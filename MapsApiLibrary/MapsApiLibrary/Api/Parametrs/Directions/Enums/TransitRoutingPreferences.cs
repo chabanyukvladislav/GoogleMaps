@@ -2,5 +2,7 @@
 {
     public enum TransitRoutingPreferences
     {
+        LessWalking,
+        FewerTransfers
     }
 }

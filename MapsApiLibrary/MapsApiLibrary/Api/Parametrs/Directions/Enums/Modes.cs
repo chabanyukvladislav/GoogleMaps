@@ -2,5 +2,9 @@
 {
     public enum Modes
     {
+        Driving,
+        Walking,
+        Bicycling,
+        Transit
     }
 }

@@ -2,5 +2,10 @@
 {
     public enum TransitModes
     {
+        Bus,
+        Subway,
+        Train,
+        Tram,
+        Rail
     }
 }

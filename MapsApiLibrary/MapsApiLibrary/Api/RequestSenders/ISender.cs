@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace MapsApiLibrary.Api.RequestSenders
 {
-    interface ISender
+    internal interface ISender
     {
         Task<HttpResponseMessage> SendAsync(string url);
     }

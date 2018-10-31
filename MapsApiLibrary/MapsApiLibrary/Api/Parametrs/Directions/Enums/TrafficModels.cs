@@ -2,5 +2,8 @@
 {
     public enum TrafficModels
     {
+        BestGuess,
+        Pessimistic,
+        Optimistic
     }
 }

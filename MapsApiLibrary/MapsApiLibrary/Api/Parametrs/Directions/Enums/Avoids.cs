@@ -2,5 +2,9 @@
 {
     public enum Avoids
     {
+        Tolls,
+        Highways,
+        Ferries,
+        Indoor
     }
 }

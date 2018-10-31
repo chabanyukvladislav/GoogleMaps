@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace MapsApiLibrary.Api.MethodExtensions
 {
-    static class ResponseContentGetter
+    internal static class ResponseContentGetter
     {
         public static async Task<string> GetContentAsync(this Task<HttpResponseMessage> response)
         {

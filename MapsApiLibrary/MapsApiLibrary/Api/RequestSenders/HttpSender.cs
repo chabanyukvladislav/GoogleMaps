@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace MapsApiLibrary.Api.RequestSenders
 {
-    class HttpSender : ISender
+    internal class HttpSender : ISender
     {
         private readonly HttpClient _client;
 
