@@ -2,11 +2,13 @@
 
 namespace MapsApiLibrary.Models.Directions
 {
-    public class TextValuePair
+    public class Fare
     {
+        [JsonProperty(PropertyName = "currency")]
+        public string Currency { get; set; }
         [JsonProperty(PropertyName = "text")]
         public string Text { get; set; }
         [JsonProperty(PropertyName = "value")]
-        public int Value { get; set; }
+        public double Value { get; set; }
     }
 }

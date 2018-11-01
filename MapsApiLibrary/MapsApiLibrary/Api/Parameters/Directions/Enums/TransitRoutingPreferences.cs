@@ -1,4 +1,4 @@
-﻿namespace MapsApiLibrary.Api.Parametrs.Directions.Enums
+﻿namespace MapsApiLibrary.Api.Parameters.Directions.Enums
 {
     public enum TransitRoutingPreferences
     {

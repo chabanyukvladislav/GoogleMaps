@@ -1,11 +1,14 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Globalization;
 
 namespace MapsApiLibrary.Models.Directions
 {
     public class Location
     {
+        [JsonProperty(PropertyName = "latitude")]
         public double Latitude { get; set; }
+        [JsonProperty(PropertyName = "longitude")]
         public double Longitude { get; set; }
 
         public static implicit operator string(Location loc)
@@ -15,9 +18,8 @@ namespace MapsApiLibrary.Models.Directions
                 return "";
             }
 
-            var location = string.Format($"{0},{1}",
-                loc.Latitude.ToString(CultureInfo.InvariantCulture).Replace(',', '.'),
-                loc.Longitude.ToString(CultureInfo.InvariantCulture).Replace(',', '.'));
+            var location = $"{loc.Latitude.ToString(CultureInfo.InvariantCulture).Replace(',', '.')}," +
+                           $"{loc.Longitude.ToString(CultureInfo.InvariantCulture).Replace(',', '.')}";
             return location;
         }
         public static implicit operator Location(string loc)

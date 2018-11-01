@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace MapsApiLibrary.Api.MethodExtensions
+namespace MapsApiLibrary.Helpers.MethodExtensions
 {
     internal static class ResponseContentGetter
     {

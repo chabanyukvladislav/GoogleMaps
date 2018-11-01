@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using MapsApiLibrary.Api.MethodExtensions;
+using MapsApiLibrary.Helpers.MethodExtensions;
 using MapsApiLibrary.Api.RequestSenders;
 
 namespace MapsApiLibrary.Api
@@ -15,9 +15,9 @@ namespace MapsApiLibrary.Api
             _url = url;
         }
 
-        public virtual Task<string> GetResponseAsync(string parametrs)
+        public virtual Task<string> GetResponseAsync(string parameters)
         {
-            var url = string.Format($"{0}?{1}", _url, parametrs);
+            var url = $"{_url}?{parameters}";
             var response =  _sender.SendAsync(url).GetContentAsync();
             return response;
         }

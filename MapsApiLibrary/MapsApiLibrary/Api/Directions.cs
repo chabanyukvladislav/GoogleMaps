@@ -1,6 +1,6 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using MapsApiLibrary.Api.Parametrs.Directions;
+using MapsApiLibrary.Api.Parameters.Directions;
 using MapsApiLibrary.Helpers;
 
 namespace MapsApiLibrary.Api
@@ -11,16 +11,16 @@ namespace MapsApiLibrary.Api
 
         public Directions() : base(Url) { }
 
-        public override Task<string> GetResponseAsync(string parametrs)
+        public override Task<string> GetResponseAsync(string parameters)
         {
-            DirectionsParametrs param = parametrs;
+            DirectionsParameters param = parameters;
             if (string.IsNullOrWhiteSpace(param.Key) || string.IsNullOrWhiteSpace(param.Origin) ||
                 string.IsNullOrWhiteSpace(param.Destination))
             {
                 throw new HttpRequestException();
             }
 
-            return base.GetResponseAsync(parametrs);
+            return base.GetResponseAsync(parameters);
         }
     }
 }

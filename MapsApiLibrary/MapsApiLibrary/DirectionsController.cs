@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using MapsApiLibrary.Api;
-using MapsApiLibrary.Api.Parametrs.Directions;
+using MapsApiLibrary.Api.Parameters.Directions;
 using MapsApiLibrary.Helpers;
 using MapsApiLibrary.Models.Directions;
 
@@ -10,17 +10,17 @@ namespace MapsApiLibrary
     {
         private readonly AbstractApi _directions;
 
-        public DirectionsParametrs Parametrs { get; }
+        public DirectionsParameters Parameters { get; }
 
         public DirectionsController()
         {
             _directions = new Directions();
-            Parametrs = new DirectionsParametrs();
+            Parameters = new DirectionsParameters();
         }
 
         public async Task<DirectionsResult> GetResult()
         {
-            var response = await _directions.GetResponseAsync(Parametrs);
+            var response = await _directions.GetResponseAsync(Parameters);
             return JsonDeserializer<DirectionsResult>.Deserialize(response);
         }
     }
