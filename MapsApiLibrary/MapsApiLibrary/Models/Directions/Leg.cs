@@ -16,11 +16,11 @@ namespace MapsApiLibrary.Models.Directions
         [JsonProperty(PropertyName = "end_address")]
         public string EndAddress { get; set; }
         [JsonProperty(PropertyName = "end_location")]
-        public Location EndLocation { get; set; }
+        public Coordinate EndLocation { get; set; }
         [JsonProperty(PropertyName = "start_address")]
         public string StartAddress { get; set; }
         [JsonProperty(PropertyName = "start_location")]
-        public Location StartLocation { get; set; }
+        public Coordinate StartLocation { get; set; }
         [JsonProperty(PropertyName = "steps")]
         public List<Step> Steps { get; set; }
     }

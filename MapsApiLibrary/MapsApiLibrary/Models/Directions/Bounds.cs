@@ -5,8 +5,8 @@ namespace MapsApiLibrary.Models.Directions
     public class Bounds
     {
         [JsonProperty(PropertyName = "northeast")]
-        public Location Northeast { get; set; }
+        public Coordinate Northeast { get; set; }
         [JsonProperty(PropertyName = "southwest")]
-        public Location Southwest { get; set; }
+        public Coordinate Southwest { get; set; }
     }
 }

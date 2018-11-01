@@ -1,6 +1,5 @@
 ﻿using MapsApiLibrary.Api.Parameters.Directions.Enums;
 using MapsApiLibrary.Helpers.MethodExtensions;
-using MapsApiLibrary.Models.Directions;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -15,7 +14,8 @@ namespace MapsApiLibrary.Api.Parameters.Directions
         public Location Destination { get; set; }
         public string Key { get; set; }
         public Modes? Mode { get; set; }
-        public List<Waypoint> Waypoints { get; set; }
+        public List<Location> Waypoints { get; set; }
+        public bool? Optimize { get; set; }
         public bool? Alternatives { get; set; }
         public Avoids? Avoid { get; set; }
         public Units? Units { get; set; }
@@ -29,46 +29,44 @@ namespace MapsApiLibrary.Api.Parameters.Directions
         {
             Origin = new Location();
             Destination = new Location();
-            Waypoints = new List<Waypoint>(8);
+            Waypoints = new List<Location>(8);
         }
 
-        private static string WaypointsToString(IEnumerable<Waypoint> waypoints)
+        private static string WaypointsToString(IEnumerable<Location> waypoints, bool? isOptimize = null)
         {
             var result = new StringBuilder();
             result.Append($"{nameof(Waypoints).ToLower()}=");
-            if (Waypoint.Optimize != null && Waypoint.Optimize.Value)
+            if (isOptimize != null && isOptimize.Value)
             {
-                result.Append($"{nameof(Waypoint.Optimize).ToLower()}:true|");
+                result.Append($"{nameof(Optimize).ToLower()}:true|");
             }
 
             foreach (var waypoint in waypoints)
             {
-                result.Append($"{(string)waypoint.Location}|");
+                result.Append($"{(string)waypoint}|");
             }
 
             result[result.Length - 1] = '&';
             return result.ToString();
         }
-        private static List<Waypoint> StringToWaypoints(string waypoints)
+        private static (List<Location>, bool?) StringToWaypoints(string waypoints)
         {
-            var result = new List<Waypoint>();
+            var result = new List<Location>();
+            bool? optimize = null;
             var values = waypoints.Split('|');
             var startIndex = 0;
             if (values[0] == "optimize:true")
             {
-                Waypoint.Optimize = true;
+                optimize = true;
                 startIndex = 1;
             }
 
             for (var i = startIndex; i < values.Length; ++i)
             {
-                var waypoint = new Waypoint
-                {
-                    Location = values[i]
-                };
+                var waypoint = values[i];
                 result.Add(waypoint);
             }
-            return result;
+            return (result, optimize);
         }
 
         private static string DateTimeToString(DateTime date)
@@ -136,7 +134,7 @@ namespace MapsApiLibrary.Api.Parameters.Directions
 
             if (param.Waypoints.Count > 0)
             {
-                var waypoints = WaypointsToString(param.Waypoints);
+                var waypoints = WaypointsToString(param.Waypoints, param.Optimize);
                 result.Append(waypoints);
             }
 
@@ -229,7 +227,8 @@ namespace MapsApiLibrary.Api.Parameters.Directions
                     case "waypoints":
                         {
                             var waypoints = StringToWaypoints(nameValue.Value);
-                            result.Waypoints = waypoints;
+                            result.Waypoints = waypoints.Item1;
+                            result.Optimize = waypoints.Item2;
                             break;
                         }
                     case "alternatives":

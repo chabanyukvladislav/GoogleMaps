@@ -10,7 +10,7 @@ namespace MapsApiLibrary.Models.Directions
         [JsonProperty(PropertyName = "duration")]
         public TextValuePair Duration { get; set; }
         [JsonProperty(PropertyName = "end_location")]
-        public Location EndLocation { get; set; }
+        public Coordinate EndLocation { get; set; }
         [JsonProperty(PropertyName = "html_instructions")]
         public string HtmlInstructions { get; set; }
         [JsonProperty(PropertyName = "maneuver")]
@@ -18,7 +18,7 @@ namespace MapsApiLibrary.Models.Directions
         [JsonProperty(PropertyName = "polyline")]
         public Polyline Polyline { get; set; }
         [JsonProperty(PropertyName = "start_location")]
-        public Location StartLocation { get; set; }
+        public Coordinate StartLocation { get; set; }
         [JsonProperty(PropertyName = "steps")]
         public List<Step> Steps { get; set; }//???
         [JsonProperty(PropertyName = "travel_mode")]

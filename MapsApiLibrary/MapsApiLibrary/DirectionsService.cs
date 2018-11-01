@@ -6,13 +6,13 @@ using MapsApiLibrary.Models.Directions;
 
 namespace MapsApiLibrary
 {
-    public class DirectionsController
+    public class DirectionsService
     {
         private readonly AbstractApi _directions;
 
         public DirectionsParameters Parameters { get; }
 
-        public DirectionsController()
+        public DirectionsService()
         {
             _directions = new Directions();
             Parameters = new DirectionsParameters();
