@@ -1,12 +1,8 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 using Xamarin;
+using Xamarin.Essentials;
 
 namespace Maps.Droid
 {
@@ -19,8 +15,9 @@ namespace Maps.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Xamarin.Forms.Forms.Init(this, savedInstanceState);
             FormsMaps.Init(this, savedInstanceState);
+            Platform.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
     }
