@@ -16,6 +16,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Content\IconsPath.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\Models\MyPinType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\MyMap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\Models\MyPin.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />

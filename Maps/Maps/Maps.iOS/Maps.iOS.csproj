@@ -147,7 +147,10 @@
     <BundleResource Include="Resources\my.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\pin.png" />
+    <BundleResource Include="Resources\start_end_pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\waypoint_pin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\Maps\Maps.projitems" Label="Shared" />

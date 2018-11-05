@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using Maps.Content;
+using Maps.Controls.Models;
 using Maps.Models.Controls;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -35,7 +36,7 @@ namespace Maps.Controls
         {
             CurrentLocationProperty = BindableProperty.Create(nameof(CurrentLocation), typeof(Location), typeof(MyMap), new Location(), BindingMode.TwoWay, CurrentLocationValidate);
             RadiusProperty = BindableProperty.Create(nameof(Radius), typeof(double), typeof(MyMap), (double)2000, BindingMode.TwoWay, RadiusValidate);
-            PinsSourceProperty = BindableProperty.Create(nameof(PinsSource), typeof(ObservableCollection<MyPin>), typeof(MyMap), new ObservableCollection<MyPin>(), BindingMode.OneWay, PinsSourceValidate);
+            PinsSourceProperty = BindableProperty.Create(nameof(PinsSource), typeof(ObservableCollection<MyPin>), typeof(MyMap), new ObservableCollection<MyPin>(), BindingMode.TwoWay, PinsSourceValidate);
         }
 
         public MyMap()
@@ -51,13 +52,6 @@ namespace Maps.Controls
                 var position = await Geolocation.GetLocationAsync();
                 var myLocation = new Location(position.Latitude, position.Longitude);
                 CurrentLocation = myLocation;
-                var pin = new MyPin
-                {
-                    IconPath = IconsPath.MyLocation,
-                    Label = "I",
-                    Position = new Position(position.Latitude, position.Longitude)
-                };
-                PinsSource.Add(pin);
             }
             catch (Exception)
             {

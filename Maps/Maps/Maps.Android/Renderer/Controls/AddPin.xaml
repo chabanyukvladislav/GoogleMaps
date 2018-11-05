@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maps.Droid.Renderer.Controls.AddPin"
+             x:Name="Page">
+    <ContentPage.BindingContext>
+        <x:Reference Name="Page" />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalTextAlignment="Center">Which type?</Label>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Start" Command="{Binding RadioButtonClick}" CommandParameter="Start"/>
+                <Button Text="Waypoint" Command="{Binding RadioButtonClick}" CommandParameter="Waypoint"/>
+                <Button Text="End" Command="{Binding RadioButtonClick}" CommandParameter="End"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -8,7 +8,13 @@
         <vm:MainViewModel />
     </ContentPage.BindingContext>
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding Calculate}" Text="Calculate"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
-        <myControls:MyMap PinsSource="{Binding Pins}"/>
+        <Grid>
+            <myControls:MyMap PinsSource="{Binding Pins}"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
