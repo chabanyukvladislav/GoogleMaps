@@ -14,7 +14,27 @@
 
     <ContentPage.Content>
         <Grid>
-            <myControls:MyMap PinsSource="{Binding Pins}"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <ListView Grid.Row="0" ItemsSource="{Binding Waypoints}" SelectedItem="{Binding SelectedPoint}">
+                <ListView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ListViewTapped}"></TapGestureRecognizer>
+                </ListView.GestureRecognizers>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Latitude}" Margin="10"/>
+                                <Label Text="{Binding Longitude}" Margin="10" />
+                                <Label Text="{Binding PlaceId}" Margin="10" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <myControls:MyMap PinsSource="{Binding Pins}" Grid.Row="1"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

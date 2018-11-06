@@ -115,6 +115,21 @@ namespace MapsApiLibrary.Api.Parameters.Directions
             }
         }
 
+        public void Clear()
+        {
+            Waypoints = new List<Location>(8);
+            Mode = null;
+            Optimize = null;
+            Alternatives = null;
+            Avoid = null;
+            Units = null;
+            ArrivalTime = null;
+            DepartureTime = null;
+            TrafficModel = null;
+            TransitMode = null;
+            TransitRoutingPreference = null;
+        }
+
         public static implicit operator string(DirectionsParameters param)
         {
             if (param == null)

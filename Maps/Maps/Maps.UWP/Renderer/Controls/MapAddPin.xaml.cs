@@ -38,6 +38,7 @@ namespace Maps.UWP.Renderer.Controls
                 case MyPinType.Waypoint:
                     Pin.IconPath = IconsPath.WaypointPin;
                     Pin.MyType = MyPinType.Waypoint;
+                    Pin.Label = "";
                     break;
                 case MyPinType.End:
                     Pin.IconPath = IconsPath.StartEndPin;

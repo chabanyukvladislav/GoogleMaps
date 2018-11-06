@@ -121,7 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MapsApiLibrary">
-      <HintPath>..\..\..\MapsApiLibrary\MapsApiLibrary\bin\Debug\netcoreapp2.1\MapsApiLibrary.dll</HintPath>
+      <HintPath>..\..\..\MapsApiLibrary\MapsApiLibrary\bin\Debug\netcoreapp2.0\MapsApiLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -131,9 +131,6 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json">
       <Version>11.0.2</Version>
-    </PackageReference>
-    <PackageReference Include="SkiaSharp.Views.Forms">
-      <Version>1.60.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>0.11.0-preview</Version>
@@ -151,6 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\waypoint_pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\selected_pin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\Maps\Maps.projitems" Label="Shared" />

@@ -19,6 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\Models\MyPinType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\MyMap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\Models\MyPin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\PolylineDecoder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

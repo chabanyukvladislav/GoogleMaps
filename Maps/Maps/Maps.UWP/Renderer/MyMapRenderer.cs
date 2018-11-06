@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using Windows.Devices.Geolocation;
 using Windows.Storage.Streams;
@@ -9,11 +9,12 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls.Maps;
 using Maps.Controls;
 using Maps.Controls.Models;
+using Maps.Helpers;
 using Maps.Models.Controls;
 using Maps.UWP.Renderer;
 using Maps.UWP.Renderer.Controls;
+using Maps.UWP.Renderer.Helpers;
 using Maps.ViewModels;
-using MapsApiLibrary.Models.Directions;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Maps.UWP;
@@ -30,11 +31,68 @@ namespace Maps.UWP.Renderer
         private ObservableCollection<MyPin> _myPins;
         private bool _iconClicked;
 
+        private void AddMyPin(MyPin pin)
+        {
+            var pinPosition = new BasicGeoposition
+            {
+                Latitude = pin.Position.Latitude,
+                Longitude = pin.Position.Longitude
+            };
+            var pinPoint = new Geopoint(pinPosition);
+            var mapIcon = new MapIcon
+            {
+                Image = RandomAccessStreamReference.CreateFromUri(new Uri($"ms-appx:///{pin.IconPath}")),
+                CollisionBehaviorDesired = MapElementCollisionBehavior.RemainVisible,
+                Location = pinPoint,
+                NormalizedAnchorPoint = new Point(0.5, 1.0),
+                Title = pin.Label
+            };
+            _nativeMap.MapElements.Add(mapIcon);
+        }
+
+        private void AddWindow(DependencyObject obj, BasicGeoposition position)
+        {
+            _nativeMap.Children.Add(obj);
+            var point = new Geopoint(position);
+            MapControl.SetLocation(obj, point);
+            MapControl.SetNormalizedAnchorPoint(obj, new Point(0.5, 1.0));
+        }
+
+        private bool CloseOldWindows()
+        {
+            var oldFirstWindow = _nativeMap.Children.FirstOrDefault(el => el is MapAddPin);
+            var oldSecondWindow = _nativeMap.Children.FirstOrDefault(el => el is PinInfo);
+            if (oldSecondWindow == null && oldFirstWindow == null)
+            {
+                return false;
+            }
+            if (oldFirstWindow != null)
+            {
+                _nativeMap.Children.Remove(oldFirstWindow);
+            }
+
+            if (oldSecondWindow != null)
+            {
+                _nativeMap.Children.Remove(oldSecondWindow);
+            }
+
+            return true;
+        }
+
+        private static MainViewModel GetCurrentViewModel()
+        {
+            var view = ((NavigationPage)Application.Current.MainPage).Pages.First();
+            var viewModel = (MainViewModel)view.BindingContext;
+            return viewModel;
+        }//????????
+
         protected override void OnElementChanged(ElementChangedEventArgs<Map> e)
         {
             base.OnElementChanged(e);
 
-            GetCurrentViewModel().PathRender += RenderPath;
+            var viewModel = GetCurrentViewModel();
+                viewModel.PathRender += OnRenderPath;
+            viewModel.PropertyChanged += OnUpdate;
 
             if (e.OldElement != null)
             {
@@ -62,86 +120,21 @@ namespace Maps.UWP.Renderer
             }
         }
 
-        private void RenderPath(List<Step> obj)
+        private void OnUpdate(object sender, PropertyChangedEventArgs e)
         {
-            var positions = new List<BasicGeoposition>();
-            foreach (var step in obj)
+            if (e.PropertyName != "Pins")
             {
-                var startPosition = new BasicGeoposition
-                {
-                    Latitude = step.StartLocation.Latitude,
-                    Longitude = step.StartLocation.Longitude,
-                };
-                positions.Add(startPosition);
-                var endPosition = new BasicGeoposition
-                {
-                    Latitude = step.StartLocation.Latitude,
-                    Longitude = step.StartLocation.Longitude,
-                };
-                positions.Add(endPosition);
-            }
-            var polyline = new MapPolyline
-            {
-                StrokeColor = Colors.Red,
-                StrokeThickness = 5,
-                Path = new Geopath(positions)
-            };
-            _nativeMap.Children.Add(polyline);
-        }
-
-        private void AddMyPin(MyPin pin)
-        {
-            var pinPosition = new BasicGeoposition
-            {
-                Latitude = pin.Position.Latitude,
-                Longitude = pin.Position.Longitude
-            };
-            var pinPoint = new Geopoint(pinPosition);
-            var mapIcon = new MapIcon
-            {
-                Image = RandomAccessStreamReference.CreateFromUri(new Uri($"ms-appx:///{pin.IconPath}")),
-                CollisionBehaviorDesired = MapElementCollisionBehavior.RemainVisible,
-                Location = pinPoint,
-                NormalizedAnchorPoint = new Point(0.5, 1.0),
-                Title = pin.Label
-            };
-            _nativeMap.MapElements.Add(mapIcon);
-        }
-
-        private bool CloseOldWindows()
-        {
-            var oldFirstWindow = _nativeMap.Children.FirstOrDefault(el => el is MapAddPin);
-            var oldSecondWindow = _nativeMap.Children.FirstOrDefault(el => el is PinInfo);
-            if (oldSecondWindow == null && oldFirstWindow == null)
-            {
-                return false;
-            }
-            if (oldFirstWindow != null)
-            {
-                _nativeMap.Children.Remove(oldFirstWindow);
+                return;
             }
 
-            if (oldSecondWindow != null)
+            foreach (var element in _nativeMap.MapElements.Where(el => el is MapIcon).ToList())
             {
-                _nativeMap.Children.Remove(oldSecondWindow);
+                _nativeMap.MapElements.Remove(element);
             }
-
-            return true;
-        }
-
-        private void AddWindow(DependencyObject obj, BasicGeoposition position)
-        {
-            _nativeMap.Children.Add(obj);
-            var point = new Geopoint(position);
-            MapControl.SetLocation(obj, point);
-            MapControl.SetNormalizedAnchorPoint(obj, new Point(0.5, 1.0));
-        }
-
-        private static MainViewModel GetCurrentViewModel()
-        {
-            var view = ((NavigationPage)Application.Current.MainPage).Pages.First();
-            var viewModel = (MainViewModel)view.BindingContext;
-            return viewModel;
+            foreach (var pin in ((MainViewModel)sender).Pins)
+            {
+                AddMyPin(pin);
+            }
         }
 
         private void OnMapClicked(MapControl sender, MapInputEventArgs args)
@@ -195,8 +188,7 @@ namespace Maps.UWP.Renderer
             {
                 _nativeMap.Children.Remove(window);
             }
-
-
+            
             AddMyPin(pin);
             viewModel.Pins.Add(pin);
         }
@@ -212,7 +204,7 @@ namespace Maps.UWP.Renderer
             }
 
             var pinInfo = new PinInfo(element as MapIcon);
-            pinInfo.Clicked += ActionSelected;
+            pinInfo.Clicked += OnActionSelected;
             var position = new BasicGeoposition
             {
                 Latitude = args.Location.Position.Latitude,
@@ -223,15 +215,40 @@ namespace Maps.UWP.Renderer
             _iconClicked = true;
         }
 
-        private void ActionSelected(MapIcon pin)
+        private void OnActionSelected(MapIcon pin)
         {
             _nativeMap.MapElements.Remove(pin);
+
+            var viewModel = GetCurrentViewModel();
+            var element = viewModel.Pins.FirstOrDefault(el =>
+                Math.Abs(el.Position.Latitude - pin.Location.Position.Latitude) <= 0 &&
+                Math.Abs(el.Position.Longitude - pin.Location.Position.Longitude) <= 0);
+            viewModel.Pins.Remove(element);
 
             var window = _nativeMap.Children.FirstOrDefault(el => el is PinInfo);
             if (window != null)
             {
                 _nativeMap.Children.Remove(window);
             }
+        }
+
+        private void OnRenderPath(string obj)
+        {
+            var element = _nativeMap.MapElements.FirstOrDefault(el => el is MapPolyline);
+            if (element != null)
+            {
+                _nativeMap.MapElements.Remove(element);
+            }
+
+            var points = PolylineDecoder.Decode(obj);
+            var positions = LocationsToBasicGeopositions.Convert(points);
+            var polyline = new MapPolyline
+            {
+                StrokeColor = Colors.Red,
+                StrokeThickness = 5,
+                Path = new Geopath(positions)
+            };
+            _nativeMap.MapElements.Add(polyline);
         }
     }
 }

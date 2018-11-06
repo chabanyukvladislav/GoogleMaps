@@ -6,7 +6,7 @@ using MapsApiLibrary.Models.Directions;
 
 namespace MapsApiLibrary
 {
-    public class DirectionsService
+    public class DirectionsService : IService<DirectionsParameters, DirectionsResult>
     {
         private readonly AbstractApi _directions;
 
@@ -18,7 +18,7 @@ namespace MapsApiLibrary
             Parameters = new DirectionsParameters();
         }
 
-        public async Task<DirectionsResult> GetResult()
+        public async Task<DirectionsResult> GetResultAsync()
         {
             var response = await _directions.GetResponseAsync(Parameters);
             return JsonDeserializer<DirectionsResult>.Deserialize(response);
