@@ -117,6 +117,9 @@ namespace MapsApiLibrary.Api.Parameters.Directions
 
         public void Clear()
         {
+            Origin = new Location();
+            Destination = new Location();
+            Key = null;
             Waypoints = new List<Location>(8);
             Mode = null;
             Optimize = null;

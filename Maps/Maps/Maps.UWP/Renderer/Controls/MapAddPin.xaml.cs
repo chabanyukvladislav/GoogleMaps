@@ -2,8 +2,9 @@
 using System.Windows.Input;
 using Windows.Devices.Geolocation;
 using Maps.Content;
+using Maps.Controls;
 using Maps.Controls.Models;
-using Maps.Models.Controls;
+using MapsApiLibrary.Models.Directions;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
@@ -11,28 +12,28 @@ namespace Maps.UWP.Renderer.Controls
 {
     public sealed partial class MapAddPin
     {
-        public ICommand RadioButtonClick { get; }
         public MyPin Pin { get; }
+
+        public ICommand RadioButtonClick { get; }
 
         public MapAddPin(BasicGeoposition position)
         {
             InitializeComponent();
-            RadioButtonClick = new Command(OnRadioButtonClick);
             Pin = new MyPin
             {
-                Position = new Position(position.Latitude, position.Longitude)
+                Coordinate = new Coordinate(position.Latitude, position.Longitude)
             };
+            RadioButtonClick = new Command(OnRadioButtonClick);
         }
 
         private void OnRadioButtonClick(object obj)
         {
-            var typeString = obj.ToString();
-            var type = Enum.Parse<MyPinType>(typeString);
+            var type = Enum.Parse<MyPinType>(obj.ToString());
             switch (type)
             {
                 case MyPinType.Start:
                     Pin.IconPath = IconsPath.StartEndPin;
-                    Pin.Label = "Start";
+                    Pin.Label = MyPinType.Start.ToString();
                     Pin.MyType = MyPinType.Start;
                     break;
                 case MyPinType.Waypoint:
@@ -43,7 +44,7 @@ namespace Maps.UWP.Renderer.Controls
                 case MyPinType.End:
                     Pin.IconPath = IconsPath.StartEndPin;
                     Pin.MyType = MyPinType.End;
-                    Pin.Label = "End";
+                    Pin.Label = MyPinType.End.ToString();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

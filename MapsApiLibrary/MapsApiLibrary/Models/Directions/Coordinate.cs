@@ -9,5 +9,11 @@ namespace MapsApiLibrary.Models.Directions
 
         [JsonProperty(PropertyName = "lng")]
         public double Longitude { get; set; }
+
+        public Coordinate(double latitude = 0, double longitude = 0)
+        {
+            Latitude = latitude;
+            Longitude = longitude;
+        }
     }
 }

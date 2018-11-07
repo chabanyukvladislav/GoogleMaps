@@ -3,38 +3,63 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:vm="clr-namespace:Maps.ViewModels"
             xmlns:myControls="clr-namespace:Maps.Controls"
+            xmlns:converters="clr-namespace:Maps.Converters"
             x:Class="Maps.Views.MainPage">
     <ContentPage.BindingContext>
         <vm:MainViewModel />
     </ContentPage.BindingContext>
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding Calculate}" Text="Calculate"/>
-    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:IsCoordinateNotNullConverter x:Key="IsCoordinateNotNull"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="4*" />
             </Grid.RowDefinitions>
-            <ListView Grid.Row="0" ItemsSource="{Binding Waypoints}" SelectedItem="{Binding SelectedPoint}">
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Picker Grid.Column="0" HorizontalOptions="Center" Margin="5, 5, 25, 5" ItemsSource="{Binding}" SelectedItem="{Binding}"/>
+                <Button Grid.Column="1" Text="Calculate" HorizontalOptions="Center" Margin="5" Command="{Binding}"/>
+                <Button Grid.Column="2" Text="Calculate optimize" HorizontalOptions="Center" Margin="5" Command="{Binding CalculateOptimize}">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button" BindingContext="{Binding MapViewModel}" Binding="{Binding Pins.StartPin.Coordinate, Converter={StaticResource IsCoordinateNotNull}}" Value="false">
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
+            </Grid>
+
+            <ListView Grid.Row="1" BindingContext="{Binding WaypointsViewModel}" ItemsSource="{Binding Legs}" SelectedItem="{Binding SelectedLeg}">
                 <ListView.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ListViewTapped}"></TapGestureRecognizer>
+                    <TapGestureRecognizer Command="{Binding ListViewTapped}"/>
                 </ListView.GestureRecognizers>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Latitude}" Margin="10"/>
-                                <Label Text="{Binding Longitude}" Margin="10" />
-                                <Label Text="{Binding PlaceId}" Margin="10" />
+                                <Label Margin="10" HorizontalTextAlignment="Center" Text="{Binding EndLocation.Latitude}"/>
+                                <Label Margin="10" HorizontalTextAlignment="Center" Text="{Binding EndLocation.Longitude}"/>
+                                <Label Margin="10" HorizontalTextAlignment="Center" Text="{Binding EndAddress}"/>
+                                <Label Margin="10" HorizontalTextAlignment="Center" Text="{Binding Duration.Text}"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <myControls:MyMap PinsSource="{Binding Pins}" Grid.Row="1"/>
+
+            <myControls:MyMap Grid.Row="2" BindingContext="{Binding MapViewModel}" PinsSource="{Binding Pins}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

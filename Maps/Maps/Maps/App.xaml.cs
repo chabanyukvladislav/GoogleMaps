@@ -1,6 +1,5 @@
 ﻿using Xamarin.Forms.Xaml;
 using Maps.Views;
-using Xamarin.Forms;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Maps
@@ -13,7 +12,7 @@ namespace Maps
             InitializeComponent();
 
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

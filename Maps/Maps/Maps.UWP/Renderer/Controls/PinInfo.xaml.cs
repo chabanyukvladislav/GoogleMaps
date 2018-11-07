@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 using Windows.UI.Xaml.Controls.Maps;
+using Maps.Controls.Models;
 using Xamarin.Forms;
 
 namespace Maps.UWP.Renderer.Controls
@@ -20,9 +21,10 @@ namespace Maps.UWP.Renderer.Controls
 
         private void OnClick(object obj)
         {
-            Clicked?.Invoke(_pin);
+            var pinAction = Enum.Parse<PinAction>(obj.ToString());
+            Clicked?.Invoke(_pin, pinAction);
         }
 
-        public event Action<MapIcon> Clicked;
+        public event Action<MapIcon, PinAction> Clicked;
     }
 }

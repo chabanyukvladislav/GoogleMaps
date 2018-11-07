@@ -21,6 +21,7 @@ namespace MapsApiLibrary
         public async Task<DirectionsResult> GetResultAsync()
         {
             var response = await _directions.GetResponseAsync(Parameters);
+            Parameters.Clear();
             return JsonDeserializer<DirectionsResult>.Deserialize(response);
         }
     }
