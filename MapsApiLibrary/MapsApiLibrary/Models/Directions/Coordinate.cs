@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace MapsApiLibrary.Models.Directions
 {
@@ -14,6 +15,22 @@ namespace MapsApiLibrary.Models.Directions
         {
             Latitude = latitude;
             Longitude = longitude;
+        }
+
+        public override bool Equals(object value)
+        {
+            if (!(value is Coordinate coordinate))
+            {
+                return false;
+            }
+            var latitudeEquals = Math.Abs(Latitude - coordinate.Latitude) <= 0.00002;
+            var longitudeEquals = Math.Abs(Longitude - coordinate.Longitude) <= 0.00002;
+            return latitudeEquals && longitudeEquals;
+        }
+
+        public override int GetHashCode()
+        {
+            return 0;
         }
     }
 }

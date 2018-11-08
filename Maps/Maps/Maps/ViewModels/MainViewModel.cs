@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Windows.Input;
+using Maps.Controls;
+using Maps.Helpers;
 using MapsApiLibrary;
 using MapsApiLibrary.Api.Parameters.Directions;
 using MapsApiLibrary.Api.Parameters.Directions.Enums;
@@ -12,13 +13,13 @@ namespace Maps.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        private readonly IService<DirectionsParameters, DirectionsResult> _service;
+        private IService<DirectionsParameters, DirectionsResult> _service;
 
         private ObservableCollection<string> _trafficModels;
         private TrafficModels? _selectedTrafficModel;
 
-        public WaypointsViewModel WaypointsViewModel { get; set; }
-        public MapViewModel MapViewModel { get; set; }
+        public IPinsViewModel PinsViewModel { get; set; }
+        public IMapViewModel MapViewModel { get; set; }
 
         public ObservableCollection<string> TrafficModels
         {
@@ -39,64 +40,56 @@ namespace Maps.ViewModels
             }
         }
 
-        public ICommand CalculateOptimize { get; }
+        public Command Calculate { get; }
 
         public MainViewModel()
         {
             _service = new DirectionsService();
 
-            WaypointsViewModel = new WaypointsViewModel();
+            PinsViewModel = new PinsViewModel();
             MapViewModel = new MapViewModel();
 
-            CalculateOptimize = new Command(ExecuteCalculateOptimize);
+            Calculate = new Command(ExecuteCalculate, IsButtonEnabled);
+
+            CalculateFinished += MapViewModel.RenderPath;
+            CalculateFinished += PinsViewModel.LoadPoints;
+
+            PinsViewModel.PinSelecting += MapViewModel.PinSelect;
+
+            MapViewModel.PinsUpdated += OnUpdatedEvent;
+            OnUpdatedEvent();
         }
 
-        private void SetParameters(bool optimize)
+        private bool IsButtonEnabled(object arg)
         {
-            _service.Parameters.Origin.Latitude = MapViewModel.Pins.StartPin.Coordinate.Latitude;
-            _service.Parameters.Origin.Longitude = MapViewModel.Pins.StartPin.Coordinate.Longitude;
-
-            _service.Parameters.Destination.Latitude = MapViewModel.Pins.EndPin.Coordinate.Latitude;
-            _service.Parameters.Destination.Longitude = MapViewModel.Pins.EndPin.Coordinate.Longitude;
-
-            _service.Parameters.Key = "AIzaSyA3YhAyyckDAMFGuVR7yRI-fG_NATvL8Yk";
-
-            _service.Parameters.Optimize = optimize;
-            foreach (var pin in MapViewModel.Pins.WaypointsPin)
-            {
-                var location = new Location(pin.Coordinate.Latitude, pin.Coordinate.Longitude);
-                _service.Parameters.Waypoints.Add(location);
-            }
-
-            if (SelectedTrafficModel != null)
-            {
-                _service.Parameters.TrafficModel = SelectedTrafficModel;
-            }
+            return MapViewModel.Pins.StartPin.Coordinate != null && MapViewModel.Pins.EndPin.Coordinate != null;
+        }
+        private void CanCalculateUpdate(MyPin pin, Coordinate coordinate)
+        {
+            Calculate.ChangeCanExecute();
         }
 
-        private async void ExecuteCalculateOptimize()
+        private async void ExecuteCalculate(object optimize)
         {
-            //XAML????
-
-            if (MapViewModel.Pins.StartPin.Coordinate == null)
-            {
-                await Application.Current.MainPage.DisplayAlert("Error", "You must select origin path", "Ok");
-                return;
-            }
-            if (MapViewModel.Pins.EndPin.Coordinate == null)
-            {
-                await Application.Current.MainPage.DisplayAlert("Error", "You must select destination path", "Ok");
-                return;
-            }
-
-            SetParameters(true);
+            DirectionParametersSetter.Set(ref _service, MapViewModel.Pins, bool.Parse(optimize.ToString()), SelectedTrafficModel);
             var result = await _service.GetResultAsync();
+            if (result.Status != "OK")
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", "Zero result", "Ok");
+                return;
+            }
             CalculateFinished?.Invoke(result);
         }
-
+        
         protected virtual void OnPropertyChanged(string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        private void OnUpdatedEvent()
+        {
+            MapViewModel.Pins.StartPin.CoordinateChanged += CanCalculateUpdate;
+            MapViewModel.Pins.EndPin.CoordinateChanged += CanCalculateUpdate;
+            Calculate.ChangeCanExecute();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

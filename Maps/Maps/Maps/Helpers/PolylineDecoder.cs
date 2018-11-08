@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using MapsApiLibrary.Api.Parameters.Directions;
+using MapsApiLibrary.Models.Directions;
 
 namespace Maps.Helpers
 {
     internal class PolylineDecoder
     {
-        public static IEnumerable<Location> Decode(string polyline)
+        public static IEnumerable<Coordinate> Decode(string polyline)
         {
             var polylineChars = polyline.ToCharArray();
             var index = 0;
@@ -45,7 +45,7 @@ namespace Maps.Helpers
 
                 currentLng += (sum & 1) == 1 ? ~(sum >> 1) : (sum >> 1);
 
-                yield return new Location
+                yield return new Coordinate
                 {
                     Latitude = Convert.ToDouble(currentLat) / 1E5,
                     Longitude = Convert.ToDouble(currentLng) / 1E5

@@ -2,6 +2,7 @@
 {
     public enum MyPinType
     {
+        Undefined,
         Start,
         Waypoint,
         End,

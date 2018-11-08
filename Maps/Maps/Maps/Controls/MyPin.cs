@@ -1,4 +1,5 @@
-﻿using Maps.Content;
+﻿using System;
+using Maps.Content;
 using Maps.Controls.Models;
 using MapsApiLibrary.Models.Directions;
 using Xamarin.Forms;
@@ -46,6 +47,18 @@ namespace Maps.Controls
         protected override void OnPropertyChanged(string propertyName = null)
         {
             base.OnPropertyChanged(propertyName);
+
+            if (propertyName == IconPathProperty.PropertyName)
+            {
+                IconPathChanged?.Invoke(this, IconPath);
+            }
+            else if (propertyName == CoordinateProperty.PropertyName)
+            {
+                CoordinateChanged?.Invoke(this, Coordinate);
+            }
         }
+
+        public static event Action<MyPin, string> IconPathChanged;
+        public event Action<MyPin, Coordinate> CoordinateChanged;
     }
 }

@@ -4,11 +4,12 @@ using Xamarin.Forms;
 
 namespace Maps.Converters
 {
-    internal class IsCoordinateNotNullConverter: IValueConverter
+    internal class ToNormalDistanceConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value != null;
+            var distance = double.Parse(value.ToString());
+            return (distance / 1000) + " km";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

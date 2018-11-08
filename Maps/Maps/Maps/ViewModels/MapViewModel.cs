@@ -1,10 +1,14 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
+using Maps.Content;
 using Maps.Controls;
+using Maps.Controls.Models;
+using MapsApiLibrary.Models.Directions;
 
 namespace Maps.ViewModels
 {
-    public class MapViewModel : INotifyPropertyChanged
+    public class MapViewModel : IMapViewModel
     {
         private MyPins _pins;
 
@@ -23,45 +27,80 @@ namespace Maps.ViewModels
             Pins = new MyPins();
         }
 
-        //private static IEnumerable<Location> GetOrderPinsLocation(DirectionsResult result)
-        //{
-        //    if (result.Routes[0].WaypointOrder.Count == 0)
-        //    {
-        //        return new List<Location>();
-        //    }
+        public void RenderPath(DirectionsResult result)
+        {
+            PathRendering?.Invoke(result.Routes[0].OverviewPolyline.Points);
+        }
+        public void PinSelect(PinPoint newPin, PinPoint oldPin)
+        {
+            if (oldPin != null)
+            {
+                UnPined(oldPin);
+            }
 
-        //    var waypoints = result.GeocodedWaypoints;
-        //    waypoints.RemoveAt(0);
-        //    waypoints.RemoveAt(waypoints.Count - 1);
-        //    var orderPlaceId = new List<string>();
-        //    var locations = new List<Location>();
-        //    foreach (var i in result.Routes[0].WaypointOrder)
-        //    {
-        //        orderPlaceId.Add(waypoints[i].PlaceId);
-        //    }
+            if (newPin == null)
+            {
+                return;
+            }
 
-        //    for (var i = 0; i < result.Routes[0].Legs.Count - 1; ++i)
-        //    {
-        //        var location = new Location
-        //        {
-        //            Latitude = result.Routes[0].Legs[i].EndLocation.Latitude,
-        //            Longitude = result.Routes[0].Legs[i].EndLocation.Longitude,
-        //            PlaceId = orderPlaceId[i]
-        //        };
-        //        locations.Add(location);
-        //    }
+            Pined(newPin);
+        }
+        public void PinsUpdate(MyPins pins)
+        {
+            Pins = pins;
+        }
 
-        //    return locations;
-        //}
-
-        //public event Action<string> PathRender;
+        private void Pined(PinPoint newPin)
+        {
+            if (newPin.Number == 0)
+            {
+                Pins.StartPin.IconPath = IconsPath.SelectedPin;
+            }
+            else if (newPin.Number == Pins.WaypointsPin.Count + 1)
+            {
+                Pins.EndPin.IconPath = IconsPath.SelectedPin;
+            }
+            else
+            {
+                var element = Pins.WaypointsPin.FirstOrDefault(el => el.Coordinate.Equals(newPin.Coordinate));
+                if (element != null)
+                {
+                    element.IconPath = IconsPath.SelectedPin;
+                }
+            }
+        }
+        private void UnPined(PinPoint oldPin)
+        {
+            if (oldPin.Number == 0)
+            {
+                Pins.StartPin.IconPath = IconsPath.StartEndPin;
+            }
+            else if (oldPin.Number == Pins.WaypointsPin.Count + 1)
+            {
+                Pins.EndPin.IconPath = IconsPath.StartEndPin;
+            }
+            else
+            {
+                var element = Pins.WaypointsPin.FirstOrDefault(el => el.Coordinate.Equals(oldPin.Coordinate));
+                if (element != null)
+                {
+                    element.IconPath = IconsPath.WaypointPin;
+                }
+            }
+        }
 
         protected virtual void OnPropertyChanged(string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
+            if (propertyName == nameof(Pins))
+            {
+                PinsUpdated?.Invoke();
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public event Action<string> PathRender;
+        public event Action<string> PathRendering;
+        public event Action PinsUpdated;
     }
 }
