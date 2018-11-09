@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using Maps.Collections;
 using Maps.Controls;
 using Maps.Helpers;
 using MapsApiLibrary;
@@ -14,9 +15,10 @@ namespace Maps.ViewModels
     public class MainViewModel : INotifyPropertyChanged
     {
         private IService<DirectionsParameters, DirectionsResult> _service;
+        private readonly SharedMyPins _myPins;
 
         private ObservableCollection<string> _trafficModels;
-        private TrafficModels? _selectedTrafficModel;
+        private TrafficModels _selectedTrafficModel;
 
         public IPinsViewModel PinsViewModel { get; set; }
         public IMapViewModel MapViewModel { get; set; }
@@ -30,12 +32,12 @@ namespace Maps.ViewModels
                 OnPropertyChanged(nameof(TrafficModels));
             }
         }
-        public TrafficModels? SelectedTrafficModel
+        public string SelectedTrafficModel
         {
-            get => _selectedTrafficModel;
+            get => ConvertEnumToString(_selectedTrafficModel);
             set
             {
-                _selectedTrafficModel = value;
+                _selectedTrafficModel = ConvertStringToEnum(value);
                 OnPropertyChanged(nameof(SelectedTrafficModel));
             }
         }
@@ -44,25 +46,31 @@ namespace Maps.ViewModels
 
         public MainViewModel()
         {
+            _trafficModels = new ObservableCollection<string>(Enum.GetNames(typeof(TrafficModels)));
+
             _service = new DirectionsService();
+            _myPins = SharedMyPins.Get;
 
             PinsViewModel = new PinsViewModel();
             MapViewModel = new MapViewModel();
 
             Calculate = new Command(ExecuteCalculate, IsButtonEnabled);
 
-            CalculateFinished += MapViewModel.RenderPath;
-            CalculateFinished += PinsViewModel.LoadPoints;
+            OnPinsChanged();
+        }
 
-            PinsViewModel.PinSelecting += MapViewModel.PinSelect;
-
-            MapViewModel.PinsUpdated += OnUpdatedEvent;
-            OnUpdatedEvent();
+        public static string ConvertEnumToString(Enum eEnum)
+        {
+            return Enum.GetName(eEnum.GetType(), eEnum);
+        }
+        public static TrafficModels ConvertStringToEnum(string value)
+        {
+            return Enum.Parse<TrafficModels>(value);
         }
 
         private bool IsButtonEnabled(object arg)
         {
-            return MapViewModel.Pins.StartPin.Coordinate != null && MapViewModel.Pins.EndPin.Coordinate != null;
+            return _myPins.Pins.StartPin.Coordinate != null && _myPins.Pins.EndPin.Coordinate != null;
         }
         private void CanCalculateUpdate(MyPin pin, Coordinate coordinate)
         {
@@ -71,28 +79,28 @@ namespace Maps.ViewModels
 
         private async void ExecuteCalculate(object optimize)
         {
-            DirectionParametersSetter.Set(ref _service, MapViewModel.Pins, bool.Parse(optimize.ToString()), SelectedTrafficModel);
+            DirectionParametersSetter.Set(ref _service, _myPins.Pins, bool.Parse(optimize.ToString()), _selectedTrafficModel);
             var result = await _service.GetResultAsync();
             if (result.Status != "OK")
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "Zero result", "Ok");
                 return;
             }
-            CalculateFinished?.Invoke(result);
+
+            SharedResult.Result = result;
         }
-        
+
         protected virtual void OnPropertyChanged(string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        private void OnUpdatedEvent()
+
+        private void OnPinsChanged()
         {
-            MapViewModel.Pins.StartPin.CoordinateChanged += CanCalculateUpdate;
-            MapViewModel.Pins.EndPin.CoordinateChanged += CanCalculateUpdate;
-            Calculate.ChangeCanExecute();
+            _myPins.Pins.StartPin.CoordinateChanged += CanCalculateUpdate;
+            _myPins.Pins.EndPin.CoordinateChanged += CanCalculateUpdate;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public event Action<DirectionsResult> CalculateFinished;
     }
 }

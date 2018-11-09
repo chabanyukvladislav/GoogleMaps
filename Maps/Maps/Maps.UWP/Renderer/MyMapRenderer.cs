@@ -5,13 +5,12 @@ using Windows.Storage.Streams;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls.Maps;
+using Maps.Collections;
 using Maps.Controls;
 using Maps.Controls.Models;
-using Maps.Helpers;
 using Maps.UWP.Renderer;
 using Maps.UWP.Renderer.Controls;
 using Maps.UWP.Renderer.Helpers;
-using Maps.ViewModels;
 using MapsApiLibrary.Models.Directions;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Maps.UWP;
@@ -24,79 +23,40 @@ namespace Maps.UWP.Renderer
 {
     public class MyMapRenderer : MapRenderer
     {
-        private MyPins _pins;
+        private readonly SharedMyPins _pins;
+        private readonly SharedRoutePath _routePath;
         private MapControl _nativeMap;
         private bool _iconClicked;
 
         public MyMapRenderer()
         {
-            var viewModel = GetMapViewModel();
-            viewModel.PathRendering += OnRenderPath;
+            _pins = SharedMyPins.Get;
+            _routePath = SharedRoutePath.Get;
+
+            _pins.PinAdded += OnAddPin;
+            _pins.PinRemoved += OnRemovePin;
+            _pins.PinSelected += OnPinSelected;
+            _routePath.CoordinatesChanged += OnRenderPath;
         }
 
-        private void AddMyPins(MyPins pins)
+        private void LoadMyPins()
         {
-            _pins = new MyPins();
-
-            if (pins.MyCoordinatePin.Coordinate != null)
+            if (_pins.Pins.MyCoordinatePin.Coordinate != null)
             {
-                AddMyPin(pins.MyCoordinatePin);
+                OnAddPin(_pins.Pins.MyCoordinatePin);
             }
-            if (pins.StartPin.Coordinate != null)
+            if (_pins.Pins.StartPin.Coordinate != null)
             {
-                AddMyPin(pins.StartPin);
+                OnAddPin(_pins.Pins.StartPin);
             }
-            foreach (var myPin in pins.WaypointsPin)
+            foreach (var myPin in _pins.Pins.WaypointsPin)
             {
-                AddMyPin(myPin);
+                OnAddPin(myPin);
             }
-            if (pins.EndPin.Coordinate != null)
+            if (_pins.Pins.EndPin.Coordinate != null)
             {
-                AddMyPin(pins.EndPin);
+                OnAddPin(_pins.Pins.EndPin);
             }
-
-            _pins.PinAdded += AddPin;
-            _pins.PinRemoved += RemovePin;
-        }
-        private void AddMyPin(MyPin pin)
-        {
-            _pins.Add(pin);
-        }
-
-        private void AddPin(MyPin pin)
-        {
-            var viewModel = GetMapViewModel();
-
-            var pinPosition = new BasicGeoposition
-            {
-                Latitude = pin.Coordinate.Latitude,
-                Longitude = pin.Coordinate.Longitude
-            };
-            var pinPoint = new Geopoint(pinPosition);
-            var mapIcon = new MapIcon
-            {
-                Image = RandomAccessStreamReference.CreateFromUri(new Uri($"ms-appx:///{pin.IconPath}")),
-                CollisionBehaviorDesired = MapElementCollisionBehavior.RemainVisible,
-                Location = pinPoint,
-                NormalizedAnchorPoint = new Point(0.5, 1.0),
-                Title = pin.Label
-            };
-            _nativeMap.MapElements.Add(mapIcon);
-            viewModel.PinsUpdate(_pins);
-        }
-        private void RemovePin(MyPin pin)
-        {
-            var viewModel = GetMapViewModel();
-
-            var element = _nativeMap.MapElements.FirstOrDefault(el =>
-                el is MapIcon icon &&
-                new Coordinate(icon.Location.Position.Latitude, icon.Location.Position.Longitude)
-                    .Equals(pin.Coordinate));
-            if (element != null)
-            {
-                _nativeMap.MapElements.Remove(element);
-            }
-            viewModel.PinsUpdate(_pins);
         }
 
         private void AddWindow(DependencyObject obj, BasicGeoposition position)
@@ -106,7 +66,7 @@ namespace Maps.UWP.Renderer
             MapControl.SetLocation(obj, point);
             MapControl.SetNormalizedAnchorPoint(obj, new Point(0.5, 1.0));
         }
-        private bool CloseOldWindows()
+        private bool CloseWindows()
         {
             var oldFirstWindow = _nativeMap.Children.FirstOrDefault(el => el is MapAddPin);
             var oldSecondWindow = _nativeMap.Children.FirstOrDefault(el => el is PinInfo);
@@ -125,13 +85,6 @@ namespace Maps.UWP.Renderer
             }
 
             return true;
-        }
-
-        private static IMapViewModel GetMapViewModel()
-        {
-            var view = Application.Current.MainPage;
-            var viewModel = (MainViewModel)view.BindingContext;
-            return viewModel.MapViewModel;
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Map> e)
@@ -157,8 +110,7 @@ namespace Maps.UWP.Renderer
             _nativeMap.MapElements.Clear();
             _nativeMap.Children.Clear();
 
-            var formsMap = (MyMap)e.NewElement;
-            AddMyPins(formsMap.PinsSource);
+            LoadMyPins();
         }
 
         private void OnMapClicked(MapControl sender, MapInputEventArgs args)
@@ -169,13 +121,12 @@ namespace Maps.UWP.Renderer
                 return;
             }
 
-            if (CloseOldWindows())
+            if (CloseWindows())
             {
                 return;
             }
 
-            var viewModel = GetMapViewModel();
-            if (viewModel.Pins.WaypointsPin.Count == 8)
+            if (_pins.Pins.WaypointsPin.Count == 8)
             {
                 Application.Current.MainPage.DisplayAlert("Error", "You can`t add more then 8 waypoints", "Ok");
                 return;
@@ -192,19 +143,17 @@ namespace Maps.UWP.Renderer
         }
         private void OnTypeSelected(MyPin pin)
         {
-            var viewModel = GetMapViewModel();
-
             switch (pin.MyType)
             {
-                case MyPinType.Start when viewModel.Pins.StartPin.Coordinate != null:
+                case MyPinType.Start when _pins.Pins.StartPin.Coordinate != null:
                     Application.Current.MainPage.DisplayAlert("Error", "You can`t add more then 1 start point", "Ok");
                     return;
-                case MyPinType.End when viewModel.Pins.EndPin.Coordinate != null:
+                case MyPinType.End when _pins.Pins.EndPin.Coordinate != null:
                     Application.Current.MainPage.DisplayAlert("Error", "You can`t add more then 1 end point", "Ok");
                     return;
             }
 
-            AddMyPin(pin);
+            _pins.AddPin(pin);
 
             var window = _nativeMap.Children.FirstOrDefault(el => el is MapAddPin);
             if (window != null)
@@ -215,7 +164,7 @@ namespace Maps.UWP.Renderer
 
         private void OnMapElementClick(MapControl sender, MapElementClickEventArgs args)
         {
-            CloseOldWindows();
+            CloseWindows();
 
             var element = args.MapElements.FirstOrDefault(el => el is MapIcon icon && icon.Title != "I");
             if (element == null)
@@ -244,7 +193,7 @@ namespace Maps.UWP.Renderer
                         Coordinate = new Coordinate(pin.Location.Position.Latitude, pin.Location.Position.Longitude),
                         MyType = MyPinType.Undefined
                     };
-                    _pins.Remove(myPin);
+                    _pins.RemovePin(myPin);
 
                     var window = _nativeMap.Children.FirstOrDefault(el => el is PinInfo);
                     if (window != null)
@@ -257,7 +206,7 @@ namespace Maps.UWP.Renderer
             }
         }
 
-        private void OnRenderPath(string encodePolyline)
+        private void OnRenderPath()
         {
             var element = _nativeMap.MapElements.FirstOrDefault(el => el is MapPolyline);
             if (element != null)
@@ -265,8 +214,7 @@ namespace Maps.UWP.Renderer
                 _nativeMap.MapElements.Remove(element);
             }
 
-            var points = PolylineDecoder.Decode(encodePolyline);
-            var positions = LocationsToBasicGeopositions.Convert(points);
+            var positions = LocationsToBasicGeopositions.Convert(_routePath.Coordinates);
             var polyline = new MapPolyline
             {
                 StrokeColor = Colors.DarkRed,
@@ -276,10 +224,49 @@ namespace Maps.UWP.Renderer
             _nativeMap.MapElements.Add(polyline);
         }
 
-        private void OnIconUpdate(MyPin pin, string path)
+        private void OnAddPin(MyPin pin)
         {
-            RemovePin(pin);
-            AddMyPin(pin);
+            var pinPosition = new BasicGeoposition
+            {
+                Latitude = pin.Coordinate.Latitude,
+                Longitude = pin.Coordinate.Longitude
+            };
+            var pinPoint = new Geopoint(pinPosition);
+            var mapIcon = new MapIcon
+            {
+                Image = RandomAccessStreamReference.CreateFromUri(new Uri($"ms-appx:///{pin.IconPath}")),
+                CollisionBehaviorDesired = MapElementCollisionBehavior.RemainVisible,
+                Location = pinPoint,
+                NormalizedAnchorPoint = new Point(0.5, 1.0),
+                Title = pin.Label
+            };
+            _nativeMap.MapElements.Add(mapIcon);
+        }
+        private void OnRemovePin(Coordinate pinCoordinate)
+        {
+            var element = _nativeMap.MapElements.FirstOrDefault(el =>
+                el is MapIcon icon &&
+                new Coordinate(icon.Location.Position.Latitude, icon.Location.Position.Longitude)
+                    .Equals(pinCoordinate));
+            if (element != null)
+            {
+                _nativeMap.MapElements.Remove(element);
+            }
+        }
+        private void OnPinSelected(MyPin newPin, MyPin oldPin)
+        {
+            if(oldPin != null)
+            {
+                OnRemovePin(oldPin.Coordinate);
+                OnAddPin(oldPin);
+            }
+
+            if (newPin == null)
+            {
+                return;
+            }
+            OnRemovePin(newPin.Coordinate);
+            OnAddPin(newPin);
         }
     }
 }

@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
 using Maps.Controls.Models;
-using MapsApiLibrary.Models.Directions;
 
 namespace Maps.ViewModels
 {
@@ -13,9 +11,5 @@ namespace Maps.ViewModels
         PinPoint SelectedPinPoint { get; set; }
 
         ICommand ListViewTapped { get; }
-
-        void LoadPoints(DirectionsResult result);
-
-        event Action<PinPoint, PinPoint> PinSelecting;
     }
 }

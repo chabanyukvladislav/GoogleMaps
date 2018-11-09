@@ -3,7 +3,7 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:vm="clr-namespace:Maps.ViewModels"
             xmlns:myControls="clr-namespace:Maps.Controls"
-             xmlns:converters="clr-namespace:Maps.Converters"
+            xmlns:converters="clr-namespace:Maps.Converters"
             x:Class="Maps.Views.MainPage">
     <ContentPage.BindingContext>
         <vm:MainViewModel />
@@ -31,7 +31,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Picker Grid.Column="0" HorizontalOptions="Center" Margin="5, 5, 25, 5" ItemsSource="{Binding}" SelectedItem="{Binding}"/>
+                <Picker Grid.Column="0" HorizontalOptions="Center" Margin="5, 5, 25, 5" ItemsSource="{Binding TrafficModels}" SelectedItem="{Binding SelectedTrafficModel}"/>
                 <Button Grid.Column="1" Text="Calculate" HorizontalOptions="Center" Margin="5" Command="{Binding Calculate}" CommandParameter="false"/>
                 <Button Grid.Column="2" Text="Calculate optimize" HorizontalOptions="Center" Margin="5" Command="{Binding Calculate}" CommandParameter="true"/>
             </Grid>

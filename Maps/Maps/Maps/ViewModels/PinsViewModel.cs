@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
+using Maps.Collections;
+using Maps.Controls;
 using Maps.Controls.Models;
-using MapsApiLibrary.Models.Directions;
 using Xamarin.Forms;
 
 namespace Maps.ViewModels
 {
     public class PinsViewModel : IPinsViewModel
     {
+        private readonly SharedMyPins _pins;
         private ObservableCollection<PinPoint> _pinPoints;
         private PinPoint _selectedPinPoint;
-        private PinPoint _lastSelected;
 
         public ObservableCollection<PinPoint> PinPoints
         {
@@ -37,24 +37,58 @@ namespace Maps.ViewModels
 
         public PinsViewModel()
         {
+            _pins = SharedMyPins.Get;
             PinPoints = new ObservableCollection<PinPoint>();
 
             ListViewTapped = new Command(ExecuteListViewTapped);
+
+            SharedResult.ResultChanged += OnResultChanged;
         }
 
-        public void LoadPoints(DirectionsResult result)
+        private void ExecuteListViewTapped()
+        {
+            if (SelectedPinPoint == null)
+            {
+                return;
+            }
+
+            var selectedPin = new MyPin
+            {
+                MyType = MyPinType.Undefined,
+                Coordinate = SelectedPinPoint.Coordinate
+            };
+            _pins.SelectPin(selectedPin);
+        }
+
+        protected virtual void OnPropertyChanged(string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        private void OnResultChanged()
         {
             PinPoints.Clear();
-            var legs = result.Routes[0].Legs;
-            var distance = 0;
-            var duration = 0;
-            for (var i = 0; i < legs.Count; ++i)
+            var legs = SharedResult.Result.Routes[0].Legs;
+
+            var startPinPoint = new PinPoint
+            {
+                Number = 0,
+                Address = legs[0].StartAddress,
+                Coordinate = _pins.Pins.StartPin.Coordinate,
+                Distance = 0,
+                Duration = 0
+            };
+            PinPoints.Add(startPinPoint);
+
+            var distance = legs[0].Distance.Value;
+            var duration = legs[0].Duration.Value;
+
+            for (var i = 1; i < legs.Count; ++i)
             {
                 var pinPoint = new PinPoint
                 {
                     Number = i,
                     Address = legs[i].StartAddress,
-                    Coordinate = legs[i].StartLocation,
+                    Coordinate = _pins.Pins.WaypointsPin[SharedResult.Result.Routes[0].WaypointOrder[i - 1]].Coordinate,
                     Distance = distance,
                     Duration = duration
                 };
@@ -62,41 +96,19 @@ namespace Maps.ViewModels
 
                 distance += legs[i].Distance.Value;
                 duration += legs[i].Duration.Value;
-
-                if (i != legs.Count - 1)
-                {
-                    continue;
-                }
-                pinPoint = new PinPoint
-                {
-                    Number = i + 1,
-                    Address = legs[i].EndAddress,
-                    Coordinate = legs[i].EndLocation,
-                    Distance = distance,
-                    Duration = duration
-                };
-                PinPoints.Add(pinPoint);
             }
-        }
 
-        private void ExecuteListViewTapped()
-        {
-            if (SelectedPinPoint == null && _lastSelected == null)
+            var endPinPoint = new PinPoint
             {
-                return;
-            }
-
-            PinSelecting?.Invoke(SelectedPinPoint, _lastSelected);
-
-            _lastSelected = SelectedPinPoint;
-        }
-
-        protected virtual void OnPropertyChanged(string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                Number = legs.Count,
+                Address = legs[legs.Count - 1].EndAddress,
+                Coordinate = _pins.Pins.EndPin.Coordinate,
+                Distance = distance,
+                Duration = duration
+            };
+            PinPoints.Add(endPinPoint);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public event Action<PinPoint, PinPoint> PinSelecting;
     }
 }

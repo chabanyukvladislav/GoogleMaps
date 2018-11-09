@@ -73,7 +73,7 @@ namespace MapsApiLibrary.Api.Parameters.Directions
         {
             var mainPoint = new DateTime(1970, 1, 1); //Main point date
             var pastTime = date - mainPoint;
-            return pastTime.TotalSeconds.ToString(CultureInfo.InvariantCulture).Trim(',');
+            return ((int)pastTime.TotalSeconds).ToString(CultureInfo.InvariantCulture).Trim(',');
         }
         private static DateTime StringToDateTime(string date)
         {
