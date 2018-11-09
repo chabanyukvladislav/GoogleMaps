@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using Maps.Content;
 using Maps.Controls;
@@ -250,7 +251,6 @@ namespace Maps.Collections
                     return null;
             }
         }
-
         public void SelectPin(MyPin pin)
         {
             if (_selectedPin != null)
@@ -283,7 +283,27 @@ namespace Maps.Collections
             _selectedPin = myPin;
         }
 
+        public void UpdatePinsFromPinPoints(ObservableCollection<PinPoint> collection)
+        {
+            Pins.StartPin.Coordinate = collection[0].Coordinate;
+            Pins.WaypointsPin.Clear();
+            for (var i = 1; i < collection.Count - 1; ++i)
+            {
+                var pin = new MyPin
+                {
+                    MyType = MyPinType.Waypoint,
+                    Coordinate = collection[i].Coordinate,
+                    IconPath = IconsPath.WaypointPin
+                };
+                Pins.WaypointsPin.Add(pin);
+            }
+            Pins.EndPin.Coordinate = collection[collection.Count - 1].Coordinate;
+
+            PinsUpdated?.Invoke();
+        }
+
         public event Action PinsChanged;
+        public event Action PinsUpdated;
         public event Action<MyPin> PinAdded;
         public event Action<Coordinate> PinRemoved;
         public event Action<MyPin, MyPin> PinSelected;

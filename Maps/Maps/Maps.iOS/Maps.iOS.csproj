@@ -132,6 +132,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>11.0.2</Version>
     </PackageReference>
+    <PackageReference Include="Telerik.UI.for.Xamarin.DataControls.Trial">
+      <Version>2018.3.1018.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>0.11.0-preview</Version>
     </PackageReference>
