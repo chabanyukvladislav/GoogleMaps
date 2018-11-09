@@ -88,12 +88,10 @@ namespace Maps.UWP.Renderer
         {
             var viewModel = GetMapViewModel();
 
-            var element = _nativeMap.MapElements.FirstOrDefault(el => el is MapIcon icon &&
-                                                                      new MyPin
-                                                                      {
-                                                                          Coordinate = new Coordinate(icon.Location.Position.Latitude,
-                                                                              icon.Location.Position.Longitude)
-                                                                      }.Equals(pin));
+            var element = _nativeMap.MapElements.FirstOrDefault(el =>
+                el is MapIcon icon &&
+                new Coordinate(icon.Location.Position.Latitude, icon.Location.Position.Longitude)
+                    .Equals(pin.Coordinate));
             if (element != null)
             {
                 _nativeMap.MapElements.Remove(element);
@@ -205,7 +203,7 @@ namespace Maps.UWP.Renderer
                     Application.Current.MainPage.DisplayAlert("Error", "You can`t add more then 1 end point", "Ok");
                     return;
             }
-            
+
             AddMyPin(pin);
 
             var window = _nativeMap.Children.FirstOrDefault(el => el is MapAddPin);
@@ -285,4 +283,3 @@ namespace Maps.UWP.Renderer
         }
     }
 }
-//Bug with deleting, turn off selecting(not work)

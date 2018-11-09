@@ -58,7 +58,7 @@ namespace Maps.Controls
             }
         }
 
-        public static event Action<MyPin, string> IconPathChanged;
+        public event Action<MyPin, string> IconPathChanged;
         public event Action<MyPin, Coordinate> CoordinateChanged;
     }
 }

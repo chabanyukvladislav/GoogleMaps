@@ -103,19 +103,19 @@ namespace Maps.Controls
                         break;
                     }
 
-                    if (StartPin.Coordinate.Equals(pin.Coordinate))
+                    if (StartPin.Coordinate != null && StartPin.Coordinate.Equals(pin.Coordinate))
                     {
                         StartPin.Coordinate = null;
                         break;
                     }
 
-                    if (EndPin.Coordinate.Equals(pin.Coordinate))
+                    if (EndPin.Coordinate != null && EndPin.Coordinate.Equals(pin.Coordinate))
                     {
                         EndPin.Coordinate = null;
                         break;
                     }
 
-                    if (MyCoordinatePin.Coordinate.Equals(pin.Coordinate))
+                    if (MyCoordinatePin.Coordinate != null && MyCoordinatePin.Coordinate.Equals(pin.Coordinate))
                     {
                         MyCoordinatePin.Coordinate = null;
                     }

@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\MyPinCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Content\IconsPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\Models\PinAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\Models\PinPoint.cs" />
