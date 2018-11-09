@@ -16,6 +16,7 @@ namespace Maps.ViewModels
     {
         private IService<DirectionsParameters, DirectionsResult> _service;
         private readonly SharedMyPins _myPins;
+        private object _lastCalculateOptimize;
 
         private ObservableCollection<string> _trafficModels;
         private TrafficModels _selectedTrafficModel;
@@ -47,6 +48,7 @@ namespace Maps.ViewModels
         public MainViewModel()
         {
             _trafficModels = new ObservableCollection<string>(Enum.GetNames(typeof(TrafficModels)));
+            _lastCalculateOptimize = true;
 
             _service = new DirectionsService();
             _myPins = SharedMyPins.Get;
@@ -57,6 +59,8 @@ namespace Maps.ViewModels
             Calculate = new Command(ExecuteCalculate, IsButtonEnabled);
 
             OnPinsChanged();
+
+            _myPins.PinsUpdated += OnPinUpdated;
         }
 
         public static string ConvertEnumToString(Enum eEnum)
@@ -88,17 +92,21 @@ namespace Maps.ViewModels
             }
 
             SharedResult.Result = result;
+            _lastCalculateOptimize = optimize;
         }
 
         protected virtual void OnPropertyChanged(string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
         private void OnPinsChanged()
         {
             _myPins.Pins.StartPin.CoordinateChanged += CanCalculateUpdate;
             _myPins.Pins.EndPin.CoordinateChanged += CanCalculateUpdate;
+        }
+        private void OnPinUpdated()
+        {
+            Calculate.Execute(_lastCalculateOptimize);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

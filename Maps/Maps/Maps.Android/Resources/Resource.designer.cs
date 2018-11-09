@@ -26,6 +26,404 @@ namespace Maps.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Telerik.XamarinForms.Common.Android.Resource.Attribute.fillColor = global::Maps.Droid.Resource.Attribute.fillColor;
+			global::Telerik.XamarinForms.Common.Android.Resource.Attribute.font = global::Maps.Droid.Resource.Attribute.font;
+			global::Telerik.XamarinForms.Common.Android.Resource.Attribute.fontProviderAuthority = global::Maps.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Telerik.XamarinForms.Common.Android.Resource.Attribute.fontProviderCerts = global::Maps.Droid.Resource.Attribute.fontProviderCerts;
+			global::Telerik.XamarinForms.Common.Android.Resource.Attribute.fontProviderFetchStrategy = global::Maps.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Telerik.XamarinForms.Common.Android.Resource.Attribute.fontProviderFetchTimeout = global::Maps.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Telerik.XamarinForms.Common.Android.Resource.Attribute.fontProviderPackage = global::Maps.Droid.Resource.Attribute.fontProviderPackage;
+			global::Telerik.XamarinForms.Common.Android.Resource.Attribute.fontProviderQuery = global::Maps.Droid.Resource.Attribute.fontProviderQuery;
+			global::Telerik.XamarinForms.Common.Android.Resource.Attribute.fontStyle = global::Maps.Droid.Resource.Attribute.fontStyle;
+			global::Telerik.XamarinForms.Common.Android.Resource.Attribute.fontWeight = global::Maps.Droid.Resource.Attribute.fontWeight;
+			global::Telerik.XamarinForms.Common.Android.Resource.Attribute.strokeColor = global::Maps.Droid.Resource.Attribute.strokeColor;
+			global::Telerik.XamarinForms.Common.Android.Resource.Boolean.abc_action_bar_embed_tabs = global::Maps.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Telerik.XamarinForms.Common.Android.Resource.Color.black = global::Maps.Droid.Resource.Color.black;
+			global::Telerik.XamarinForms.Common.Android.Resource.Color.notification_action_color_filter = global::Maps.Droid.Resource.Color.notification_action_color_filter;
+			global::Telerik.XamarinForms.Common.Android.Resource.Color.notification_icon_bg_color = global::Maps.Droid.Resource.Color.notification_icon_bg_color;
+			global::Telerik.XamarinForms.Common.Android.Resource.Color.notification_material_background_media_default_color = global::Maps.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Telerik.XamarinForms.Common.Android.Resource.Color.primary_text_default_material_dark = global::Maps.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Telerik.XamarinForms.Common.Android.Resource.Color.ripple_material_light = global::Maps.Droid.Resource.Color.ripple_material_light;
+			global::Telerik.XamarinForms.Common.Android.Resource.Color.secondary_text_default_material_dark = global::Maps.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Telerik.XamarinForms.Common.Android.Resource.Color.secondary_text_default_material_light = global::Maps.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Telerik.XamarinForms.Common.Android.Resource.Color.white = global::Maps.Droid.Resource.Color.white;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.compat_button_inset_horizontal_material = global::Maps.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.compat_button_inset_vertical_material = global::Maps.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.compat_button_padding_horizontal_material = global::Maps.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.compat_button_padding_vertical_material = global::Maps.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.compat_control_corner_material = global::Maps.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_action_icon_size = global::Maps.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_action_text_size = global::Maps.Droid.Resource.Dimension.notification_action_text_size;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_big_circle_margin = global::Maps.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_content_margin_start = global::Maps.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_large_icon_height = global::Maps.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_large_icon_width = global::Maps.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_main_column_padding_top = global::Maps.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_media_narrow_margin = global::Maps.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_right_icon_size = global::Maps.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_right_side_padding_top = global::Maps.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_small_icon_background_padding = global::Maps.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_small_icon_size_as_large = global::Maps.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_subtext_size = global::Maps.Droid.Resource.Dimension.notification_subtext_size;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_top_pad = global::Maps.Droid.Resource.Dimension.notification_top_pad;
+			global::Telerik.XamarinForms.Common.Android.Resource.Dimension.notification_top_pad_large_text = global::Maps.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Telerik.XamarinForms.Common.Android.Resource.Drawable.notification_action_background = global::Maps.Droid.Resource.Drawable.notification_action_background;
+			global::Telerik.XamarinForms.Common.Android.Resource.Drawable.notification_bg = global::Maps.Droid.Resource.Drawable.notification_bg;
+			global::Telerik.XamarinForms.Common.Android.Resource.Drawable.notification_bg_low = global::Maps.Droid.Resource.Drawable.notification_bg_low;
+			global::Telerik.XamarinForms.Common.Android.Resource.Drawable.notification_bg_low_normal = global::Maps.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Telerik.XamarinForms.Common.Android.Resource.Drawable.notification_bg_low_pressed = global::Maps.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Telerik.XamarinForms.Common.Android.Resource.Drawable.notification_bg_normal = global::Maps.Droid.Resource.Drawable.notification_bg_normal;
+			global::Telerik.XamarinForms.Common.Android.Resource.Drawable.notification_bg_normal_pressed = global::Maps.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Telerik.XamarinForms.Common.Android.Resource.Drawable.notification_icon_background = global::Maps.Droid.Resource.Drawable.notification_icon_background;
+			global::Telerik.XamarinForms.Common.Android.Resource.Drawable.notification_template_icon_bg = global::Maps.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Telerik.XamarinForms.Common.Android.Resource.Drawable.notification_template_icon_low_bg = global::Maps.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Telerik.XamarinForms.Common.Android.Resource.Drawable.notification_tile_bg = global::Maps.Droid.Resource.Drawable.notification_tile_bg;
+			global::Telerik.XamarinForms.Common.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::Maps.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.action0 = global::Maps.Droid.Resource.Id.action0;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.action_container = global::Maps.Droid.Resource.Id.action_container;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.action_divider = global::Maps.Droid.Resource.Id.action_divider;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.action_image = global::Maps.Droid.Resource.Id.action_image;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.action_text = global::Maps.Droid.Resource.Id.action_text;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.actions = global::Maps.Droid.Resource.Id.actions;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.async = global::Maps.Droid.Resource.Id.async;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.blocking = global::Maps.Droid.Resource.Id.blocking;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.cancel_action = global::Maps.Droid.Resource.Id.cancel_action;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.chronometer = global::Maps.Droid.Resource.Id.chronometer;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.end_padder = global::Maps.Droid.Resource.Id.end_padder;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.forever = global::Maps.Droid.Resource.Id.forever;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.icon = global::Maps.Droid.Resource.Id.icon;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.icon_group = global::Maps.Droid.Resource.Id.icon_group;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.info = global::Maps.Droid.Resource.Id.info;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.italic = global::Maps.Droid.Resource.Id.italic;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.line1 = global::Maps.Droid.Resource.Id.line1;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.line3 = global::Maps.Droid.Resource.Id.line3;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.media_actions = global::Maps.Droid.Resource.Id.media_actions;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.normal = global::Maps.Droid.Resource.Id.normal;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.notification_background = global::Maps.Droid.Resource.Id.notification_background;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.notification_main_column = global::Maps.Droid.Resource.Id.notification_main_column;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.notification_main_column_container = global::Maps.Droid.Resource.Id.notification_main_column_container;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.right_icon = global::Maps.Droid.Resource.Id.right_icon;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.right_side = global::Maps.Droid.Resource.Id.right_side;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.status_bar_latest_event_content = global::Maps.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.tag_transition_group = global::Maps.Droid.Resource.Id.tag_transition_group;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.text = global::Maps.Droid.Resource.Id.text;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.text2 = global::Maps.Droid.Resource.Id.text2;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.time = global::Maps.Droid.Resource.Id.time;
+			global::Telerik.XamarinForms.Common.Android.Resource.Id.title = global::Maps.Droid.Resource.Id.title;
+			global::Telerik.XamarinForms.Common.Android.Resource.Integer.cancel_button_image_alpha = global::Maps.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Telerik.XamarinForms.Common.Android.Resource.Integer.status_bar_notification_info_maxnum = global::Maps.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_action = global::Maps.Droid.Resource.Layout.notification_action;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_action_tombstone = global::Maps.Droid.Resource.Layout.notification_action_tombstone;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_media_action = global::Maps.Droid.Resource.Layout.notification_media_action;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_media_cancel_action = global::Maps.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_template_big_media = global::Maps.Droid.Resource.Layout.notification_template_big_media;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_template_big_media_custom = global::Maps.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_template_big_media_narrow = global::Maps.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_template_big_media_narrow_custom = global::Maps.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_template_custom_big = global::Maps.Droid.Resource.Layout.notification_template_custom_big;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_template_icon_group = global::Maps.Droid.Resource.Layout.notification_template_icon_group;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_template_lines_media = global::Maps.Droid.Resource.Layout.notification_template_lines_media;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_template_media = global::Maps.Droid.Resource.Layout.notification_template_media;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_template_media_custom = global::Maps.Droid.Resource.Layout.notification_template_media_custom;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_template_part_chronometer = global::Maps.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.notification_template_part_time = global::Maps.Droid.Resource.Layout.notification_template_part_time;
+			global::Telerik.XamarinForms.Common.Android.Resource.Layout.trial_message = global::Maps.Droid.Resource.Layout.trial_message;
+			global::Telerik.XamarinForms.Common.Android.Resource.String.ApplicationName = global::Maps.Droid.Resource.String.ApplicationName;
+			global::Telerik.XamarinForms.Common.Android.Resource.String.Hello = global::Maps.Droid.Resource.String.Hello;
+			global::Telerik.XamarinForms.Common.Android.Resource.String.status_bar_notification_info_overflow = global::Maps.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Telerik.XamarinForms.Common.Android.Resource.String.trial_message = global::Maps.Droid.Resource.String.trial_message;
+			global::Telerik.XamarinForms.Common.Android.Resource.String.trial_message_caption = global::Maps.Droid.Resource.String.trial_message_caption;
+			global::Telerik.XamarinForms.Common.Android.Resource.Style.TextAppearance_Compat_Notification = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Telerik.XamarinForms.Common.Android.Resource.Style.TextAppearance_Compat_Notification_Info = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Telerik.XamarinForms.Common.Android.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Telerik.XamarinForms.Common.Android.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Telerik.XamarinForms.Common.Android.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Telerik.XamarinForms.Common.Android.Resource.Style.TextAppearance_Compat_Notification_Media = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Telerik.XamarinForms.Common.Android.Resource.Style.TextAppearance_Compat_Notification_Time = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Telerik.XamarinForms.Common.Android.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Telerik.XamarinForms.Common.Android.Resource.Style.TextAppearance_Compat_Notification_Title = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Telerik.XamarinForms.Common.Android.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Telerik.XamarinForms.Common.Android.Resource.Style.Widget_Compat_NotificationActionContainer = global::Maps.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Telerik.XamarinForms.Common.Android.Resource.Style.Widget_Compat_NotificationActionText = global::Maps.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamily = global::Maps.Droid.Resource.Styleable.FontFamily;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamily_fontProviderAuthority = global::Maps.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamily_fontProviderCerts = global::Maps.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::Maps.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::Maps.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamily_fontProviderPackage = global::Maps.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamily_fontProviderQuery = global::Maps.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamilyFont = global::Maps.Droid.Resource.Styleable.FontFamilyFont;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamilyFont_android_font = global::Maps.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamilyFont_android_fontStyle = global::Maps.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamilyFont_android_fontWeight = global::Maps.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamilyFont_font = global::Maps.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamilyFont_fontStyle = global::Maps.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Telerik.XamarinForms.Common.Android.Resource.Styleable.FontFamilyFont_fontWeight = global::Maps.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Animation.drawer_slide_in_top = global::Maps.Droid.Resource.Animation.drawer_slide_in_top;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Animation.drawer_slide_out_top = global::Maps.Droid.Resource.Animation.drawer_slide_out_top;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fastScrollEnabled = global::Maps.Droid.Resource.Attribute.fastScrollEnabled;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::Maps.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::Maps.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fastScrollVerticalThumbDrawable = global::Maps.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fastScrollVerticalTrackDrawable = global::Maps.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fillColor = global::Maps.Droid.Resource.Attribute.fillColor;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fillViewport = global::Maps.Droid.Resource.Attribute.fillViewport;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.font = global::Maps.Droid.Resource.Attribute.font;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fontProviderAuthority = global::Maps.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fontProviderCerts = global::Maps.Droid.Resource.Attribute.fontProviderCerts;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fontProviderFetchStrategy = global::Maps.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fontProviderFetchTimeout = global::Maps.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fontProviderPackage = global::Maps.Droid.Resource.Attribute.fontProviderPackage;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fontProviderQuery = global::Maps.Droid.Resource.Attribute.fontProviderQuery;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fontStyle = global::Maps.Droid.Resource.Attribute.fontStyle;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.fontWeight = global::Maps.Droid.Resource.Attribute.fontWeight;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.layoutManager = global::Maps.Droid.Resource.Attribute.layoutManager;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.pointerFill = global::Maps.Droid.Resource.Attribute.pointerFill;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.pointerMargin = global::Maps.Droid.Resource.Attribute.pointerMargin;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.pointerSize = global::Maps.Droid.Resource.Attribute.pointerSize;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.radScrollViewStyle = global::Maps.Droid.Resource.Attribute.radScrollViewStyle;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.reverseLayout = global::Maps.Droid.Resource.Attribute.reverseLayout;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.scrollMode = global::Maps.Droid.Resource.Attribute.scrollMode;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.spanCount = global::Maps.Droid.Resource.Attribute.spanCount;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.stackFromEnd = global::Maps.Droid.Resource.Attribute.stackFromEnd;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Attribute.strokeColor = global::Maps.Droid.Resource.Attribute.strokeColor;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Boolean.abc_action_bar_embed_tabs = global::Maps.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.black = global::Maps.Droid.Resource.Color.black;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.dark_grey_text_color = global::Maps.Droid.Resource.Color.dark_grey_text_color;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.grey_text_color = global::Maps.Droid.Resource.Color.grey_text_color;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.groupHeaderTextColor = global::Maps.Droid.Resource.Color.groupHeaderTextColor;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.light_grey = global::Maps.Droid.Resource.Color.light_grey;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.listAccentColor = global::Maps.Droid.Resource.Color.listAccentColor;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.listItemTextColor = global::Maps.Droid.Resource.Color.listItemTextColor;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.notification_action_color_filter = global::Maps.Droid.Resource.Color.notification_action_color_filter;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.notification_icon_bg_color = global::Maps.Droid.Resource.Color.notification_icon_bg_color;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.pressedColor = global::Maps.Droid.Resource.Color.pressedColor;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.ripple_material_light = global::Maps.Droid.Resource.Color.ripple_material_light;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.secondary_text_default_material_light = global::Maps.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.selectionColor = global::Maps.Droid.Resource.Color.selectionColor;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.shadeColor = global::Maps.Droid.Resource.Color.shadeColor;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.shadeColorCenter = global::Maps.Droid.Resource.Color.shadeColorCenter;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.transparent = global::Maps.Droid.Resource.Color.transparent;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Color.white = global::Maps.Droid.Resource.Color.white;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.card_deck_translation = global::Maps.Droid.Resource.Dimension.card_deck_translation;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.compat_button_inset_horizontal_material = global::Maps.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.compat_button_inset_vertical_material = global::Maps.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.compat_button_padding_horizontal_material = global::Maps.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.compat_button_padding_vertical_material = global::Maps.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.compat_control_corner_material = global::Maps.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.fastscroll_default_thickness = global::Maps.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.fastscroll_margin = global::Maps.Droid.Resource.Dimension.fastscroll_margin;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.fastscroll_minimum_range = global::Maps.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::Maps.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::Maps.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::Maps.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.legend_stroke_width = global::Maps.Droid.Resource.Dimension.legend_stroke_width;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_action_icon_size = global::Maps.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_action_text_size = global::Maps.Droid.Resource.Dimension.notification_action_text_size;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_big_circle_margin = global::Maps.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_content_margin_start = global::Maps.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_large_icon_height = global::Maps.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_large_icon_width = global::Maps.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_main_column_padding_top = global::Maps.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_media_narrow_margin = global::Maps.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_right_icon_size = global::Maps.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_right_side_padding_top = global::Maps.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_small_icon_background_padding = global::Maps.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_small_icon_size_as_large = global::Maps.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_subtext_size = global::Maps.Droid.Resource.Dimension.notification_subtext_size;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_top_pad = global::Maps.Droid.Resource.Dimension.notification_top_pad;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Dimension.notification_top_pad_large_text = global::Maps.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.gingerbread_background = global::Maps.Droid.Resource.Drawable.gingerbread_background;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.hamburger = global::Maps.Droid.Resource.Drawable.hamburger;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.hmb = global::Maps.Droid.Resource.Drawable.hmb;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.ic_collapse = global::Maps.Droid.Resource.Drawable.ic_collapse;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.ic_expand = global::Maps.Droid.Resource.Drawable.ic_expand;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.notification_action_background = global::Maps.Droid.Resource.Drawable.notification_action_background;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.notification_bg = global::Maps.Droid.Resource.Drawable.notification_bg;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.notification_bg_low = global::Maps.Droid.Resource.Drawable.notification_bg_low;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.notification_bg_low_normal = global::Maps.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.notification_bg_low_pressed = global::Maps.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.notification_bg_normal = global::Maps.Droid.Resource.Drawable.notification_bg_normal;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.notification_bg_normal_pressed = global::Maps.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.notification_icon_background = global::Maps.Droid.Resource.Drawable.notification_icon_background;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.notification_template_icon_bg = global::Maps.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.notification_template_icon_low_bg = global::Maps.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.notification_tile_bg = global::Maps.Droid.Resource.Drawable.notification_tile_bg;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::Maps.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.pressable_item_background = global::Maps.Droid.Resource.Drawable.pressable_item_background;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.selectable_item_background = global::Maps.Droid.Resource.Drawable.selectable_item_background;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.shade_bottom = global::Maps.Droid.Resource.Drawable.shade_bottom;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.shade_corner = global::Maps.Droid.Resource.Drawable.shade_corner;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.shade_right = global::Maps.Droid.Resource.Drawable.shade_right;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Drawable.tab_view_popup_background = global::Maps.Droid.Resource.Drawable.tab_view_popup_background;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.action_container = global::Maps.Droid.Resource.Id.action_container;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.action_divider = global::Maps.Droid.Resource.Id.action_divider;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.action_image = global::Maps.Droid.Resource.Id.action_image;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.action_text = global::Maps.Droid.Resource.Id.action_text;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.actions = global::Maps.Droid.Resource.Id.actions;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.async = global::Maps.Droid.Resource.Id.async;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.blocking = global::Maps.Droid.Resource.Id.blocking;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.chart_data_point_content_container = global::Maps.Droid.Resource.Id.chart_data_point_content_container;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.chart_tooltip_category = global::Maps.Droid.Resource.Id.chart_tooltip_category;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.chart_tooltip_pointer = global::Maps.Droid.Resource.Id.chart_tooltip_pointer;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.chart_tooltip_value = global::Maps.Droid.Resource.Id.chart_tooltip_value;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.chronometer = global::Maps.Droid.Resource.Id.chronometer;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.forever = global::Maps.Droid.Resource.Id.forever;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.groupHeaderCollapseImage = global::Maps.Droid.Resource.Id.groupHeaderCollapseImage;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.groupHeaderText = global::Maps.Droid.Resource.Id.groupHeaderText;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.horizontal = global::Maps.Droid.Resource.Id.horizontal;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.icon = global::Maps.Droid.Resource.Id.icon;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.icon_group = global::Maps.Droid.Resource.Id.icon_group;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.imageView = global::Maps.Droid.Resource.Id.imageView;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.info = global::Maps.Droid.Resource.Id.info;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.italic = global::Maps.Droid.Resource.Id.italic;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.item_touch_helper_previous_elevation = global::Maps.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.line1 = global::Maps.Droid.Resource.Id.line1;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.line3 = global::Maps.Droid.Resource.Id.line3;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.navItemsLayout = global::Maps.Droid.Resource.Id.navItemsLayout;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.navigationItemText = global::Maps.Droid.Resource.Id.navigationItemText;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.normal = global::Maps.Droid.Resource.Id.normal;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.notification_background = global::Maps.Droid.Resource.Id.notification_background;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.notification_main_column = global::Maps.Droid.Resource.Id.notification_main_column;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.notification_main_column_container = global::Maps.Droid.Resource.Id.notification_main_column_container;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.right_icon = global::Maps.Droid.Resource.Id.right_icon;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.right_side = global::Maps.Droid.Resource.Id.right_side;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.tabItemImageView = global::Maps.Droid.Resource.Id.tabItemImageView;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.tabItemTextView = global::Maps.Droid.Resource.Id.tabItemTextView;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.tag_transition_group = global::Maps.Droid.Resource.Id.tag_transition_group;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.text = global::Maps.Droid.Resource.Id.text;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.text1 = global::Maps.Droid.Resource.Id.text1;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.text2 = global::Maps.Droid.Resource.Id.text2;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.time = global::Maps.Droid.Resource.Id.time;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.title = global::Maps.Droid.Resource.Id.title;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.tooltip_content_container = global::Maps.Droid.Resource.Id.tooltip_content_container;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Id.vertical = global::Maps.Droid.Resource.Id.vertical;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Integer.status_bar_notification_info_maxnum = global::Maps.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.default_tooltip_content = global::Maps.Droid.Resource.Layout.default_tooltip_content;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.drawer_blur_fade_layer = global::Maps.Droid.Resource.Layout.drawer_blur_fade_layer;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.navigation_drawer_content = global::Maps.Droid.Resource.Layout.navigation_drawer_content;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.navigation_item_view = global::Maps.Droid.Resource.Layout.navigation_item_view;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.notification_action = global::Maps.Droid.Resource.Layout.notification_action;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.notification_action_tombstone = global::Maps.Droid.Resource.Layout.notification_action_tombstone;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.notification_template_custom_big = global::Maps.Droid.Resource.Layout.notification_template_custom_big;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.notification_template_icon_group = global::Maps.Droid.Resource.Layout.notification_template_icon_group;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.notification_template_part_chronometer = global::Maps.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.notification_template_part_time = global::Maps.Droid.Resource.Layout.notification_template_part_time;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.on_demand_automatic = global::Maps.Droid.Resource.Layout.on_demand_automatic;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.on_demand_manual = global::Maps.Droid.Resource.Layout.on_demand_manual;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.scrollview_scrollbars = global::Maps.Droid.Resource.Layout.scrollview_scrollbars;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.simple_empty_content = global::Maps.Droid.Resource.Layout.simple_empty_content;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.simple_group_header_item = global::Maps.Droid.Resource.Layout.simple_group_header_item;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.simple_list_item = global::Maps.Droid.Resource.Layout.simple_list_item;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.tab_item_view = global::Maps.Droid.Resource.Layout.tab_item_view;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.tooltip_container = global::Maps.Droid.Resource.Layout.tooltip_container;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Layout.trial_message = global::Maps.Droid.Resource.Layout.trial_message;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.String.ApplicationName = global::Maps.Droid.Resource.String.ApplicationName;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.String.Hello = global::Maps.Droid.Resource.String.Hello;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.String.list_view_default_empty_content = global::Maps.Droid.Resource.String.list_view_default_empty_content;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.String.on_demand_manual_button_busy = global::Maps.Droid.Resource.String.on_demand_manual_button_busy;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.String.on_demand_manual_button_idle = global::Maps.Droid.Resource.String.on_demand_manual_button_idle;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.String.status_bar_notification_info_overflow = global::Maps.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.String.trial_message = global::Maps.Droid.Resource.String.trial_message;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.String.trial_message_caption = global::Maps.Droid.Resource.String.trial_message_caption;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Style.RadScrollViewStyle = global::Maps.Droid.Resource.Style.RadScrollViewStyle;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Style.RadScrollViewTheme = global::Maps.Droid.Resource.Style.RadScrollViewTheme;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Style.TextAppearance_Compat_Notification = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Style.TextAppearance_Compat_Notification_Info = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Style.TextAppearance_Compat_Notification_Time = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Style.TextAppearance_Compat_Notification_Title = global::Maps.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Style.Widget_Compat_NotificationActionContainer = global::Maps.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Style.Widget_Compat_NotificationActionText = global::Maps.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamily = global::Maps.Droid.Resource.Styleable.FontFamily;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamily_fontProviderAuthority = global::Maps.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamily_fontProviderCerts = global::Maps.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::Maps.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::Maps.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamily_fontProviderPackage = global::Maps.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamily_fontProviderQuery = global::Maps.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamilyFont = global::Maps.Droid.Resource.Styleable.FontFamilyFont;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamilyFont_android_font = global::Maps.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamilyFont_android_fontStyle = global::Maps.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamilyFont_android_fontWeight = global::Maps.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamilyFont_font = global::Maps.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamilyFont_fontStyle = global::Maps.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.FontFamilyFont_fontWeight = global::Maps.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.PointerLayout = global::Maps.Droid.Resource.Styleable.PointerLayout;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.PointerLayout_pointerFill = global::Maps.Droid.Resource.Styleable.PointerLayout_pointerFill;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.PointerLayout_pointerMargin = global::Maps.Droid.Resource.Styleable.PointerLayout_pointerMargin;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.PointerLayout_pointerSize = global::Maps.Droid.Resource.Styleable.PointerLayout_pointerSize;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RadScrollView = global::Maps.Droid.Resource.Styleable.RadScrollView;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RadScrollView_fillViewport = global::Maps.Droid.Resource.Styleable.RadScrollView_fillViewport;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RadScrollView_scrollMode = global::Maps.Droid.Resource.Styleable.RadScrollView_scrollMode;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RadScrollViewTheme = global::Maps.Droid.Resource.Styleable.RadScrollViewTheme;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RadScrollViewTheme_radScrollViewStyle = global::Maps.Droid.Resource.Styleable.RadScrollViewTheme_radScrollViewStyle;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RecyclerView = global::Maps.Droid.Resource.Styleable.RecyclerView;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RecyclerView_android_descendantFocusability = global::Maps.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RecyclerView_android_orientation = global::Maps.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RecyclerView_fastScrollEnabled = global::Maps.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::Maps.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::Maps.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::Maps.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::Maps.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RecyclerView_layoutManager = global::Maps.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RecyclerView_reverseLayout = global::Maps.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RecyclerView_spanCount = global::Maps.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Telerik.XamarinForms.DataControlsRenderer.Android.Resource.Styleable.RecyclerView_stackFromEnd = global::Maps.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Animation.drawer_slide_in_top = global::Maps.Droid.Resource.Animation.drawer_slide_in_top;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Animation.drawer_slide_out_top = global::Maps.Droid.Resource.Animation.drawer_slide_out_top;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Attribute.fillColor = global::Maps.Droid.Resource.Attribute.fillColor;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Attribute.fillViewport = global::Maps.Droid.Resource.Attribute.fillViewport;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Attribute.pointerFill = global::Maps.Droid.Resource.Attribute.pointerFill;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Attribute.pointerMargin = global::Maps.Droid.Resource.Attribute.pointerMargin;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Attribute.pointerSize = global::Maps.Droid.Resource.Attribute.pointerSize;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Attribute.radScrollViewStyle = global::Maps.Droid.Resource.Attribute.radScrollViewStyle;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Attribute.scrollMode = global::Maps.Droid.Resource.Attribute.scrollMode;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Attribute.strokeColor = global::Maps.Droid.Resource.Attribute.strokeColor;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Color.black = global::Maps.Droid.Resource.Color.black;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Color.dark_grey_text_color = global::Maps.Droid.Resource.Color.dark_grey_text_color;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Color.grey_text_color = global::Maps.Droid.Resource.Color.grey_text_color;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Color.light_grey = global::Maps.Droid.Resource.Color.light_grey;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Color.white = global::Maps.Droid.Resource.Color.white;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Dimension.legend_stroke_width = global::Maps.Droid.Resource.Dimension.legend_stroke_width;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Drawable.hamburger = global::Maps.Droid.Resource.Drawable.hamburger;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Drawable.hmb = global::Maps.Droid.Resource.Drawable.hmb;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Drawable.tab_view_popup_background = global::Maps.Droid.Resource.Drawable.tab_view_popup_background;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Id.chart_data_point_content_container = global::Maps.Droid.Resource.Id.chart_data_point_content_container;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Id.chart_tooltip_category = global::Maps.Droid.Resource.Id.chart_tooltip_category;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Id.chart_tooltip_pointer = global::Maps.Droid.Resource.Id.chart_tooltip_pointer;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Id.chart_tooltip_value = global::Maps.Droid.Resource.Id.chart_tooltip_value;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Id.horizontal = global::Maps.Droid.Resource.Id.horizontal;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Id.imageView = global::Maps.Droid.Resource.Id.imageView;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Id.navItemsLayout = global::Maps.Droid.Resource.Id.navItemsLayout;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Id.navigationItemText = global::Maps.Droid.Resource.Id.navigationItemText;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Id.tabItemImageView = global::Maps.Droid.Resource.Id.tabItemImageView;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Id.tabItemTextView = global::Maps.Droid.Resource.Id.tabItemTextView;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Id.tooltip_content_container = global::Maps.Droid.Resource.Id.tooltip_content_container;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Id.vertical = global::Maps.Droid.Resource.Id.vertical;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Layout.default_tooltip_content = global::Maps.Droid.Resource.Layout.default_tooltip_content;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Layout.drawer_blur_fade_layer = global::Maps.Droid.Resource.Layout.drawer_blur_fade_layer;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Layout.navigation_drawer_content = global::Maps.Droid.Resource.Layout.navigation_drawer_content;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Layout.navigation_item_view = global::Maps.Droid.Resource.Layout.navigation_item_view;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Layout.scrollview_scrollbars = global::Maps.Droid.Resource.Layout.scrollview_scrollbars;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Layout.tab_item_view = global::Maps.Droid.Resource.Layout.tab_item_view;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Layout.tooltip_container = global::Maps.Droid.Resource.Layout.tooltip_container;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Layout.trial_message = global::Maps.Droid.Resource.Layout.trial_message;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.String.ApplicationName = global::Maps.Droid.Resource.String.ApplicationName;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.String.Hello = global::Maps.Droid.Resource.String.Hello;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.String.trial_message = global::Maps.Droid.Resource.String.trial_message;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.String.trial_message_caption = global::Maps.Droid.Resource.String.trial_message_caption;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Style.RadScrollViewStyle = global::Maps.Droid.Resource.Style.RadScrollViewStyle;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Style.RadScrollViewTheme = global::Maps.Droid.Resource.Style.RadScrollViewTheme;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Styleable.PointerLayout = global::Maps.Droid.Resource.Styleable.PointerLayout;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Styleable.PointerLayout_pointerFill = global::Maps.Droid.Resource.Styleable.PointerLayout_pointerFill;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Styleable.PointerLayout_pointerMargin = global::Maps.Droid.Resource.Styleable.PointerLayout_pointerMargin;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Styleable.PointerLayout_pointerSize = global::Maps.Droid.Resource.Styleable.PointerLayout_pointerSize;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Styleable.RadScrollView = global::Maps.Droid.Resource.Styleable.RadScrollView;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Styleable.RadScrollView_fillViewport = global::Maps.Droid.Resource.Styleable.RadScrollView_fillViewport;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Styleable.RadScrollView_scrollMode = global::Maps.Droid.Resource.Styleable.RadScrollView_scrollMode;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Styleable.RadScrollViewTheme = global::Maps.Droid.Resource.Styleable.RadScrollViewTheme;
+			global::Telerik.XamarinForms.PrimitivesRenderer.Android.Resource.Styleable.RadScrollViewTheme_radScrollViewStyle = global::Maps.Droid.Resource.Styleable.RadScrollViewTheme_radScrollViewStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Maps.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -75,10 +473,16 @@ namespace Maps.Droid
 			public const int design_snackbar_out = 2131034125;
 			
 			// aapt resource value: 0x7f05000e
-			public const int tooltip_enter = 2131034126;
+			public const int drawer_slide_in_top = 2131034126;
 			
 			// aapt resource value: 0x7f05000f
-			public const int tooltip_exit = 2131034127;
+			public const int drawer_slide_out_top = 2131034127;
+			
+			// aapt resource value: 0x7f050010
+			public const int tooltip_enter = 2131034128;
+			
+			// aapt resource value: 0x7f050011
+			public const int tooltip_exit = 2131034129;
 			
 			static Animation()
 			{
@@ -604,6 +1008,12 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f010023
 			public const int fastScrollVerticalTrackDrawable = 2130772003;
 			
+			// aapt resource value: 0x7f010196
+			public const int fillColor = 2130772374;
+			
+			// aapt resource value: 0x7f010193
+			public const int fillViewport = 2130772371;
+			
 			// aapt resource value: 0x7f01018e
 			public const int font = 2130772366;
 			
@@ -916,6 +1326,15 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f010186
 			public const int passwordToggleTintMode = 2130772358;
 			
+			// aapt resource value: 0x7f010192
+			public const int pointerFill = 2130772370;
+			
+			// aapt resource value: 0x7f010191
+			public const int pointerMargin = 2130772369;
+			
+			// aapt resource value: 0x7f010190
+			public const int pointerSize = 2130772368;
+			
 			// aapt resource value: 0x7f0100ae
 			public const int popupMenuStyle = 2130772142;
 			
@@ -943,6 +1362,9 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f010109
 			public const int queryHint = 2130772233;
 			
+			// aapt resource value: 0x7f010195
+			public const int radScrollViewStyle = 2130772373;
+			
 			// aapt resource value: 0x7f0100dd
 			public const int radioButtonStyle = 2130772189;
 			
@@ -969,6 +1391,9 @@ namespace Maps.Droid
 			
 			// aapt resource value: 0x7f010147
 			public const int scrimVisibleHeightTrigger = 2130772295;
+			
+			// aapt resource value: 0x7f010194
+			public const int scrollMode = 2130772372;
 			
 			// aapt resource value: 0x7f01010e
 			public const int searchHintIcon = 2130772238;
@@ -1038,6 +1463,9 @@ namespace Maps.Droid
 			
 			// aapt resource value: 0x7f010145
 			public const int statusBarScrim = 2130772293;
+			
+			// aapt resource value: 0x7f010197
+			public const int strokeColor = 2130772375;
 			
 			// aapt resource value: 0x7f010102
 			public const int subMenuArrow = 2130772226;
@@ -1350,44 +1778,44 @@ namespace Maps.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0a0057
-			public const int abc_background_cache_hint_selector_material_dark = 2131361879;
+			// aapt resource value: 0x7f0a0064
+			public const int abc_background_cache_hint_selector_material_dark = 2131361892;
 			
-			// aapt resource value: 0x7f0a0058
-			public const int abc_background_cache_hint_selector_material_light = 2131361880;
+			// aapt resource value: 0x7f0a0065
+			public const int abc_background_cache_hint_selector_material_light = 2131361893;
 			
-			// aapt resource value: 0x7f0a0059
-			public const int abc_btn_colored_borderless_text_material = 2131361881;
+			// aapt resource value: 0x7f0a0066
+			public const int abc_btn_colored_borderless_text_material = 2131361894;
 			
-			// aapt resource value: 0x7f0a005a
-			public const int abc_btn_colored_text_material = 2131361882;
+			// aapt resource value: 0x7f0a0067
+			public const int abc_btn_colored_text_material = 2131361895;
 			
-			// aapt resource value: 0x7f0a005b
-			public const int abc_color_highlight_material = 2131361883;
+			// aapt resource value: 0x7f0a0068
+			public const int abc_color_highlight_material = 2131361896;
 			
-			// aapt resource value: 0x7f0a005c
-			public const int abc_hint_foreground_material_dark = 2131361884;
+			// aapt resource value: 0x7f0a0069
+			public const int abc_hint_foreground_material_dark = 2131361897;
 			
-			// aapt resource value: 0x7f0a005d
-			public const int abc_hint_foreground_material_light = 2131361885;
+			// aapt resource value: 0x7f0a006a
+			public const int abc_hint_foreground_material_light = 2131361898;
 			
 			// aapt resource value: 0x7f0a000c
 			public const int abc_input_method_navigation_guard = 2131361804;
 			
-			// aapt resource value: 0x7f0a005e
-			public const int abc_primary_text_disable_only_material_dark = 2131361886;
+			// aapt resource value: 0x7f0a006b
+			public const int abc_primary_text_disable_only_material_dark = 2131361899;
 			
-			// aapt resource value: 0x7f0a005f
-			public const int abc_primary_text_disable_only_material_light = 2131361887;
+			// aapt resource value: 0x7f0a006c
+			public const int abc_primary_text_disable_only_material_light = 2131361900;
 			
-			// aapt resource value: 0x7f0a0060
-			public const int abc_primary_text_material_dark = 2131361888;
+			// aapt resource value: 0x7f0a006d
+			public const int abc_primary_text_material_dark = 2131361901;
 			
-			// aapt resource value: 0x7f0a0061
-			public const int abc_primary_text_material_light = 2131361889;
+			// aapt resource value: 0x7f0a006e
+			public const int abc_primary_text_material_light = 2131361902;
 			
-			// aapt resource value: 0x7f0a0062
-			public const int abc_search_url_text = 2131361890;
+			// aapt resource value: 0x7f0a006f
+			public const int abc_search_url_text = 2131361903;
 			
 			// aapt resource value: 0x7f0a000d
 			public const int abc_search_url_text_normal = 2131361805;
@@ -1398,29 +1826,29 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0a000f
 			public const int abc_search_url_text_selected = 2131361807;
 			
-			// aapt resource value: 0x7f0a0063
-			public const int abc_secondary_text_material_dark = 2131361891;
+			// aapt resource value: 0x7f0a0070
+			public const int abc_secondary_text_material_dark = 2131361904;
 			
-			// aapt resource value: 0x7f0a0064
-			public const int abc_secondary_text_material_light = 2131361892;
+			// aapt resource value: 0x7f0a0071
+			public const int abc_secondary_text_material_light = 2131361905;
 			
-			// aapt resource value: 0x7f0a0065
-			public const int abc_tint_btn_checkable = 2131361893;
+			// aapt resource value: 0x7f0a0072
+			public const int abc_tint_btn_checkable = 2131361906;
 			
-			// aapt resource value: 0x7f0a0066
-			public const int abc_tint_default = 2131361894;
+			// aapt resource value: 0x7f0a0073
+			public const int abc_tint_default = 2131361907;
 			
-			// aapt resource value: 0x7f0a0067
-			public const int abc_tint_edittext = 2131361895;
+			// aapt resource value: 0x7f0a0074
+			public const int abc_tint_edittext = 2131361908;
 			
-			// aapt resource value: 0x7f0a0068
-			public const int abc_tint_seek_thumb = 2131361896;
+			// aapt resource value: 0x7f0a0075
+			public const int abc_tint_seek_thumb = 2131361909;
 			
-			// aapt resource value: 0x7f0a0069
-			public const int abc_tint_spinner = 2131361897;
+			// aapt resource value: 0x7f0a0076
+			public const int abc_tint_spinner = 2131361910;
 			
-			// aapt resource value: 0x7f0a006a
-			public const int abc_tint_switch_track = 2131361898;
+			// aapt resource value: 0x7f0a0077
+			public const int abc_tint_switch_track = 2131361911;
 			
 			// aapt resource value: 0x7f0a0010
 			public const int accent_material_dark = 2131361808;
@@ -1439,6 +1867,9 @@ namespace Maps.Droid
 			
 			// aapt resource value: 0x7f0a0015
 			public const int background_material_light = 2131361813;
+			
+			// aapt resource value: 0x7f0a005f
+			public const int black = 2131361887;
 			
 			// aapt resource value: 0x7f0a0016
 			public const int bright_foreground_disabled_material_dark = 2131361814;
@@ -1476,17 +1907,17 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0a000b
 			public const int cardview_shadow_start_color = 2131361803;
 			
-			// aapt resource value: 0x7f0a0056
-			public const int colorAccent = 2131361878;
+			// aapt resource value: 0x7f0a0063
+			public const int colorAccent = 2131361891;
 			
-			// aapt resource value: 0x7f0a0054
-			public const int colorPrimary = 2131361876;
+			// aapt resource value: 0x7f0a0061
+			public const int colorPrimary = 2131361889;
 			
-			// aapt resource value: 0x7f0a0055
-			public const int colorPrimaryDark = 2131361877;
+			// aapt resource value: 0x7f0a0062
+			public const int colorPrimaryDark = 2131361890;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int common_google_signin_btn_text_dark = 2131361899;
+			// aapt resource value: 0x7f0a0078
+			public const int common_google_signin_btn_text_dark = 2131361912;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int common_google_signin_btn_text_dark_default = 2131361792;
@@ -1500,8 +1931,8 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0a0003
 			public const int common_google_signin_btn_text_dark_pressed = 2131361795;
 			
-			// aapt resource value: 0x7f0a006c
-			public const int common_google_signin_btn_text_light = 2131361900;
+			// aapt resource value: 0x7f0a0079
+			public const int common_google_signin_btn_text_light = 2131361913;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int common_google_signin_btn_text_light_default = 2131361796;
@@ -1515,14 +1946,17 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0a0007
 			public const int common_google_signin_btn_text_light_pressed = 2131361799;
 			
-			// aapt resource value: 0x7f0a006d
-			public const int common_google_signin_btn_tint = 2131361901;
+			// aapt resource value: 0x7f0a007a
+			public const int common_google_signin_btn_tint = 2131361914;
+			
+			// aapt resource value: 0x7f0a0053
+			public const int dark_grey_text_color = 2131361875;
 			
 			// aapt resource value: 0x7f0a0048
 			public const int design_bottom_navigation_shadow_color = 2131361864;
 			
-			// aapt resource value: 0x7f0a006e
-			public const int design_error = 2131361902;
+			// aapt resource value: 0x7f0a007b
+			public const int design_error = 2131361915;
 			
 			// aapt resource value: 0x7f0a0049
 			public const int design_fab_shadow_end_color = 2131361865;
@@ -1548,8 +1982,8 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0a0050
 			public const int design_snackbar_background_color = 2131361872;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int design_tint_password_toggle = 2131361903;
+			// aapt resource value: 0x7f0a007c
+			public const int design_tint_password_toggle = 2131361916;
 			
 			// aapt resource value: 0x7f0a001e
 			public const int dim_foreground_disabled_material_dark = 2131361822;
@@ -1572,14 +2006,29 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0a0024
 			public const int foreground_material_light = 2131361828;
 			
+			// aapt resource value: 0x7f0a0054
+			public const int grey_text_color = 2131361876;
+			
+			// aapt resource value: 0x7f0a0056
+			public const int groupHeaderTextColor = 2131361878;
+			
 			// aapt resource value: 0x7f0a0025
 			public const int highlighted_text_material_dark = 2131361829;
 			
 			// aapt resource value: 0x7f0a0026
 			public const int highlighted_text_material_light = 2131361830;
 			
-			// aapt resource value: 0x7f0a0053
-			public const int launcher_background = 2131361875;
+			// aapt resource value: 0x7f0a0060
+			public const int launcher_background = 2131361888;
+			
+			// aapt resource value: 0x7f0a0055
+			public const int light_grey = 2131361877;
+			
+			// aapt resource value: 0x7f0a0057
+			public const int listAccentColor = 2131361879;
+			
+			// aapt resource value: 0x7f0a0058
+			public const int listItemTextColor = 2131361880;
 			
 			// aapt resource value: 0x7f0a0027
 			public const int material_blue_grey_800 = 2131361831;
@@ -1626,6 +2075,9 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0a0047
 			public const int notification_material_background_media_default_color = 2131361863;
 			
+			// aapt resource value: 0x7f0a0059
+			public const int pressedColor = 2131361881;
+			
 			// aapt resource value: 0x7f0a0033
 			public const int primary_dark_material_dark = 2131361843;
 			
@@ -1668,17 +2120,26 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0a0040
 			public const int secondary_text_disabled_material_light = 2131361856;
 			
+			// aapt resource value: 0x7f0a005a
+			public const int selectionColor = 2131361882;
+			
+			// aapt resource value: 0x7f0a005b
+			public const int shadeColor = 2131361883;
+			
+			// aapt resource value: 0x7f0a005c
+			public const int shadeColorCenter = 2131361884;
+			
 			// aapt resource value: 0x7f0a0041
 			public const int switch_thumb_disabled_material_dark = 2131361857;
 			
 			// aapt resource value: 0x7f0a0042
 			public const int switch_thumb_disabled_material_light = 2131361858;
 			
-			// aapt resource value: 0x7f0a0070
-			public const int switch_thumb_material_dark = 2131361904;
+			// aapt resource value: 0x7f0a007d
+			public const int switch_thumb_material_dark = 2131361917;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int switch_thumb_material_light = 2131361905;
+			// aapt resource value: 0x7f0a007e
+			public const int switch_thumb_material_light = 2131361918;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int switch_thumb_normal_material_dark = 2131361859;
@@ -1691,6 +2152,12 @@ namespace Maps.Droid
 			
 			// aapt resource value: 0x7f0a0046
 			public const int tooltip_background_light = 2131361862;
+			
+			// aapt resource value: 0x7f0a005d
+			public const int transparent = 2131361885;
+			
+			// aapt resource value: 0x7f0a005e
+			public const int white = 2131361886;
 			
 			static Color()
 			{
@@ -1927,6 +2394,9 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0b0013
 			public const int abc_text_size_title_material_toolbar = 2131427347;
 			
+			// aapt resource value: 0x7f0b00a5
+			public const int card_deck_translation = 2131427493;
+			
 			// aapt resource value: 0x7f0b000c
 			public const int cardview_compat_inset_shadow = 2131427340;
 			
@@ -2109,6 +2579,9 @@ namespace Maps.Droid
 			
 			// aapt resource value: 0x7f0b0005
 			public const int item_touch_helper_swipe_escape_velocity = 2131427333;
+			
+			// aapt resource value: 0x7f0b00a4
+			public const int legend_stroke_width = 2131427492;
 			
 			// aapt resource value: 0x7f0b0006
 			public const int mr_controller_volume_group_list_item_height = 2131427334;
@@ -2462,26 +2935,26 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020149
-			public const int avd_hide_password_1 = 2130837833;
+			// aapt resource value: 0x7f020154
+			public const int avd_hide_password_1 = 2130837844;
 			
-			// aapt resource value: 0x7f02014a
-			public const int avd_hide_password_2 = 2130837834;
+			// aapt resource value: 0x7f020155
+			public const int avd_hide_password_2 = 2130837845;
 			
-			// aapt resource value: 0x7f02014b
-			public const int avd_hide_password_3 = 2130837835;
+			// aapt resource value: 0x7f020156
+			public const int avd_hide_password_3 = 2130837846;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f02014c
-			public const int avd_show_password_1 = 2130837836;
+			// aapt resource value: 0x7f020157
+			public const int avd_show_password_1 = 2130837847;
 			
-			// aapt resource value: 0x7f02014d
-			public const int avd_show_password_2 = 2130837837;
+			// aapt resource value: 0x7f020158
+			public const int avd_show_password_2 = 2130837848;
 			
-			// aapt resource value: 0x7f02014e
-			public const int avd_show_password_3 = 2130837838;
+			// aapt resource value: 0x7f020159
+			public const int avd_show_password_3 = 2130837849;
 			
 			// aapt resource value: 0x7f020055
 			public const int common_full_open_on_phone = 2130837589;
@@ -2559,661 +3032,694 @@ namespace Maps.Droid
 			public const int design_snackbar_background = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int googleg_disabled_color_18 = 2130837614;
+			public const int gingerbread_background = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int googleg_standard_color_18 = 2130837615;
+			public const int googleg_disabled_color_18 = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int ic_audiotrack_dark = 2130837616;
+			public const int googleg_standard_color_18 = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_audiotrack_light = 2130837617;
+			public const int hamburger = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int ic_dialog_close_dark = 2130837618;
+			public const int hmb = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_dialog_close_light = 2130837619;
+			public const int ic_audiotrack_dark = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int ic_group_collapse_00 = 2130837620;
+			public const int ic_audiotrack_light = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int ic_group_collapse_01 = 2130837621;
+			public const int ic_collapse = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int ic_group_collapse_02 = 2130837622;
+			public const int ic_dialog_close_dark = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int ic_group_collapse_03 = 2130837623;
+			public const int ic_dialog_close_light = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int ic_group_collapse_04 = 2130837624;
+			public const int ic_expand = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int ic_group_collapse_05 = 2130837625;
+			public const int ic_group_collapse_00 = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int ic_group_collapse_06 = 2130837626;
+			public const int ic_group_collapse_01 = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int ic_group_collapse_07 = 2130837627;
+			public const int ic_group_collapse_02 = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int ic_group_collapse_08 = 2130837628;
+			public const int ic_group_collapse_03 = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int ic_group_collapse_09 = 2130837629;
+			public const int ic_group_collapse_04 = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int ic_group_collapse_10 = 2130837630;
+			public const int ic_group_collapse_05 = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int ic_group_collapse_11 = 2130837631;
+			public const int ic_group_collapse_06 = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int ic_group_collapse_12 = 2130837632;
+			public const int ic_group_collapse_07 = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int ic_group_collapse_13 = 2130837633;
+			public const int ic_group_collapse_08 = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int ic_group_collapse_14 = 2130837634;
+			public const int ic_group_collapse_09 = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int ic_group_collapse_15 = 2130837635;
+			public const int ic_group_collapse_10 = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int ic_group_expand_00 = 2130837636;
+			public const int ic_group_collapse_11 = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int ic_group_expand_01 = 2130837637;
+			public const int ic_group_collapse_12 = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int ic_group_expand_02 = 2130837638;
+			public const int ic_group_collapse_13 = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int ic_group_expand_03 = 2130837639;
+			public const int ic_group_collapse_14 = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int ic_group_expand_04 = 2130837640;
+			public const int ic_group_collapse_15 = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int ic_group_expand_05 = 2130837641;
+			public const int ic_group_expand_00 = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int ic_group_expand_06 = 2130837642;
+			public const int ic_group_expand_01 = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int ic_group_expand_07 = 2130837643;
+			public const int ic_group_expand_02 = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int ic_group_expand_08 = 2130837644;
+			public const int ic_group_expand_03 = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int ic_group_expand_09 = 2130837645;
+			public const int ic_group_expand_04 = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int ic_group_expand_10 = 2130837646;
+			public const int ic_group_expand_05 = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int ic_group_expand_11 = 2130837647;
+			public const int ic_group_expand_06 = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int ic_group_expand_12 = 2130837648;
+			public const int ic_group_expand_07 = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int ic_group_expand_13 = 2130837649;
+			public const int ic_group_expand_08 = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int ic_group_expand_14 = 2130837650;
+			public const int ic_group_expand_09 = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int ic_group_expand_15 = 2130837651;
+			public const int ic_group_expand_10 = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int ic_media_pause_dark = 2130837652;
+			public const int ic_group_expand_11 = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int ic_media_pause_light = 2130837653;
+			public const int ic_group_expand_12 = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int ic_media_play_dark = 2130837654;
+			public const int ic_group_expand_13 = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int ic_media_play_light = 2130837655;
+			public const int ic_group_expand_14 = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int ic_media_stop_dark = 2130837656;
+			public const int ic_group_expand_15 = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int ic_media_stop_light = 2130837657;
+			public const int ic_media_pause_dark = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int ic_mr_button_connected_00_dark = 2130837658;
+			public const int ic_media_pause_light = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int ic_mr_button_connected_00_light = 2130837659;
+			public const int ic_media_play_dark = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int ic_mr_button_connected_01_dark = 2130837660;
+			public const int ic_media_play_light = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int ic_mr_button_connected_01_light = 2130837661;
+			public const int ic_media_stop_dark = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int ic_mr_button_connected_02_dark = 2130837662;
+			public const int ic_media_stop_light = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int ic_mr_button_connected_02_light = 2130837663;
+			public const int ic_mr_button_connected_00_dark = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int ic_mr_button_connected_03_dark = 2130837664;
+			public const int ic_mr_button_connected_00_light = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int ic_mr_button_connected_03_light = 2130837665;
+			public const int ic_mr_button_connected_01_dark = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int ic_mr_button_connected_04_dark = 2130837666;
+			public const int ic_mr_button_connected_01_light = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int ic_mr_button_connected_04_light = 2130837667;
+			public const int ic_mr_button_connected_02_dark = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
-			public const int ic_mr_button_connected_05_dark = 2130837668;
+			public const int ic_mr_button_connected_02_light = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
-			public const int ic_mr_button_connected_05_light = 2130837669;
+			public const int ic_mr_button_connected_03_dark = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int ic_mr_button_connected_06_dark = 2130837670;
+			public const int ic_mr_button_connected_03_light = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int ic_mr_button_connected_06_light = 2130837671;
+			public const int ic_mr_button_connected_04_dark = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int ic_mr_button_connected_07_dark = 2130837672;
+			public const int ic_mr_button_connected_04_light = 2130837672;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int ic_mr_button_connected_07_light = 2130837673;
+			public const int ic_mr_button_connected_05_dark = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int ic_mr_button_connected_08_dark = 2130837674;
+			public const int ic_mr_button_connected_05_light = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ic_mr_button_connected_08_light = 2130837675;
+			public const int ic_mr_button_connected_06_dark = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int ic_mr_button_connected_09_dark = 2130837676;
+			public const int ic_mr_button_connected_06_light = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int ic_mr_button_connected_09_light = 2130837677;
+			public const int ic_mr_button_connected_07_dark = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int ic_mr_button_connected_10_dark = 2130837678;
+			public const int ic_mr_button_connected_07_light = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int ic_mr_button_connected_10_light = 2130837679;
+			public const int ic_mr_button_connected_08_dark = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int ic_mr_button_connected_11_dark = 2130837680;
+			public const int ic_mr_button_connected_08_light = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int ic_mr_button_connected_11_light = 2130837681;
+			public const int ic_mr_button_connected_09_dark = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int ic_mr_button_connected_12_dark = 2130837682;
+			public const int ic_mr_button_connected_09_light = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int ic_mr_button_connected_12_light = 2130837683;
+			public const int ic_mr_button_connected_10_dark = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int ic_mr_button_connected_13_dark = 2130837684;
+			public const int ic_mr_button_connected_10_light = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int ic_mr_button_connected_13_light = 2130837685;
+			public const int ic_mr_button_connected_11_dark = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int ic_mr_button_connected_14_dark = 2130837686;
+			public const int ic_mr_button_connected_11_light = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int ic_mr_button_connected_14_light = 2130837687;
+			public const int ic_mr_button_connected_12_dark = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int ic_mr_button_connected_15_dark = 2130837688;
+			public const int ic_mr_button_connected_12_light = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int ic_mr_button_connected_15_light = 2130837689;
+			public const int ic_mr_button_connected_13_dark = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int ic_mr_button_connected_16_dark = 2130837690;
+			public const int ic_mr_button_connected_13_light = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int ic_mr_button_connected_16_light = 2130837691;
+			public const int ic_mr_button_connected_14_dark = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int ic_mr_button_connected_17_dark = 2130837692;
+			public const int ic_mr_button_connected_14_light = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int ic_mr_button_connected_17_light = 2130837693;
+			public const int ic_mr_button_connected_15_dark = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int ic_mr_button_connected_18_dark = 2130837694;
+			public const int ic_mr_button_connected_15_light = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int ic_mr_button_connected_18_light = 2130837695;
+			public const int ic_mr_button_connected_16_dark = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int ic_mr_button_connected_19_dark = 2130837696;
+			public const int ic_mr_button_connected_16_light = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int ic_mr_button_connected_19_light = 2130837697;
+			public const int ic_mr_button_connected_17_dark = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int ic_mr_button_connected_20_dark = 2130837698;
+			public const int ic_mr_button_connected_17_light = 2130837698;
 			
 			// aapt resource value: 0x7f0200c3
-			public const int ic_mr_button_connected_20_light = 2130837699;
+			public const int ic_mr_button_connected_18_dark = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int ic_mr_button_connected_21_dark = 2130837700;
+			public const int ic_mr_button_connected_18_light = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int ic_mr_button_connected_21_light = 2130837701;
+			public const int ic_mr_button_connected_19_dark = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int ic_mr_button_connected_22_dark = 2130837702;
+			public const int ic_mr_button_connected_19_light = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int ic_mr_button_connected_22_light = 2130837703;
+			public const int ic_mr_button_connected_20_dark = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int ic_mr_button_connected_23_dark = 2130837704;
+			public const int ic_mr_button_connected_20_light = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int ic_mr_button_connected_23_light = 2130837705;
+			public const int ic_mr_button_connected_21_dark = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int ic_mr_button_connected_24_dark = 2130837706;
+			public const int ic_mr_button_connected_21_light = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int ic_mr_button_connected_24_light = 2130837707;
+			public const int ic_mr_button_connected_22_dark = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int ic_mr_button_connected_25_dark = 2130837708;
+			public const int ic_mr_button_connected_22_light = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int ic_mr_button_connected_25_light = 2130837709;
+			public const int ic_mr_button_connected_23_dark = 2130837709;
 			
 			// aapt resource value: 0x7f0200ce
-			public const int ic_mr_button_connected_26_dark = 2130837710;
+			public const int ic_mr_button_connected_23_light = 2130837710;
 			
 			// aapt resource value: 0x7f0200cf
-			public const int ic_mr_button_connected_26_light = 2130837711;
+			public const int ic_mr_button_connected_24_dark = 2130837711;
 			
 			// aapt resource value: 0x7f0200d0
-			public const int ic_mr_button_connected_27_dark = 2130837712;
+			public const int ic_mr_button_connected_24_light = 2130837712;
 			
 			// aapt resource value: 0x7f0200d1
-			public const int ic_mr_button_connected_27_light = 2130837713;
+			public const int ic_mr_button_connected_25_dark = 2130837713;
 			
 			// aapt resource value: 0x7f0200d2
-			public const int ic_mr_button_connected_28_dark = 2130837714;
+			public const int ic_mr_button_connected_25_light = 2130837714;
 			
 			// aapt resource value: 0x7f0200d3
-			public const int ic_mr_button_connected_28_light = 2130837715;
+			public const int ic_mr_button_connected_26_dark = 2130837715;
 			
 			// aapt resource value: 0x7f0200d4
-			public const int ic_mr_button_connected_29_dark = 2130837716;
+			public const int ic_mr_button_connected_26_light = 2130837716;
 			
 			// aapt resource value: 0x7f0200d5
-			public const int ic_mr_button_connected_29_light = 2130837717;
+			public const int ic_mr_button_connected_27_dark = 2130837717;
 			
 			// aapt resource value: 0x7f0200d6
-			public const int ic_mr_button_connected_30_dark = 2130837718;
+			public const int ic_mr_button_connected_27_light = 2130837718;
 			
 			// aapt resource value: 0x7f0200d7
-			public const int ic_mr_button_connected_30_light = 2130837719;
+			public const int ic_mr_button_connected_28_dark = 2130837719;
 			
 			// aapt resource value: 0x7f0200d8
-			public const int ic_mr_button_connecting_00_dark = 2130837720;
+			public const int ic_mr_button_connected_28_light = 2130837720;
 			
 			// aapt resource value: 0x7f0200d9
-			public const int ic_mr_button_connecting_00_light = 2130837721;
+			public const int ic_mr_button_connected_29_dark = 2130837721;
 			
 			// aapt resource value: 0x7f0200da
-			public const int ic_mr_button_connecting_01_dark = 2130837722;
+			public const int ic_mr_button_connected_29_light = 2130837722;
 			
 			// aapt resource value: 0x7f0200db
-			public const int ic_mr_button_connecting_01_light = 2130837723;
+			public const int ic_mr_button_connected_30_dark = 2130837723;
 			
 			// aapt resource value: 0x7f0200dc
-			public const int ic_mr_button_connecting_02_dark = 2130837724;
+			public const int ic_mr_button_connected_30_light = 2130837724;
 			
 			// aapt resource value: 0x7f0200dd
-			public const int ic_mr_button_connecting_02_light = 2130837725;
+			public const int ic_mr_button_connecting_00_dark = 2130837725;
 			
 			// aapt resource value: 0x7f0200de
-			public const int ic_mr_button_connecting_03_dark = 2130837726;
+			public const int ic_mr_button_connecting_00_light = 2130837726;
 			
 			// aapt resource value: 0x7f0200df
-			public const int ic_mr_button_connecting_03_light = 2130837727;
+			public const int ic_mr_button_connecting_01_dark = 2130837727;
 			
 			// aapt resource value: 0x7f0200e0
-			public const int ic_mr_button_connecting_04_dark = 2130837728;
+			public const int ic_mr_button_connecting_01_light = 2130837728;
 			
 			// aapt resource value: 0x7f0200e1
-			public const int ic_mr_button_connecting_04_light = 2130837729;
+			public const int ic_mr_button_connecting_02_dark = 2130837729;
 			
 			// aapt resource value: 0x7f0200e2
-			public const int ic_mr_button_connecting_05_dark = 2130837730;
+			public const int ic_mr_button_connecting_02_light = 2130837730;
 			
 			// aapt resource value: 0x7f0200e3
-			public const int ic_mr_button_connecting_05_light = 2130837731;
+			public const int ic_mr_button_connecting_03_dark = 2130837731;
 			
 			// aapt resource value: 0x7f0200e4
-			public const int ic_mr_button_connecting_06_dark = 2130837732;
+			public const int ic_mr_button_connecting_03_light = 2130837732;
 			
 			// aapt resource value: 0x7f0200e5
-			public const int ic_mr_button_connecting_06_light = 2130837733;
+			public const int ic_mr_button_connecting_04_dark = 2130837733;
 			
 			// aapt resource value: 0x7f0200e6
-			public const int ic_mr_button_connecting_07_dark = 2130837734;
+			public const int ic_mr_button_connecting_04_light = 2130837734;
 			
 			// aapt resource value: 0x7f0200e7
-			public const int ic_mr_button_connecting_07_light = 2130837735;
+			public const int ic_mr_button_connecting_05_dark = 2130837735;
 			
 			// aapt resource value: 0x7f0200e8
-			public const int ic_mr_button_connecting_08_dark = 2130837736;
+			public const int ic_mr_button_connecting_05_light = 2130837736;
 			
 			// aapt resource value: 0x7f0200e9
-			public const int ic_mr_button_connecting_08_light = 2130837737;
+			public const int ic_mr_button_connecting_06_dark = 2130837737;
 			
 			// aapt resource value: 0x7f0200ea
-			public const int ic_mr_button_connecting_09_dark = 2130837738;
+			public const int ic_mr_button_connecting_06_light = 2130837738;
 			
 			// aapt resource value: 0x7f0200eb
-			public const int ic_mr_button_connecting_09_light = 2130837739;
+			public const int ic_mr_button_connecting_07_dark = 2130837739;
 			
 			// aapt resource value: 0x7f0200ec
-			public const int ic_mr_button_connecting_10_dark = 2130837740;
+			public const int ic_mr_button_connecting_07_light = 2130837740;
 			
 			// aapt resource value: 0x7f0200ed
-			public const int ic_mr_button_connecting_10_light = 2130837741;
+			public const int ic_mr_button_connecting_08_dark = 2130837741;
 			
 			// aapt resource value: 0x7f0200ee
-			public const int ic_mr_button_connecting_11_dark = 2130837742;
+			public const int ic_mr_button_connecting_08_light = 2130837742;
 			
 			// aapt resource value: 0x7f0200ef
-			public const int ic_mr_button_connecting_11_light = 2130837743;
+			public const int ic_mr_button_connecting_09_dark = 2130837743;
 			
 			// aapt resource value: 0x7f0200f0
-			public const int ic_mr_button_connecting_12_dark = 2130837744;
+			public const int ic_mr_button_connecting_09_light = 2130837744;
 			
 			// aapt resource value: 0x7f0200f1
-			public const int ic_mr_button_connecting_12_light = 2130837745;
+			public const int ic_mr_button_connecting_10_dark = 2130837745;
 			
 			// aapt resource value: 0x7f0200f2
-			public const int ic_mr_button_connecting_13_dark = 2130837746;
+			public const int ic_mr_button_connecting_10_light = 2130837746;
 			
 			// aapt resource value: 0x7f0200f3
-			public const int ic_mr_button_connecting_13_light = 2130837747;
+			public const int ic_mr_button_connecting_11_dark = 2130837747;
 			
 			// aapt resource value: 0x7f0200f4
-			public const int ic_mr_button_connecting_14_dark = 2130837748;
+			public const int ic_mr_button_connecting_11_light = 2130837748;
 			
 			// aapt resource value: 0x7f0200f5
-			public const int ic_mr_button_connecting_14_light = 2130837749;
+			public const int ic_mr_button_connecting_12_dark = 2130837749;
 			
 			// aapt resource value: 0x7f0200f6
-			public const int ic_mr_button_connecting_15_dark = 2130837750;
+			public const int ic_mr_button_connecting_12_light = 2130837750;
 			
 			// aapt resource value: 0x7f0200f7
-			public const int ic_mr_button_connecting_15_light = 2130837751;
+			public const int ic_mr_button_connecting_13_dark = 2130837751;
 			
 			// aapt resource value: 0x7f0200f8
-			public const int ic_mr_button_connecting_16_dark = 2130837752;
+			public const int ic_mr_button_connecting_13_light = 2130837752;
 			
 			// aapt resource value: 0x7f0200f9
-			public const int ic_mr_button_connecting_16_light = 2130837753;
+			public const int ic_mr_button_connecting_14_dark = 2130837753;
 			
 			// aapt resource value: 0x7f0200fa
-			public const int ic_mr_button_connecting_17_dark = 2130837754;
+			public const int ic_mr_button_connecting_14_light = 2130837754;
 			
 			// aapt resource value: 0x7f0200fb
-			public const int ic_mr_button_connecting_17_light = 2130837755;
+			public const int ic_mr_button_connecting_15_dark = 2130837755;
 			
 			// aapt resource value: 0x7f0200fc
-			public const int ic_mr_button_connecting_18_dark = 2130837756;
+			public const int ic_mr_button_connecting_15_light = 2130837756;
 			
 			// aapt resource value: 0x7f0200fd
-			public const int ic_mr_button_connecting_18_light = 2130837757;
+			public const int ic_mr_button_connecting_16_dark = 2130837757;
 			
 			// aapt resource value: 0x7f0200fe
-			public const int ic_mr_button_connecting_19_dark = 2130837758;
+			public const int ic_mr_button_connecting_16_light = 2130837758;
 			
 			// aapt resource value: 0x7f0200ff
-			public const int ic_mr_button_connecting_19_light = 2130837759;
+			public const int ic_mr_button_connecting_17_dark = 2130837759;
 			
 			// aapt resource value: 0x7f020100
-			public const int ic_mr_button_connecting_20_dark = 2130837760;
+			public const int ic_mr_button_connecting_17_light = 2130837760;
 			
 			// aapt resource value: 0x7f020101
-			public const int ic_mr_button_connecting_20_light = 2130837761;
+			public const int ic_mr_button_connecting_18_dark = 2130837761;
 			
 			// aapt resource value: 0x7f020102
-			public const int ic_mr_button_connecting_21_dark = 2130837762;
+			public const int ic_mr_button_connecting_18_light = 2130837762;
 			
 			// aapt resource value: 0x7f020103
-			public const int ic_mr_button_connecting_21_light = 2130837763;
+			public const int ic_mr_button_connecting_19_dark = 2130837763;
 			
 			// aapt resource value: 0x7f020104
-			public const int ic_mr_button_connecting_22_dark = 2130837764;
+			public const int ic_mr_button_connecting_19_light = 2130837764;
 			
 			// aapt resource value: 0x7f020105
-			public const int ic_mr_button_connecting_22_light = 2130837765;
+			public const int ic_mr_button_connecting_20_dark = 2130837765;
 			
 			// aapt resource value: 0x7f020106
-			public const int ic_mr_button_connecting_23_dark = 2130837766;
+			public const int ic_mr_button_connecting_20_light = 2130837766;
 			
 			// aapt resource value: 0x7f020107
-			public const int ic_mr_button_connecting_23_light = 2130837767;
+			public const int ic_mr_button_connecting_21_dark = 2130837767;
 			
 			// aapt resource value: 0x7f020108
-			public const int ic_mr_button_connecting_24_dark = 2130837768;
+			public const int ic_mr_button_connecting_21_light = 2130837768;
 			
 			// aapt resource value: 0x7f020109
-			public const int ic_mr_button_connecting_24_light = 2130837769;
+			public const int ic_mr_button_connecting_22_dark = 2130837769;
 			
 			// aapt resource value: 0x7f02010a
-			public const int ic_mr_button_connecting_25_dark = 2130837770;
+			public const int ic_mr_button_connecting_22_light = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
-			public const int ic_mr_button_connecting_25_light = 2130837771;
+			public const int ic_mr_button_connecting_23_dark = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int ic_mr_button_connecting_26_dark = 2130837772;
+			public const int ic_mr_button_connecting_23_light = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int ic_mr_button_connecting_26_light = 2130837773;
+			public const int ic_mr_button_connecting_24_dark = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int ic_mr_button_connecting_27_dark = 2130837774;
+			public const int ic_mr_button_connecting_24_light = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int ic_mr_button_connecting_27_light = 2130837775;
+			public const int ic_mr_button_connecting_25_dark = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int ic_mr_button_connecting_28_dark = 2130837776;
+			public const int ic_mr_button_connecting_25_light = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int ic_mr_button_connecting_28_light = 2130837777;
+			public const int ic_mr_button_connecting_26_dark = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int ic_mr_button_connecting_29_dark = 2130837778;
+			public const int ic_mr_button_connecting_26_light = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int ic_mr_button_connecting_29_light = 2130837779;
+			public const int ic_mr_button_connecting_27_dark = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int ic_mr_button_connecting_30_dark = 2130837780;
+			public const int ic_mr_button_connecting_27_light = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int ic_mr_button_connecting_30_light = 2130837781;
+			public const int ic_mr_button_connecting_28_dark = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int ic_mr_button_disabled_dark = 2130837782;
+			public const int ic_mr_button_connecting_28_light = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int ic_mr_button_disabled_light = 2130837783;
+			public const int ic_mr_button_connecting_29_dark = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int ic_mr_button_disconnected_dark = 2130837784;
+			public const int ic_mr_button_connecting_29_light = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int ic_mr_button_disconnected_light = 2130837785;
+			public const int ic_mr_button_connecting_30_dark = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int ic_mr_button_grey = 2130837786;
+			public const int ic_mr_button_connecting_30_light = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int ic_vol_type_speaker_dark = 2130837787;
+			public const int ic_mr_button_disabled_dark = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int ic_vol_type_speaker_group_dark = 2130837788;
+			public const int ic_mr_button_disabled_light = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int ic_vol_type_speaker_group_light = 2130837789;
+			public const int ic_mr_button_disconnected_dark = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int ic_vol_type_speaker_light = 2130837790;
+			public const int ic_mr_button_disconnected_light = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int ic_vol_type_tv_dark = 2130837791;
+			public const int ic_mr_button_grey = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int ic_vol_type_tv_light = 2130837792;
+			public const int ic_vol_type_speaker_dark = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int mr_button_connected_dark = 2130837793;
+			public const int ic_vol_type_speaker_group_dark = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int mr_button_connected_light = 2130837794;
+			public const int ic_vol_type_speaker_group_light = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int mr_button_connecting_dark = 2130837795;
+			public const int ic_vol_type_speaker_light = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int mr_button_connecting_light = 2130837796;
+			public const int ic_vol_type_tv_dark = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int mr_button_dark = 2130837797;
+			public const int ic_vol_type_tv_light = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int mr_button_light = 2130837798;
+			public const int mr_button_connected_dark = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int mr_dialog_close_dark = 2130837799;
+			public const int mr_button_connected_light = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int mr_dialog_close_light = 2130837800;
+			public const int mr_button_connecting_dark = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int mr_dialog_material_background_dark = 2130837801;
+			public const int mr_button_connecting_light = 2130837801;
 			
 			// aapt resource value: 0x7f02012a
-			public const int mr_dialog_material_background_light = 2130837802;
+			public const int mr_button_dark = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-			public const int mr_group_collapse = 2130837803;
+			public const int mr_button_light = 2130837803;
 			
 			// aapt resource value: 0x7f02012c
-			public const int mr_group_expand = 2130837804;
+			public const int mr_dialog_close_dark = 2130837804;
 			
 			// aapt resource value: 0x7f02012d
-			public const int mr_media_pause_dark = 2130837805;
+			public const int mr_dialog_close_light = 2130837805;
 			
 			// aapt resource value: 0x7f02012e
-			public const int mr_media_pause_light = 2130837806;
+			public const int mr_dialog_material_background_dark = 2130837806;
 			
 			// aapt resource value: 0x7f02012f
-			public const int mr_media_play_dark = 2130837807;
+			public const int mr_dialog_material_background_light = 2130837807;
 			
 			// aapt resource value: 0x7f020130
-			public const int mr_media_play_light = 2130837808;
+			public const int mr_group_collapse = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int mr_media_stop_dark = 2130837809;
+			public const int mr_group_expand = 2130837809;
 			
 			// aapt resource value: 0x7f020132
-			public const int mr_media_stop_light = 2130837810;
+			public const int mr_media_pause_dark = 2130837810;
 			
 			// aapt resource value: 0x7f020133
-			public const int mr_vol_type_audiotrack_dark = 2130837811;
+			public const int mr_media_pause_light = 2130837811;
 			
 			// aapt resource value: 0x7f020134
-			public const int mr_vol_type_audiotrack_light = 2130837812;
+			public const int mr_media_play_dark = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int my = 2130837813;
+			public const int mr_media_play_light = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int navigation_empty_icon = 2130837814;
+			public const int mr_media_stop_dark = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int notification_action_background = 2130837815;
+			public const int mr_media_stop_light = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int notification_bg = 2130837816;
+			public const int mr_vol_type_audiotrack_dark = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int notification_bg_low = 2130837817;
+			public const int mr_vol_type_audiotrack_light = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int notification_bg_low_normal = 2130837818;
+			public const int my = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
-			public const int notification_bg_low_pressed = 2130837819;
+			public const int navigation_empty_icon = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int notification_bg_normal = 2130837820;
+			public const int notification_action_background = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int notification_bg_normal_pressed = 2130837821;
+			public const int notification_bg = 2130837821;
 			
 			// aapt resource value: 0x7f02013e
-			public const int notification_icon_background = 2130837822;
-			
-			// aapt resource value: 0x7f020147
-			public const int notification_template_icon_bg = 2130837831;
-			
-			// aapt resource value: 0x7f020148
-			public const int notification_template_icon_low_bg = 2130837832;
+			public const int notification_bg_low = 2130837822;
 			
 			// aapt resource value: 0x7f02013f
-			public const int notification_tile_bg = 2130837823;
+			public const int notification_bg_low_normal = 2130837823;
 			
 			// aapt resource value: 0x7f020140
-			public const int notify_panel_notification_icon_bg = 2130837824;
+			public const int notification_bg_low_pressed = 2130837824;
 			
 			// aapt resource value: 0x7f020141
-			public const int selected_pin = 2130837825;
+			public const int notification_bg_normal = 2130837825;
 			
 			// aapt resource value: 0x7f020142
-			public const int start_end_pin = 2130837826;
+			public const int notification_bg_normal_pressed = 2130837826;
 			
 			// aapt resource value: 0x7f020143
-			public const int tooltip_frame_dark = 2130837827;
+			public const int notification_icon_background = 2130837827;
+			
+			// aapt resource value: 0x7f020152
+			public const int notification_template_icon_bg = 2130837842;
+			
+			// aapt resource value: 0x7f020153
+			public const int notification_template_icon_low_bg = 2130837843;
 			
 			// aapt resource value: 0x7f020144
-			public const int tooltip_frame_light = 2130837828;
+			public const int notification_tile_bg = 2130837828;
 			
 			// aapt resource value: 0x7f020145
-			public const int waypoint_pin = 2130837829;
+			public const int notify_panel_notification_icon_bg = 2130837829;
 			
 			// aapt resource value: 0x7f020146
-			public const int xamarin_logo = 2130837830;
+			public const int pressable_item_background = 2130837830;
+			
+			// aapt resource value: 0x7f020147
+			public const int selectable_item_background = 2130837831;
+			
+			// aapt resource value: 0x7f020148
+			public const int selected_pin = 2130837832;
+			
+			// aapt resource value: 0x7f020149
+			public const int shade_bottom = 2130837833;
+			
+			// aapt resource value: 0x7f02014a
+			public const int shade_corner = 2130837834;
+			
+			// aapt resource value: 0x7f02014b
+			public const int shade_right = 2130837835;
+			
+			// aapt resource value: 0x7f02014c
+			public const int start_end_pin = 2130837836;
+			
+			// aapt resource value: 0x7f02014d
+			public const int tab_view_popup_background = 2130837837;
+			
+			// aapt resource value: 0x7f02014e
+			public const int tooltip_frame_dark = 2130837838;
+			
+			// aapt resource value: 0x7f02014f
+			public const int tooltip_frame_light = 2130837839;
+			
+			// aapt resource value: 0x7f020150
+			public const int waypoint_pin = 2130837840;
+			
+			// aapt resource value: 0x7f020151
+			public const int xamarin_logo = 2130837841;
 			
 			static Drawable()
 			{
@@ -3246,41 +3752,41 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0042
 			public const int SYM = 2131492930;
 			
-			// aapt resource value: 0x7f0c00c0
-			public const int action0 = 2131493056;
+			// aapt resource value: 0x7f0c00c8
+			public const int action0 = 2131493064;
 			
-			// aapt resource value: 0x7f0c0086
-			public const int action_bar = 2131492998;
+			// aapt resource value: 0x7f0c0088
+			public const int action_bar = 2131493000;
 			
 			// aapt resource value: 0x7f0c0001
 			public const int action_bar_activity_content = 2131492865;
 			
-			// aapt resource value: 0x7f0c0085
-			public const int action_bar_container = 2131492997;
+			// aapt resource value: 0x7f0c0087
+			public const int action_bar_container = 2131492999;
 			
-			// aapt resource value: 0x7f0c0081
-			public const int action_bar_root = 2131492993;
+			// aapt resource value: 0x7f0c0083
+			public const int action_bar_root = 2131492995;
 			
 			// aapt resource value: 0x7f0c0002
 			public const int action_bar_spinner = 2131492866;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int action_bar_subtitle = 2131492965;
+			// aapt resource value: 0x7f0c0067
+			public const int action_bar_subtitle = 2131492967;
 			
-			// aapt resource value: 0x7f0c0064
-			public const int action_bar_title = 2131492964;
+			// aapt resource value: 0x7f0c0066
+			public const int action_bar_title = 2131492966;
 			
-			// aapt resource value: 0x7f0c00bd
-			public const int action_container = 2131493053;
+			// aapt resource value: 0x7f0c00c5
+			public const int action_container = 2131493061;
 			
-			// aapt resource value: 0x7f0c0087
-			public const int action_context_bar = 2131492999;
+			// aapt resource value: 0x7f0c0089
+			public const int action_context_bar = 2131493001;
 			
-			// aapt resource value: 0x7f0c00c4
-			public const int action_divider = 2131493060;
+			// aapt resource value: 0x7f0c00cc
+			public const int action_divider = 2131493068;
 			
-			// aapt resource value: 0x7f0c00be
-			public const int action_image = 2131493054;
+			// aapt resource value: 0x7f0c00c6
+			public const int action_image = 2131493062;
 			
 			// aapt resource value: 0x7f0c0003
 			public const int action_menu_divider = 2131492867;
@@ -3288,23 +3794,23 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0004
 			public const int action_menu_presenter = 2131492868;
 			
-			// aapt resource value: 0x7f0c0083
-			public const int action_mode_bar = 2131492995;
+			// aapt resource value: 0x7f0c0085
+			public const int action_mode_bar = 2131492997;
 			
-			// aapt resource value: 0x7f0c0082
-			public const int action_mode_bar_stub = 2131492994;
+			// aapt resource value: 0x7f0c0084
+			public const int action_mode_bar_stub = 2131492996;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int action_mode_close_button = 2131492966;
+			// aapt resource value: 0x7f0c0068
+			public const int action_mode_close_button = 2131492968;
 			
-			// aapt resource value: 0x7f0c00bf
-			public const int action_text = 2131493055;
+			// aapt resource value: 0x7f0c00c7
+			public const int action_text = 2131493063;
 			
-			// aapt resource value: 0x7f0c00cd
-			public const int actions = 2131493069;
+			// aapt resource value: 0x7f0c00d5
+			public const int actions = 2131493077;
 			
-			// aapt resource value: 0x7f0c0067
-			public const int activity_chooser_view_content = 2131492967;
+			// aapt resource value: 0x7f0c0069
+			public const int activity_chooser_view_content = 2131492969;
 			
 			// aapt resource value: 0x7f0c0032
 			public const int add = 2131492914;
@@ -3315,8 +3821,8 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0023
 			public const int adjust_width = 2131492899;
 			
-			// aapt resource value: 0x7f0c007a
-			public const int alertTitle = 2131492986;
+			// aapt resource value: 0x7f0c007c
+			public const int alertTitle = 2131492988;
 			
 			// aapt resource value: 0x7f0c005c
 			public const int all = 2131492956;
@@ -3339,11 +3845,11 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0048
 			public const int bottom = 2131492936;
 			
-			// aapt resource value: 0x7f0c006d
-			public const int buttonPanel = 2131492973;
+			// aapt resource value: 0x7f0c006f
+			public const int buttonPanel = 2131492975;
 			
-			// aapt resource value: 0x7f0c00c1
-			public const int cancel_action = 2131493057;
+			// aapt resource value: 0x7f0c00c9
+			public const int cancel_action = 2131493065;
 			
 			// aapt resource value: 0x7f0c004f
 			public const int center = 2131492943;
@@ -3354,11 +3860,23 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0051
 			public const int center_vertical = 2131492945;
 			
-			// aapt resource value: 0x7f0c007d
-			public const int checkbox = 2131492989;
+			// aapt resource value: 0x7f0c00e1
+			public const int chart_data_point_content_container = 2131493089;
 			
-			// aapt resource value: 0x7f0c00c9
-			public const int chronometer = 2131493065;
+			// aapt resource value: 0x7f0c0098
+			public const int chart_tooltip_category = 2131493016;
+			
+			// aapt resource value: 0x7f0c00e0
+			public const int chart_tooltip_pointer = 2131493088;
+			
+			// aapt resource value: 0x7f0c0099
+			public const int chart_tooltip_value = 2131493017;
+			
+			// aapt resource value: 0x7f0c007f
+			public const int checkbox = 2131492991;
+			
+			// aapt resource value: 0x7f0c00d1
+			public const int chronometer = 2131493073;
 			
 			// aapt resource value: 0x7f0c0058
 			public const int clip_horizontal = 2131492952;
@@ -3369,56 +3887,56 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0044
 			public const int collapseActionView = 2131492932;
 			
-			// aapt resource value: 0x7f0c0097
-			public const int container = 2131493015;
+			// aapt resource value: 0x7f0c009c
+			public const int container = 2131493020;
 			
-			// aapt resource value: 0x7f0c0070
-			public const int contentPanel = 2131492976;
+			// aapt resource value: 0x7f0c0072
+			public const int contentPanel = 2131492978;
 			
-			// aapt resource value: 0x7f0c0098
-			public const int coordinator = 2131493016;
+			// aapt resource value: 0x7f0c009d
+			public const int coordinator = 2131493021;
 			
-			// aapt resource value: 0x7f0c0077
-			public const int custom = 2131492983;
+			// aapt resource value: 0x7f0c0079
+			public const int custom = 2131492985;
 			
-			// aapt resource value: 0x7f0c0076
-			public const int customPanel = 2131492982;
+			// aapt resource value: 0x7f0c0078
+			public const int customPanel = 2131492984;
 			
 			// aapt resource value: 0x7f0c0028
 			public const int dark = 2131492904;
 			
-			// aapt resource value: 0x7f0c0084
-			public const int decor_content_parent = 2131492996;
+			// aapt resource value: 0x7f0c0086
+			public const int decor_content_parent = 2131492998;
 			
-			// aapt resource value: 0x7f0c006a
-			public const int default_activity_button = 2131492970;
-			
-			// aapt resource value: 0x7f0c009a
-			public const int design_bottom_sheet = 2131493018;
-			
-			// aapt resource value: 0x7f0c00a1
-			public const int design_menu_item_action_area = 2131493025;
-			
-			// aapt resource value: 0x7f0c00a0
-			public const int design_menu_item_action_area_stub = 2131493024;
+			// aapt resource value: 0x7f0c006c
+			public const int default_activity_button = 2131492972;
 			
 			// aapt resource value: 0x7f0c009f
-			public const int design_menu_item_text = 2131493023;
+			public const int design_bottom_sheet = 2131493023;
 			
-			// aapt resource value: 0x7f0c009e
-			public const int design_navigation_view = 2131493022;
+			// aapt resource value: 0x7f0c00a6
+			public const int design_menu_item_action_area = 2131493030;
+			
+			// aapt resource value: 0x7f0c00a5
+			public const int design_menu_item_action_area_stub = 2131493029;
+			
+			// aapt resource value: 0x7f0c00a4
+			public const int design_menu_item_text = 2131493028;
+			
+			// aapt resource value: 0x7f0c00a3
+			public const int design_navigation_view = 2131493027;
 			
 			// aapt resource value: 0x7f0c002c
 			public const int disableHome = 2131492908;
 			
-			// aapt resource value: 0x7f0c0088
-			public const int edit_query = 2131493000;
+			// aapt resource value: 0x7f0c008a
+			public const int edit_query = 2131493002;
 			
 			// aapt resource value: 0x7f0c003b
 			public const int end = 2131492923;
 			
-			// aapt resource value: 0x7f0c00cf
-			public const int end_padder = 2131493071;
+			// aapt resource value: 0x7f0c00d7
+			public const int end_padder = 2131493079;
 			
 			// aapt resource value: 0x7f0c004a
 			public const int enterAlways = 2131492938;
@@ -3429,11 +3947,11 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c004c
 			public const int exitUntilCollapsed = 2131492940;
 			
-			// aapt resource value: 0x7f0c0068
-			public const int expand_activities_button = 2131492968;
+			// aapt resource value: 0x7f0c006a
+			public const int expand_activities_button = 2131492970;
 			
-			// aapt resource value: 0x7f0c007c
-			public const int expanded_menu = 2131492988;
+			// aapt resource value: 0x7f0c007e
+			public const int expanded_menu = 2131492990;
 			
 			// aapt resource value: 0x7f0c005a
 			public const int fill = 2131492954;
@@ -3453,20 +3971,29 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c000a
 			public const int ghost_view = 2131492874;
 			
+			// aapt resource value: 0x7f0c00d8
+			public const int groupHeaderCollapseImage = 2131493080;
+			
+			// aapt resource value: 0x7f0c00d9
+			public const int groupHeaderText = 2131493081;
+			
 			// aapt resource value: 0x7f0c0005
 			public const int home = 2131492869;
 			
 			// aapt resource value: 0x7f0c002d
 			public const int homeAsUp = 2131492909;
 			
+			// aapt resource value: 0x7f0c0064
+			public const int horizontal = 2131492964;
+			
 			// aapt resource value: 0x7f0c001d
 			public const int hybrid = 2131492893;
 			
-			// aapt resource value: 0x7f0c006c
-			public const int icon = 2131492972;
+			// aapt resource value: 0x7f0c006e
+			public const int icon = 2131492974;
 			
-			// aapt resource value: 0x7f0c00ce
-			public const int icon_group = 2131493070;
+			// aapt resource value: 0x7f0c00d6
+			public const int icon_group = 2131493078;
 			
 			// aapt resource value: 0x7f0c0024
 			public const int icon_only = 2131492900;
@@ -3474,11 +4001,14 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0045
 			public const int ifRoom = 2131492933;
 			
-			// aapt resource value: 0x7f0c0069
-			public const int image = 2131492969;
+			// aapt resource value: 0x7f0c006b
+			public const int image = 2131492971;
 			
-			// aapt resource value: 0x7f0c00ca
-			public const int info = 2131493066;
+			// aapt resource value: 0x7f0c00a8
+			public const int imageView = 2131493032;
+			
+			// aapt resource value: 0x7f0c00d2
+			public const int info = 2131493074;
 			
 			// aapt resource value: 0x7f0c0063
 			public const int italic = 2131492963;
@@ -3486,8 +4016,8 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0000
 			public const int item_touch_helper_previous_elevation = 2131492864;
 			
-			// aapt resource value: 0x7f0c0096
-			public const int largeLabel = 2131493014;
+			// aapt resource value: 0x7f0c009b
+			public const int largeLabel = 2131493019;
 			
 			// aapt resource value: 0x7f0c0053
 			public const int left = 2131492947;
@@ -3504,17 +4034,17 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c002a
 			public const int listMode = 2131492906;
 			
-			// aapt resource value: 0x7f0c006b
-			public const int list_item = 2131492971;
+			// aapt resource value: 0x7f0c006d
+			public const int list_item = 2131492973;
 			
-			// aapt resource value: 0x7f0c00d4
-			public const int masked = 2131493076;
+			// aapt resource value: 0x7f0c00e3
+			public const int masked = 2131493091;
 			
-			// aapt resource value: 0x7f0c00c3
-			public const int media_actions = 2131493059;
+			// aapt resource value: 0x7f0c00cb
+			public const int media_actions = 2131493067;
 			
-			// aapt resource value: 0x7f0c00d2
-			public const int message = 2131493074;
+			// aapt resource value: 0x7f0c00df
+			public const int message = 2131493087;
 			
 			// aapt resource value: 0x7f0c003c
 			public const int middle = 2131492924;
@@ -3522,86 +4052,92 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c005d
 			public const int mini = 2131492957;
 			
-			// aapt resource value: 0x7f0c00af
-			public const int mr_art = 2131493039;
-			
-			// aapt resource value: 0x7f0c00a4
-			public const int mr_chooser_list = 2131493028;
-			
-			// aapt resource value: 0x7f0c00a7
-			public const int mr_chooser_route_desc = 2131493031;
-			
-			// aapt resource value: 0x7f0c00a5
-			public const int mr_chooser_route_icon = 2131493029;
-			
-			// aapt resource value: 0x7f0c00a6
-			public const int mr_chooser_route_name = 2131493030;
-			
-			// aapt resource value: 0x7f0c00a3
-			public const int mr_chooser_title = 2131493027;
-			
-			// aapt resource value: 0x7f0c00ac
-			public const int mr_close = 2131493036;
-			
-			// aapt resource value: 0x7f0c00b2
-			public const int mr_control_divider = 2131493042;
-			
-			// aapt resource value: 0x7f0c00b8
-			public const int mr_control_playback_ctrl = 2131493048;
-			
-			// aapt resource value: 0x7f0c00bb
-			public const int mr_control_subtitle = 2131493051;
-			
-			// aapt resource value: 0x7f0c00ba
-			public const int mr_control_title = 2131493050;
-			
-			// aapt resource value: 0x7f0c00b9
-			public const int mr_control_title_container = 2131493049;
-			
-			// aapt resource value: 0x7f0c00ad
-			public const int mr_custom_control = 2131493037;
-			
-			// aapt resource value: 0x7f0c00ae
-			public const int mr_default_control = 2131493038;
-			
-			// aapt resource value: 0x7f0c00a9
-			public const int mr_dialog_area = 2131493033;
-			
-			// aapt resource value: 0x7f0c00a8
-			public const int mr_expandable_area = 2131493032;
-			
-			// aapt resource value: 0x7f0c00bc
-			public const int mr_group_expand_collapse = 2131493052;
-			
-			// aapt resource value: 0x7f0c00b0
-			public const int mr_media_main_control = 2131493040;
-			
-			// aapt resource value: 0x7f0c00ab
-			public const int mr_name = 2131493035;
-			
-			// aapt resource value: 0x7f0c00b1
-			public const int mr_playback_control = 2131493041;
+			// aapt resource value: 0x7f0c00b5
+			public const int mr_art = 2131493045;
 			
 			// aapt resource value: 0x7f0c00aa
-			public const int mr_title_bar = 2131493034;
+			public const int mr_chooser_list = 2131493034;
+			
+			// aapt resource value: 0x7f0c00ad
+			public const int mr_chooser_route_desc = 2131493037;
+			
+			// aapt resource value: 0x7f0c00ab
+			public const int mr_chooser_route_icon = 2131493035;
+			
+			// aapt resource value: 0x7f0c00ac
+			public const int mr_chooser_route_name = 2131493036;
+			
+			// aapt resource value: 0x7f0c00a9
+			public const int mr_chooser_title = 2131493033;
+			
+			// aapt resource value: 0x7f0c00b2
+			public const int mr_close = 2131493042;
+			
+			// aapt resource value: 0x7f0c00b8
+			public const int mr_control_divider = 2131493048;
+			
+			// aapt resource value: 0x7f0c00be
+			public const int mr_control_playback_ctrl = 2131493054;
+			
+			// aapt resource value: 0x7f0c00c1
+			public const int mr_control_subtitle = 2131493057;
+			
+			// aapt resource value: 0x7f0c00c0
+			public const int mr_control_title = 2131493056;
+			
+			// aapt resource value: 0x7f0c00bf
+			public const int mr_control_title_container = 2131493055;
 			
 			// aapt resource value: 0x7f0c00b3
-			public const int mr_volume_control = 2131493043;
+			public const int mr_custom_control = 2131493043;
 			
 			// aapt resource value: 0x7f0c00b4
-			public const int mr_volume_group_list = 2131493044;
+			public const int mr_default_control = 2131493044;
+			
+			// aapt resource value: 0x7f0c00af
+			public const int mr_dialog_area = 2131493039;
+			
+			// aapt resource value: 0x7f0c00ae
+			public const int mr_expandable_area = 2131493038;
+			
+			// aapt resource value: 0x7f0c00c2
+			public const int mr_group_expand_collapse = 2131493058;
 			
 			// aapt resource value: 0x7f0c00b6
-			public const int mr_volume_item_icon = 2131493046;
+			public const int mr_media_main_control = 2131493046;
+			
+			// aapt resource value: 0x7f0c00b1
+			public const int mr_name = 2131493041;
 			
 			// aapt resource value: 0x7f0c00b7
-			public const int mr_volume_slider = 2131493047;
+			public const int mr_playback_control = 2131493047;
+			
+			// aapt resource value: 0x7f0c00b0
+			public const int mr_title_bar = 2131493040;
+			
+			// aapt resource value: 0x7f0c00b9
+			public const int mr_volume_control = 2131493049;
+			
+			// aapt resource value: 0x7f0c00ba
+			public const int mr_volume_group_list = 2131493050;
+			
+			// aapt resource value: 0x7f0c00bc
+			public const int mr_volume_item_icon = 2131493052;
+			
+			// aapt resource value: 0x7f0c00bd
+			public const int mr_volume_slider = 2131493053;
 			
 			// aapt resource value: 0x7f0c0033
 			public const int multiply = 2131492915;
 			
-			// aapt resource value: 0x7f0c009d
-			public const int navigation_header_container = 2131493021;
+			// aapt resource value: 0x7f0c00c3
+			public const int navItemsLayout = 2131493059;
+			
+			// aapt resource value: 0x7f0c00c4
+			public const int navigationItemText = 2131493060;
+			
+			// aapt resource value: 0x7f0c00a2
+			public const int navigation_header_container = 2131493026;
 			
 			// aapt resource value: 0x7f0c0046
 			public const int never = 2131492934;
@@ -3612,20 +4148,20 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c001f
 			public const int normal = 2131492895;
 			
-			// aapt resource value: 0x7f0c00cc
-			public const int notification_background = 2131493068;
+			// aapt resource value: 0x7f0c00d4
+			public const int notification_background = 2131493076;
 			
-			// aapt resource value: 0x7f0c00c6
-			public const int notification_main_column = 2131493062;
+			// aapt resource value: 0x7f0c00ce
+			public const int notification_main_column = 2131493070;
 			
-			// aapt resource value: 0x7f0c00c5
-			public const int notification_main_column_container = 2131493061;
+			// aapt resource value: 0x7f0c00cd
+			public const int notification_main_column_container = 2131493069;
 			
 			// aapt resource value: 0x7f0c0056
 			public const int parallax = 2131492950;
 			
-			// aapt resource value: 0x7f0c006f
-			public const int parentPanel = 2131492975;
+			// aapt resource value: 0x7f0c0071
+			public const int parentPanel = 2131492977;
 			
 			// aapt resource value: 0x7f0c000b
 			public const int parent_matrix = 2131492875;
@@ -3639,17 +4175,17 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0007
 			public const int progress_horizontal = 2131492871;
 			
-			// aapt resource value: 0x7f0c007f
-			public const int radio = 2131492991;
+			// aapt resource value: 0x7f0c0081
+			public const int radio = 2131492993;
 			
 			// aapt resource value: 0x7f0c0054
 			public const int right = 2131492948;
 			
-			// aapt resource value: 0x7f0c00cb
-			public const int right_icon = 2131493067;
+			// aapt resource value: 0x7f0c00d3
+			public const int right_icon = 2131493075;
 			
-			// aapt resource value: 0x7f0c00c7
-			public const int right_side = 2131493063;
+			// aapt resource value: 0x7f0c00cf
+			public const int right_side = 2131493071;
 			
 			// aapt resource value: 0x7f0c0020
 			public const int satellite = 2131492896;
@@ -3669,53 +4205,53 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c004d
 			public const int scroll = 2131492941;
 			
-			// aapt resource value: 0x7f0c0075
-			public const int scrollIndicatorDown = 2131492981;
+			// aapt resource value: 0x7f0c0077
+			public const int scrollIndicatorDown = 2131492983;
 			
-			// aapt resource value: 0x7f0c0071
-			public const int scrollIndicatorUp = 2131492977;
+			// aapt resource value: 0x7f0c0073
+			public const int scrollIndicatorUp = 2131492979;
 			
-			// aapt resource value: 0x7f0c0072
-			public const int scrollView = 2131492978;
+			// aapt resource value: 0x7f0c0074
+			public const int scrollView = 2131492980;
 			
 			// aapt resource value: 0x7f0c005f
 			public const int scrollable = 2131492959;
 			
-			// aapt resource value: 0x7f0c008a
-			public const int search_badge = 2131493002;
-			
-			// aapt resource value: 0x7f0c0089
-			public const int search_bar = 2131493001;
+			// aapt resource value: 0x7f0c008c
+			public const int search_badge = 2131493004;
 			
 			// aapt resource value: 0x7f0c008b
-			public const int search_button = 2131493003;
-			
-			// aapt resource value: 0x7f0c0090
-			public const int search_close_btn = 2131493008;
-			
-			// aapt resource value: 0x7f0c008c
-			public const int search_edit_frame = 2131493004;
-			
-			// aapt resource value: 0x7f0c0092
-			public const int search_go_btn = 2131493010;
+			public const int search_bar = 2131493003;
 			
 			// aapt resource value: 0x7f0c008d
-			public const int search_mag_icon = 2131493005;
+			public const int search_button = 2131493005;
+			
+			// aapt resource value: 0x7f0c0092
+			public const int search_close_btn = 2131493010;
 			
 			// aapt resource value: 0x7f0c008e
-			public const int search_plate = 2131493006;
-			
-			// aapt resource value: 0x7f0c008f
-			public const int search_src_text = 2131493007;
-			
-			// aapt resource value: 0x7f0c0093
-			public const int search_voice_btn = 2131493011;
+			public const int search_edit_frame = 2131493006;
 			
 			// aapt resource value: 0x7f0c0094
-			public const int select_dialog_listview = 2131493012;
+			public const int search_go_btn = 2131493012;
 			
-			// aapt resource value: 0x7f0c007e
-			public const int shortcut = 2131492990;
+			// aapt resource value: 0x7f0c008f
+			public const int search_mag_icon = 2131493007;
+			
+			// aapt resource value: 0x7f0c0090
+			public const int search_plate = 2131493008;
+			
+			// aapt resource value: 0x7f0c0091
+			public const int search_src_text = 2131493009;
+			
+			// aapt resource value: 0x7f0c0095
+			public const int search_voice_btn = 2131493013;
+			
+			// aapt resource value: 0x7f0c0096
+			public const int select_dialog_listview = 2131493014;
+			
+			// aapt resource value: 0x7f0c0080
+			public const int shortcut = 2131492992;
 			
 			// aapt resource value: 0x7f0c002e
 			public const int showCustom = 2131492910;
@@ -3726,23 +4262,23 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0030
 			public const int showTitle = 2131492912;
 			
-			// aapt resource value: 0x7f0c00d0
-			public const int sliding_tabs = 2131493072;
+			// aapt resource value: 0x7f0c00dd
+			public const int sliding_tabs = 2131493085;
 			
-			// aapt resource value: 0x7f0c0095
-			public const int smallLabel = 2131493013;
+			// aapt resource value: 0x7f0c009a
+			public const int smallLabel = 2131493018;
 			
-			// aapt resource value: 0x7f0c009c
-			public const int snackbar_action = 2131493020;
+			// aapt resource value: 0x7f0c00a1
+			public const int snackbar_action = 2131493025;
 			
-			// aapt resource value: 0x7f0c009b
-			public const int snackbar_text = 2131493019;
+			// aapt resource value: 0x7f0c00a0
+			public const int snackbar_text = 2131493024;
 			
 			// aapt resource value: 0x7f0c004e
 			public const int snap = 2131492942;
 			
-			// aapt resource value: 0x7f0c006e
-			public const int spacer = 2131492974;
+			// aapt resource value: 0x7f0c0070
+			public const int spacer = 2131492976;
 			
 			// aapt resource value: 0x7f0c0008
 			public const int split_action_bar = 2131492872;
@@ -3762,14 +4298,20 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0055
 			public const int start = 2131492949;
 			
-			// aapt resource value: 0x7f0c00c2
-			public const int status_bar_latest_event_content = 2131493058;
+			// aapt resource value: 0x7f0c00ca
+			public const int status_bar_latest_event_content = 2131493066;
 			
-			// aapt resource value: 0x7f0c0080
-			public const int submenuarrow = 2131492992;
+			// aapt resource value: 0x7f0c0082
+			public const int submenuarrow = 2131492994;
 			
-			// aapt resource value: 0x7f0c0091
-			public const int submit_area = 2131493009;
+			// aapt resource value: 0x7f0c0093
+			public const int submit_area = 2131493011;
+			
+			// aapt resource value: 0x7f0c00dc
+			public const int tabItemImageView = 2131493084;
+			
+			// aapt resource value: 0x7f0c00db
+			public const int tabItemTextView = 2131493083;
 			
 			// aapt resource value: 0x7f0c002b
 			public const int tabMode = 2131492907;
@@ -3783,17 +4325,20 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c001a
 			public const int text = 2131492890;
 			
+			// aapt resource value: 0x7f0c00da
+			public const int text1 = 2131493082;
+			
 			// aapt resource value: 0x7f0c001b
 			public const int text2 = 2131492891;
 			
-			// aapt resource value: 0x7f0c0074
-			public const int textSpacerNoButtons = 2131492980;
+			// aapt resource value: 0x7f0c0076
+			public const int textSpacerNoButtons = 2131492982;
 			
-			// aapt resource value: 0x7f0c0073
-			public const int textSpacerNoTitle = 2131492979;
+			// aapt resource value: 0x7f0c0075
+			public const int textSpacerNoTitle = 2131492981;
 			
-			// aapt resource value: 0x7f0c00a2
-			public const int text_input_password_toggle = 2131493026;
+			// aapt resource value: 0x7f0c00a7
+			public const int text_input_password_toggle = 2131493031;
 			
 			// aapt resource value: 0x7f0c0014
 			public const int textinput_counter = 2131492884;
@@ -3801,29 +4346,32 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0015
 			public const int textinput_error = 2131492885;
 			
-			// aapt resource value: 0x7f0c00c8
-			public const int time = 2131493064;
+			// aapt resource value: 0x7f0c00d0
+			public const int time = 2131493072;
 			
 			// aapt resource value: 0x7f0c001c
 			public const int title = 2131492892;
 			
+			// aapt resource value: 0x7f0c007d
+			public const int titleDividerNoCustom = 2131492989;
+			
 			// aapt resource value: 0x7f0c007b
-			public const int titleDividerNoCustom = 2131492987;
+			public const int title_template = 2131492987;
 			
-			// aapt resource value: 0x7f0c0079
-			public const int title_template = 2131492985;
+			// aapt resource value: 0x7f0c00de
+			public const int toolbar = 2131493086;
 			
-			// aapt resource value: 0x7f0c00d1
-			public const int toolbar = 2131493073;
+			// aapt resource value: 0x7f0c0097
+			public const int tooltip_content_container = 2131493015;
 			
 			// aapt resource value: 0x7f0c0049
 			public const int top = 2131492937;
 			
-			// aapt resource value: 0x7f0c0078
-			public const int topPanel = 2131492984;
+			// aapt resource value: 0x7f0c007a
+			public const int topPanel = 2131492986;
 			
-			// aapt resource value: 0x7f0c0099
-			public const int touch_outside = 2131493017;
+			// aapt resource value: 0x7f0c009e
+			public const int touch_outside = 2131493022;
 			
 			// aapt resource value: 0x7f0c000f
 			public const int transition_current_scene = 2131492879;
@@ -3849,14 +4397,17 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0c0031
 			public const int useLogo = 2131492913;
 			
+			// aapt resource value: 0x7f0c0065
+			public const int vertical = 2131492965;
+			
 			// aapt resource value: 0x7f0c0016
 			public const int view_offset_helper = 2131492886;
 			
-			// aapt resource value: 0x7f0c00d3
-			public const int visible = 2131493075;
+			// aapt resource value: 0x7f0c00e2
+			public const int visible = 2131493090;
 			
-			// aapt resource value: 0x7f0c00b5
-			public const int volume_item_container = 2131493045;
+			// aapt resource value: 0x7f0c00bb
+			public const int volume_item_container = 2131493051;
 			
 			// aapt resource value: 0x7f0c0026
 			public const int wide = 2131492902;
@@ -4033,130 +4584,169 @@ namespace Maps.Droid
 			public const int abc_select_dialog_material = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int design_bottom_navigation_item = 2130968602;
+			public const int default_tooltip_content = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int design_bottom_sheet_dialog = 2130968603;
+			public const int design_bottom_navigation_item = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int design_layout_snackbar = 2130968604;
+			public const int design_bottom_sheet_dialog = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int design_layout_snackbar_include = 2130968605;
+			public const int design_layout_snackbar = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int design_layout_tab_icon = 2130968606;
+			public const int design_layout_snackbar_include = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int design_layout_tab_text = 2130968607;
+			public const int design_layout_tab_icon = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int design_menu_item_action_area = 2130968608;
+			public const int design_layout_tab_text = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int design_navigation_item = 2130968609;
+			public const int design_menu_item_action_area = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int design_navigation_item_header = 2130968610;
+			public const int design_navigation_item = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int design_navigation_item_separator = 2130968611;
+			public const int design_navigation_item_header = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int design_navigation_item_subheader = 2130968612;
+			public const int design_navigation_item_separator = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int design_navigation_menu = 2130968613;
+			public const int design_navigation_item_subheader = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int design_navigation_menu_item = 2130968614;
+			public const int design_navigation_menu = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int design_text_input_password_icon = 2130968615;
+			public const int design_navigation_menu_item = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int mr_chooser_dialog = 2130968616;
+			public const int design_text_input_password_icon = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int mr_chooser_list_item = 2130968617;
+			public const int drawer_blur_fade_layer = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int mr_controller_material_dialog_b = 2130968618;
+			public const int mr_chooser_dialog = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int mr_controller_volume_item = 2130968619;
+			public const int mr_chooser_list_item = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int mr_playback_control = 2130968620;
+			public const int mr_controller_material_dialog_b = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int mr_volume_control = 2130968621;
+			public const int mr_controller_volume_item = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int notification_action = 2130968622;
+			public const int mr_playback_control = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_action_tombstone = 2130968623;
+			public const int mr_volume_control = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_media_action = 2130968624;
+			public const int navigation_drawer_content = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_media_cancel_action = 2130968625;
+			public const int navigation_item_view = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_big_media = 2130968626;
+			public const int notification_action = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_big_media_custom = 2130968627;
+			public const int notification_action_tombstone = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_big_media_narrow = 2130968628;
+			public const int notification_media_action = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_big_media_narrow_custom = 2130968629;
+			public const int notification_media_cancel_action = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_custom_big = 2130968630;
+			public const int notification_template_big_media = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_icon_group = 2130968631;
+			public const int notification_template_big_media_custom = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_lines_media = 2130968632;
+			public const int notification_template_big_media_narrow = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int notification_template_media = 2130968633;
+			public const int notification_template_big_media_narrow_custom = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int notification_template_media_custom = 2130968634;
+			public const int notification_template_custom_big = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int notification_template_part_chronometer = 2130968635;
+			public const int notification_template_icon_group = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int notification_template_part_time = 2130968636;
+			public const int notification_template_lines_media = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int select_dialog_item_material = 2130968637;
+			public const int notification_template_media = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int select_dialog_multichoice_material = 2130968638;
+			public const int notification_template_media_custom = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int select_dialog_singlechoice_material = 2130968639;
+			public const int notification_template_part_chronometer = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int support_simple_spinner_dropdown_item = 2130968640;
+			public const int notification_template_part_time = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int Tabbar = 2130968641;
+			public const int on_demand_automatic = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int Toolbar = 2130968642;
+			public const int on_demand_manual = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int tooltip = 2130968643;
+			public const int scrollview_scrollbars = 2130968643;
+			
+			// aapt resource value: 0x7f040044
+			public const int select_dialog_item_material = 2130968644;
+			
+			// aapt resource value: 0x7f040045
+			public const int select_dialog_multichoice_material = 2130968645;
+			
+			// aapt resource value: 0x7f040046
+			public const int select_dialog_singlechoice_material = 2130968646;
+			
+			// aapt resource value: 0x7f040047
+			public const int simple_empty_content = 2130968647;
+			
+			// aapt resource value: 0x7f040048
+			public const int simple_group_header_item = 2130968648;
+			
+			// aapt resource value: 0x7f040049
+			public const int simple_list_item = 2130968649;
+			
+			// aapt resource value: 0x7f04004a
+			public const int support_simple_spinner_dropdown_item = 2130968650;
+			
+			// aapt resource value: 0x7f04004b
+			public const int tab_item_view = 2130968651;
+			
+			// aapt resource value: 0x7f04004c
+			public const int Tabbar = 2130968652;
+			
+			// aapt resource value: 0x7f04004d
+			public const int Toolbar = 2130968653;
+			
+			// aapt resource value: 0x7f04004e
+			public const int tooltip = 2130968654;
+			
+			// aapt resource value: 0x7f04004f
+			public const int tooltip_container = 2130968655;
+			
+			// aapt resource value: 0x7f040050
+			public const int trial_message = 2130968656;
 			
 			static Layout()
 			{
@@ -4192,6 +4782,12 @@ namespace Maps.Droid
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f09004e
+			public const int ApplicationName = 2131296334;
+			
+			// aapt resource value: 0x7f09004d
+			public const int Hello = 2131296333;
 			
 			// aapt resource value: 0x7f090026
 			public const int abc_action_bar_home_description = 2131296294;
@@ -4340,6 +4936,9 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f090010
 			public const int common_signin_button_text_long = 2131296272;
 			
+			// aapt resource value: 0x7f09004f
+			public const int list_view_default_empty_content = 2131296335;
+			
 			// aapt resource value: 0x7f090011
 			public const int mr_button_content_description = 2131296273;
 			
@@ -4403,6 +5002,12 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f090025
 			public const int mr_user_route_category_name = 2131296293;
 			
+			// aapt resource value: 0x7f090050
+			public const int on_demand_manual_button_busy = 2131296336;
+			
+			// aapt resource value: 0x7f090051
+			public const int on_demand_manual_button_idle = 2131296337;
+			
 			// aapt resource value: 0x7f090047
 			public const int password_toggle_content_description = 2131296327;
 			
@@ -4423,6 +5028,12 @@ namespace Maps.Droid
 			
 			// aapt resource value: 0x7f09004c
 			public const int status_bar_notification_info_overflow = 2131296332;
+			
+			// aapt resource value: 0x7f090052
+			public const int trial_message = 2131296338;
+			
+			// aapt resource value: 0x7f090053
+			public const int trial_message_caption = 2131296339;
 			
 			static String()
 			{
@@ -4455,8 +5066,8 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0d016e
 			public const int Animation_Design_BottomSheetDialog = 2131558766;
 			
-			// aapt resource value: 0x7f0d0191
-			public const int AppCompatDialogStyle = 2131558801;
+			// aapt resource value: 0x7f0d0193
+			public const int AppCompatDialogStyle = 2131558803;
 			
 			// aapt resource value: 0x7f0d00a9
 			public const int Base_AlertDialog_AppCompat = 2131558569;
@@ -4959,11 +5570,11 @@ namespace Maps.Droid
 			// aapt resource value: 0x7f0d000e
 			public const int CardView_Light = 2131558414;
 			
-			// aapt resource value: 0x7f0d018f
-			public const int MainTheme = 2131558799;
+			// aapt resource value: 0x7f0d0191
+			public const int MainTheme = 2131558801;
 			
-			// aapt resource value: 0x7f0d0190
-			public const int MainTheme_Base = 2131558800;
+			// aapt resource value: 0x7f0d0192
+			public const int MainTheme_Base = 2131558802;
 			
 			// aapt resource value: 0x7f0d002d
 			public const int Platform_AppCompat = 2131558445;
@@ -5006,6 +5617,12 @@ namespace Maps.Droid
 			
 			// aapt resource value: 0x7f0d0031
 			public const int Platform_Widget_AppCompat_Spinner = 2131558449;
+			
+			// aapt resource value: 0x7f0d018f
+			public const int RadScrollViewStyle = 2131558799;
+			
+			// aapt resource value: 0x7f0d0190
+			public const int RadScrollViewTheme = 2131558800;
 			
 			// aapt resource value: 0x7f0d003a
 			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131558458;
@@ -7260,6 +7877,20 @@ namespace Maps.Droid
 			// aapt resource value: 4
 			public const int NavigationView_menu = 4;
 			
+			public static int[] PointerLayout = new int[] {
+					2130772368,
+					2130772369,
+					2130772370};
+			
+			// aapt resource value: 2
+			public const int PointerLayout_pointerFill = 2;
+			
+			// aapt resource value: 1
+			public const int PointerLayout_pointerMargin = 1;
+			
+			// aapt resource value: 0
+			public const int PointerLayout_pointerSize = 0;
+			
 			public static int[] PopupWindow = new int[] {
 					16843126,
 					16843465,
@@ -7279,6 +7910,22 @@ namespace Maps.Droid
 			
 			// aapt resource value: 0
 			public const int PopupWindowBackgroundState_state_above_anchor = 0;
+			
+			public static int[] RadScrollView = new int[] {
+					2130772371,
+					2130772372};
+			
+			// aapt resource value: 0
+			public const int RadScrollView_fillViewport = 0;
+			
+			// aapt resource value: 1
+			public const int RadScrollView_scrollMode = 1;
+			
+			public static int[] RadScrollViewTheme = new int[] {
+					2130772373};
+			
+			// aapt resource value: 0
+			public const int RadScrollViewTheme_radScrollViewStyle = 0;
 			
 			public static int[] RecycleListView = new int[] {
 					2130772229,

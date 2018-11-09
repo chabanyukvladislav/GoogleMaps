@@ -60,6 +60,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>11.0.2</Version>
     </PackageReference>
+    <PackageReference Include="Telerik.UI.for.Xamarin.DataControls.Trial">
+      <Version>2018.3.1018.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>0.11.0-preview</Version>
     </PackageReference>
@@ -75,10 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
-    <Compile Include="Renderer\Controls\AddPin.xaml.cs">
-      <DependentUpon>AddPin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Renderer\MyMapRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -122,11 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\waypoint_pin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Renderer\Controls\AddPin.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\selected_pin.png" />

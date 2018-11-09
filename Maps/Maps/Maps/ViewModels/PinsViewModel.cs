@@ -42,6 +42,7 @@ namespace Maps.ViewModels
 
             ListViewTapped = new Command(ExecuteListViewTapped);
 
+            _pins.PinAdded += OnPinAdded;
             SharedResult.ResultChanged += OnResultChanged;
         }
 
@@ -107,6 +108,15 @@ namespace Maps.ViewModels
                 Duration = duration
             };
             PinPoints.Add(endPinPoint);
+        }
+        private void OnPinAdded(MyPin value)
+        {
+            var pinPoint = new PinPoint
+            {
+                Coordinate = value.Coordinate,
+                Number = PinPoints.Count
+            };
+            PinPoints.Add(pinPoint);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

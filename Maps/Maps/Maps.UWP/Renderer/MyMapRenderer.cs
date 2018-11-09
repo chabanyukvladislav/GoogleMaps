@@ -36,6 +36,7 @@ namespace Maps.UWP.Renderer
             _pins.PinAdded += OnAddPin;
             _pins.PinRemoved += OnRemovePin;
             _pins.PinSelected += OnPinSelected;
+            _pins.PinsUpdated += OnPinsUpdated;
             _routePath.CoordinatesChanged += OnRenderPath;
         }
 
@@ -267,6 +268,11 @@ namespace Maps.UWP.Renderer
             }
             OnRemovePin(newPin.Coordinate);
             OnAddPin(newPin);
+        }
+        private void OnPinsUpdated()
+        {
+            _nativeMap.MapElements.Clear();
+            LoadMyPins();
         }
     }
 }
