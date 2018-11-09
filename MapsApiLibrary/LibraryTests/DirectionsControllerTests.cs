@@ -19,7 +19,7 @@ namespace LibraryTests
             controller.Parameters.Key = "AIzaSyA3YhAyyckDAMFGuVR7yRI-fG_NATvL8Yk";
 
             //Act
-            var result = await controller.GetResult();
+            var result = await controller.GetResultAsync();
 
             //Assert
             Assert.Equal("OK", result?.Status);
@@ -37,7 +37,7 @@ namespace LibraryTests
             controller.Parameters.DepartureTime = DateTime.Parse("11/01/2018 16:00");
 
             //Act
-            var result = await controller.GetResult();
+            var result = await controller.GetResultAsync();
 
             //Assert
             Assert.Equal("OK", result?.Status);
@@ -51,13 +51,13 @@ namespace LibraryTests
             controller.Parameters.Origin = new Location(46.436458, 30.741378);
             controller.Parameters.Destination = new Location(46.437828, 30.726247);
             controller.Parameters.Key = "AIzaSyA3YhAyyckDAMFGuVR7yRI-fG_NATvL8Yk";
-            controller.Parameters.DepartureTime = DateTime.Parse("11/01/2018 16:00");
+            controller.Parameters.DepartureTime = DateTime.Parse("11/07/2018 16:00");
             controller.Parameters.Optimize = true;
             controller.Parameters.Waypoints.Add(new Location(46.468184, 30.741464));
             controller.Parameters.Waypoints.Add(new Location(46.459931, 30.749942));
 
             //Act
-            var result = await controller.GetResult();
+            var result = await controller.GetResultAsync();
 
             //Assert
             Assert.Equal("OK", result?.Status);

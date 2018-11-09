@@ -3,12 +3,88 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:vm="clr-namespace:Maps.ViewModels"
             xmlns:myControls="clr-namespace:Maps.Controls"
+             xmlns:converters="clr-namespace:Maps.Converters"
             x:Class="Maps.Views.MainPage">
     <ContentPage.BindingContext>
         <vm:MainViewModel />
     </ContentPage.BindingContext>
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ToNormalDurationConverter x:Key="ToNormalDuration"/>
+            <converters:ToNormalDistanceConverter x:Key="ToNormalDistance"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <myControls:MyMap PinsSource="{Binding Pins}"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="4*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Picker Grid.Column="0" HorizontalOptions="Center" Margin="5, 5, 25, 5" ItemsSource="{Binding}" SelectedItem="{Binding}"/>
+                <Button Grid.Column="1" Text="Calculate" HorizontalOptions="Center" Margin="5" Command="{Binding Calculate}" CommandParameter="false"/>
+                <Button Grid.Column="2" Text="Calculate optimize" HorizontalOptions="Center" Margin="5" Command="{Binding Calculate}" CommandParameter="true"/>
+            </Grid>
+
+            <ListView Grid.Row="1" BindingContext="{Binding PinsViewModel}" ItemsSource="{Binding PinPoints}" SelectedItem="{Binding SelectedPinPoint}">
+                <ListView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ListViewTapped}"/>
+                </ListView.GestureRecognizers>
+                <ListView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Margin="10" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="Number"/>
+                        <Label Grid.Column="1" Margin="10" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="Latitude"/>
+                        <Label Grid.Column="2" Margin="10" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="Longitude"/>
+                        <Label Grid.Column="3" Margin="10" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="Address"/>
+                        <Label Grid.Column="4" Margin="10" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="Duration"/>
+                        <Label Grid.Column="5" Margin="10" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="Distance"/>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" Margin="10" HorizontalTextAlignment="Center" Text="{Binding Number}"/>
+                                <Label Grid.Column="1" Margin="10" HorizontalTextAlignment="Center" Text="{Binding Coordinate.Latitude}"/>
+                                <Label Grid.Column="2" Margin="10" HorizontalTextAlignment="Center" Text="{Binding Coordinate.Longitude}"/>
+                                <Label Grid.Column="3" Margin="10" HorizontalTextAlignment="Center" Text="{Binding Address}"/>
+                                <Label Grid.Column="4" Margin="10" HorizontalTextAlignment="Center" Text="{Binding Duration, Converter={StaticResource ToNormalDuration}}"/>
+                                <Label Grid.Column="5" Margin="10" HorizontalTextAlignment="Center" Text="{Binding Distance, Converter={StaticResource ToNormalDistance}}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <myControls:MyMap Grid.Row="2" BindingContext="{Binding MapViewModel}" PinsSource="{Binding Pins}"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

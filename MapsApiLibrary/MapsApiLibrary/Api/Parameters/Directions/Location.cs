@@ -19,6 +19,12 @@ namespace MapsApiLibrary.Api.Parameters.Directions
             Latitude = latitude;
             Longitude = longitude;
         }
+        public Location(double latitude, double longitude, string placeId)
+        {
+            Latitude = latitude;
+            Longitude = longitude;
+            PlaceId = placeId;
+        }
 
         public static implicit operator string(Location loc)
         {
