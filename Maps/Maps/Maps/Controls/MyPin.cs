@@ -44,21 +44,33 @@ namespace Maps.Controls
             Coordinate = coordinate;
         }
 
+        public override bool Equals(object value)
+        {
+            if (!(value is MyPin pin) || pin.Coordinate == null || Coordinate == null)
+            {
+                return false;
+            }
+
+            var coordinateEqual = Coordinate.Equals(pin.Coordinate);
+            var typeEqual = MyType == MyPinType.Undefined || pin.MyType == MyPinType.Undefined || MyType == pin.MyType;
+            return coordinateEqual && typeEqual;
+        }
+
+        public override int GetHashCode()
+        {
+            return "mp".GetHashCode();
+        }
+
         protected override void OnPropertyChanged(string propertyName = null)
         {
             base.OnPropertyChanged(propertyName);
 
-            if (propertyName == IconPathProperty.PropertyName)
-            {
-                IconPathChanged?.Invoke(this, IconPath);
-            }
-            else if (propertyName == CoordinateProperty.PropertyName)
+            if (propertyName == CoordinateProperty.PropertyName)
             {
                 CoordinateChanged?.Invoke(this, Coordinate);
             }
         }
 
-        public event Action<MyPin, string> IconPathChanged;
         public event Action<MyPin, Coordinate> CoordinateChanged;
     }
 }

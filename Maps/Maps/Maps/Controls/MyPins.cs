@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 using Maps.Content;
 using Maps.Controls.Models;
 using Xamarin.Forms;
@@ -49,93 +47,9 @@ namespace Maps.Controls
                 NotNullValidate);
         }
 
-        public void Add(MyPin pin)
-        {
-            switch (pin.MyType)
-            {
-                case MyPinType.Start:
-                    StartPin.Coordinate = pin.Coordinate;
-                    break;
-                case MyPinType.Waypoint:
-                    if (WaypointsPin.FirstOrDefault(el => el.Coordinate.Equals(pin.Coordinate)) != null)
-                    {
-                        return;
-                    }
-                    WaypointsPin.Add(pin);
-                    break;
-                case MyPinType.End:
-                    EndPin.Coordinate = pin.Coordinate;
-                    break;
-                case MyPinType.MyLocation:
-                    MyCoordinatePin.Coordinate = pin.Coordinate;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-
-            PinAdded?.Invoke(pin);
-        }
-        public void Remove(MyPin pin)
-        {
-            switch (pin.MyType)
-            {
-                case MyPinType.Start:
-                    StartPin.Coordinate = null;
-                    break;
-                case MyPinType.Waypoint:
-                    var element = WaypointsPin.FirstOrDefault(el => el.Coordinate.Equals(pin.Coordinate));
-                    if (element != null)
-                    {
-                        WaypointsPin.Remove(element);
-                    }
-                    break;
-                case MyPinType.End:
-                    EndPin.Coordinate = null;
-                    break;
-                case MyPinType.MyLocation:
-                    MyCoordinatePin.Coordinate = null;
-                    break;
-                default:
-                    var item = WaypointsPin.FirstOrDefault(el => el.Coordinate.Equals(pin.Coordinate));
-                    if (item != null)
-                    {
-                        WaypointsPin.Remove(item);
-                        break;
-                    }
-
-                    if (StartPin.Coordinate != null && StartPin.Coordinate.Equals(pin.Coordinate))
-                    {
-                        StartPin.Coordinate = null;
-                        break;
-                    }
-
-                    if (EndPin.Coordinate != null && EndPin.Coordinate.Equals(pin.Coordinate))
-                    {
-                        EndPin.Coordinate = null;
-                        break;
-                    }
-
-                    if (MyCoordinatePin.Coordinate != null && MyCoordinatePin.Coordinate.Equals(pin.Coordinate))
-                    {
-                        MyCoordinatePin.Coordinate = null;
-                    }
-                    break;
-            }
-
-            PinRemoved?.Invoke(pin);
-        }
-
         private static bool NotNullValidate(BindableObject bindable, object value)
         {
             return value != null;
         }
-
-        protected override void OnPropertyChanged(string propertyName = null)
-        {
-            base.OnPropertyChanged(propertyName);
-        }
-        
-        public event Action<MyPin> PinAdded;
-        public event Action<MyPin> PinRemoved;
     }
 }

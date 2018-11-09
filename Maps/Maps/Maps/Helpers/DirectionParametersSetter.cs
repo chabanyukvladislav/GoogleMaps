@@ -1,4 +1,5 @@
-﻿using Maps.Controls;
+﻿using System;
+using Maps.Controls;
 using MapsApiLibrary;
 using MapsApiLibrary.Api.Parameters.Directions;
 using MapsApiLibrary.Api.Parameters.Directions.Enums;
@@ -12,7 +13,7 @@ namespace Maps.Helpers
         {
             service.Parameters.Origin.Latitude = pins.StartPin.Coordinate.Latitude;
             service.Parameters.Origin.Longitude = pins.StartPin.Coordinate.Longitude;
-            
+
             service.Parameters.Destination.Latitude = pins.EndPin.Coordinate.Latitude;
             service.Parameters.Destination.Longitude = pins.EndPin.Coordinate.Longitude;
 
@@ -25,10 +26,12 @@ namespace Maps.Helpers
                 service.Parameters.Waypoints.Add(location);
             }
 
-            if (trafficModels != null)
+            if (trafficModels == null || trafficModels.Value == TrafficModels.BestGuess)
             {
-                service.Parameters.TrafficModel = trafficModels;
+                return;
             }
+            service.Parameters.TrafficModel = trafficModels;
+            service.Parameters.DepartureTime = DateTime.Now.AddMinutes(1);
         }
     }
 }
