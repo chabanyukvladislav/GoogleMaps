@@ -1,9 +1,11 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Input;
 using Maps.Collections;
 using Maps.Controls;
 using Maps.Controls.Models;
+using MapsApiStandardLibrary.Models.Directions;
 using Xamarin.Forms;
 
 namespace Maps.ViewModels
@@ -43,6 +45,7 @@ namespace Maps.ViewModels
             ListViewTapped = new Command(ExecuteListViewTapped);
 
             _pins.PinAdded += OnPinAdded;
+            _pins.PinRemoved += OnPinRemoved;
             SharedResult.ResultChanged += OnResultChanged;
         }
 
@@ -117,6 +120,11 @@ namespace Maps.ViewModels
                 Number = PinPoints.Count
             };
             PinPoints.Add(pinPoint);
+        }
+        private void OnPinRemoved(Coordinate coordinate)
+        {
+            var element = PinPoints.FirstOrDefault(el => el.Coordinate.Equals(coordinate));
+            PinPoints.Remove(element);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

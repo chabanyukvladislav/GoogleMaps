@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows.Input;
 using Maps.Collections;
 using Maps.Controls;
+using Maps.Controls.Models;
 using Maps.Helpers;
 using MapsApiStandardLibrary;
 using MapsApiStandardLibrary.Api.Parameters.Directions;
@@ -44,6 +46,7 @@ namespace Maps.ViewModels
         }
 
         public Command Calculate { get; }
+        public ICommand TypeSelected { get; }
 
         public MainViewModel()
         {
@@ -57,6 +60,7 @@ namespace Maps.ViewModels
             MapViewModel = new MapViewModel();
 
             Calculate = new Command(ExecuteCalculate, IsButtonEnabled);
+            TypeSelected = new Command(ExecuteTypeSelected);
 
             OnPinsChanged();
 
@@ -93,6 +97,22 @@ namespace Maps.ViewModels
 
             SharedResult.Result = result;
             _lastCalculateOptimize = optimize;
+        }
+        private void ExecuteTypeSelected(object type)
+        {
+            var pinType = type.ToString();
+            switch (pinType)
+            {
+                case "Start":
+                    _myPins.PinType = MyPinType.Start;
+                    break;
+                case "Waypoint":
+                    _myPins.PinType = MyPinType.Waypoint;
+                    break;
+                case "End":
+                    _myPins.PinType = MyPinType.End;
+                    break;
+            }
         }
 
         protected virtual void OnPropertyChanged(string propertyName = null)

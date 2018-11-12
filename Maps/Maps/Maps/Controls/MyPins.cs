@@ -38,12 +38,12 @@ namespace Maps.Controls
             MyCoordinatePinProperty = BindableProperty.Create(nameof(MyCoordinatePin), typeof(MyPin), typeof(MyPins),
                 new MyPin(MyPinType.MyLocation, IconsPath.MyLocation, "I"), BindingMode.TwoWay, NotNullValidate);
             StartPinProperty = BindableProperty.Create(nameof(StartPin), typeof(MyPin), typeof(MyPins),
-                new MyPin(MyPinType.Start, IconsPath.StartEndPin, MyPinType.Start.ToString()), BindingMode.TwoWay,
+                new MyPin(MyPinType.Start, IconsPath.StartPin, MyPinType.Start.ToString()), BindingMode.TwoWay,
                 NotNullValidate);
             WaypointsPinProperty = BindableProperty.Create(nameof(WaypointsPin), typeof(ObservableCollection<MyPin>),
                 typeof(MyPins), new ObservableCollection<MyPin>(), BindingMode.TwoWay, NotNullValidate);
             EndPinProperty = BindableProperty.Create(nameof(EndPin), typeof(MyPin), typeof(MyPins),
-                new MyPin(MyPinType.End, IconsPath.StartEndPin, MyPinType.End.ToString()), BindingMode.TwoWay,
+                new MyPin(MyPinType.End, IconsPath.EndPin, MyPinType.End.ToString()), BindingMode.TwoWay,
                 NotNullValidate);
         }
 

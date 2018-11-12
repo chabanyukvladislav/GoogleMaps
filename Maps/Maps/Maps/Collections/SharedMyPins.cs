@@ -44,11 +44,13 @@ namespace Maps.Collections
                 PinsChanged?.Invoke();
             }
         }
+        public MyPinType PinType { get; set; }
 
         private SharedMyPins()
         {
             _selectedPin = null;
             Pins = new MyPins();
+            PinType = MyPinType.Undefined;
         }
 
         public bool AddPin(MyPin pin)
@@ -83,7 +85,7 @@ namespace Maps.Collections
             var pin = new MyPin
             {
                 Coordinate = startCoordinate,
-                IconPath = IconsPath.StartEndPin,
+                IconPath = IconsPath.StartPin,
                 Label = "Start",
                 MyType = MyPinType.Start
             };
@@ -106,7 +108,7 @@ namespace Maps.Collections
             var pin = new MyPin
             {
                 Coordinate = endCoordinate,
-                IconPath = IconsPath.StartEndPin,
+                IconPath = IconsPath.EndPin,
                 Label = "End",
                 MyType = MyPinType.End
             };
@@ -258,13 +260,13 @@ namespace Maps.Collections
                 switch (_selectedPin.MyType)
                 {
                     case MyPinType.Start:
-                        _selectedPin.IconPath = IconsPath.StartEndPin;
+                        _selectedPin.IconPath = IconsPath.StartPin;
                         break;
                     case MyPinType.Waypoint:
                         _selectedPin.IconPath = IconsPath.WaypointPin;
                         break;
                     case MyPinType.End:
-                        _selectedPin.IconPath = IconsPath.StartEndPin;
+                        _selectedPin.IconPath = IconsPath.EndPin;
                         break;
                     case MyPinType.MyLocation:
                         _selectedPin.IconPath = IconsPath.MyLocation;

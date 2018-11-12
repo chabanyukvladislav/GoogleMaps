@@ -23,6 +23,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="4*" />
             </Grid.RowDefinitions>
 
@@ -33,9 +34,9 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Picker Grid.Column="0" HorizontalOptions="Center" Margin="5, 5, 25, 5" ItemsSource="{Binding TrafficModels}" SelectedItem="{Binding SelectedTrafficModel}"/>
-                <Button Grid.Column="1" Text="Calculate" HorizontalOptions="Center" Margin="5" Command="{Binding Calculate}" CommandParameter="false"/>
-                <Button Grid.Column="2" Text="Calculate optimize" HorizontalOptions="Center" Margin="5" Command="{Binding Calculate}" CommandParameter="true"/>
+                <Picker Grid.Column="0" HorizontalOptions="Center" FontSize="Micro" Margin="5, 5, 25, 5" ItemsSource="{Binding TrafficModels}" SelectedItem="{Binding SelectedTrafficModel}"/>
+                <Button Grid.Column="1" Text="Calculate" FontSize="Micro" HorizontalOptions="Center" Margin="5" Command="{Binding Calculate}" CommandParameter="false"/>
+                <Button Grid.Column="2" Text="Calculate optimize" FontSize="Micro" HorizontalOptions="Center" Margin="5" Command="{Binding Calculate}" CommandParameter="true"/>
             </Grid>
 
             <telerikDataControl:RadListView Grid.Row="1" IsItemsReorderEnabled="True" ReorderEnded="RadListView_OnReorderEnded" BindingContext="{Binding PinsViewModel}" ItemsSource="{Binding PinPoints}" SelectedItem="{Binding SelectedPinPoint, Mode=TwoWay}">
@@ -56,12 +57,12 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Grid.Column="0" Margin="10" HorizontalTextAlignment="Center" Text="{Binding Number}"/>
-                                    <Label Grid.Column="1" Margin="10" HorizontalTextAlignment="Center" Text="{Binding Coordinate.Latitude}"/>
-                                    <Label Grid.Column="2" Margin="10" HorizontalTextAlignment="Center" Text="{Binding Coordinate.Longitude}"/>
-                                    <Label Grid.Column="3" Margin="10" HorizontalTextAlignment="Center" Text="{Binding Address}"/>
-                                    <Label Grid.Column="4" Margin="10" HorizontalTextAlignment="Center" Text="{Binding Duration, Converter={StaticResource ToNormalDuration}}"/>
-                                    <Label Grid.Column="5" Margin="10" HorizontalTextAlignment="Center" Text="{Binding Distance, Converter={StaticResource ToNormalDistance}}"/>
+                                    <Label Grid.Column="0" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Number}"/>
+                                    <Label Grid.Column="1" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Coordinate.Latitude}"/>
+                                    <Label Grid.Column="2" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Coordinate.Longitude}"/>
+                                    <Label Grid.Column="3" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Address}"/>
+                                    <Label Grid.Column="4" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Duration, Converter={StaticResource ToNormalDuration}}"/>
+                                    <Label Grid.Column="5" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Distance, Converter={StaticResource ToNormalDistance}}"/>
                                 </Grid>
                             </telerikListView:ListViewTemplateCell.View>
                         </telerikListView:ListViewTemplateCell>
@@ -69,7 +70,42 @@
                 </telerikDataControl:RadListView.ItemTemplate>
             </telerikDataControl:RadListView>
 
-            <myControls:MyMap Grid.Row="2" BindingContext="{Binding MapViewModel}" PinsSource="{Binding Pins}"/>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Orientation="Horizontal" Grid.Column="0" HorizontalOptions="Center">
+                    <Label Text="Start" HorizontalOptions="Start" VerticalOptions="Center"/>
+                    <Switch HorizontalOptions="End" Toggled="Switch_OnToggled" x:Name="Start">
+                        <Switch.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TypeSelected}" CommandParameter="Start"/>
+                        </Switch.GestureRecognizers>
+                    </Switch>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="Center">
+                    <Label Text="Waypoint" HorizontalOptions="Start" VerticalOptions="Center"/>
+                    <Switch HorizontalOptions="End" Toggled="Switch_OnToggled" x:Name="Waypoint">
+                        <Switch.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TypeSelected}" CommandParameter="Waypoint"/>
+                        </Switch.GestureRecognizers>
+                    </Switch>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Grid.Column="2" HorizontalOptions="Center">
+                    <Label Text="End" HorizontalOptions="Start" VerticalOptions="Center"/>
+                    <Switch HorizontalOptions="End" Toggled="Switch_OnToggled" x:Name="End">
+                        <Switch.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TypeSelected}" CommandParameter="End"/>
+                        </Switch.GestureRecognizers>
+                    </Switch>
+                </StackLayout>
+            </Grid>
+
+            <myControls:MyMap Grid.Row="3" BindingContext="{Binding MapViewModel}" PinsSource="{Binding Pins}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

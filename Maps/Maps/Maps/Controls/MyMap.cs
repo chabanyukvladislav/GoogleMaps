@@ -1,6 +1,4 @@
-﻿using System;
-using MapsApiStandardLibrary.Models.Directions;
-using Xamarin.Essentials;
+﻿using MapsApiStandardLibrary.Models.Directions;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
@@ -37,22 +35,7 @@ namespace Maps.Controls
 
         public MyMap()
         {
-            GetCurrentLocation();
-        }
-
-        private async void GetCurrentLocation()
-        {
-            Coordinate myLocation;
-            try
-            {
-                var position = await Geolocation.GetLocationAsync();
-                myLocation = new Coordinate(position.Latitude, position.Longitude);
-            }
-            catch (Exception)
-            {
-                myLocation = new Coordinate(46.440033, 30.756811);
-            }
-            CurrentCoordinate = myLocation;
+            CurrentCoordinate = new Coordinate(46.440033, 30.756811);
         }
 
         private void MapMove()

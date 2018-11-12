@@ -6,7 +6,6 @@ using Maps.Controls;
 using Maps.Controls.Models;
 using MapsApiStandardLibrary.Models.Directions;
 using Xamarin.Forms;
-using Xamarin.Forms.Maps;
 
 namespace Maps.UWP.Renderer.Controls
 {
@@ -32,7 +31,7 @@ namespace Maps.UWP.Renderer.Controls
             switch (type)
             {
                 case MyPinType.Start:
-                    Pin.IconPath = IconsPath.StartEndPin;
+                    Pin.IconPath = IconsPath.StartPin;
                     Pin.Label = MyPinType.Start.ToString();
                     Pin.MyType = MyPinType.Start;
                     break;
@@ -42,7 +41,7 @@ namespace Maps.UWP.Renderer.Controls
                     Pin.Label = "";
                     break;
                 case MyPinType.End:
-                    Pin.IconPath = IconsPath.StartEndPin;
+                    Pin.IconPath = IconsPath.EndPin;
                     Pin.MyType = MyPinType.End;
                     Pin.Label = MyPinType.End.ToString();
                     break;
