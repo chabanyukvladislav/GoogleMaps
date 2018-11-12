@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapsApiStandardLibrary", "MapsApiStandardLibrary\MapsApiStandardLibrary.csproj", "{88FF9C4E-6E7A-4F3C-98A6-590E597995F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryTests", "LibraryTests\LibraryTests.csproj", "{75EA0706-4E08-4216-97A4-1FAFC0887728}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88FF9C4E-6E7A-4F3C-98A6-590E597995F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88FF9C4E-6E7A-4F3C-98A6-590E597995F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88FF9C4E-6E7A-4F3C-98A6-590E597995F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88FF9C4E-6E7A-4F3C-98A6-590E597995F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75EA0706-4E08-4216-97A4-1FAFC0887728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75EA0706-4E08-4216-97A4-1FAFC0887728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75EA0706-4E08-4216-97A4-1FAFC0887728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75EA0706-4E08-4216-97A4-1FAFC0887728}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {701C9C05-13EC-46E0-A7D9-88073419B9F2}
+	EndGlobalSection
+EndGlobal

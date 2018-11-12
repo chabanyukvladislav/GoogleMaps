@@ -4,10 +4,10 @@ using System.ComponentModel;
 using Maps.Collections;
 using Maps.Controls;
 using Maps.Helpers;
-using MapsApiLibrary;
-using MapsApiLibrary.Api.Parameters.Directions;
-using MapsApiLibrary.Api.Parameters.Directions.Enums;
-using MapsApiLibrary.Models.Directions;
+using MapsApiStandardLibrary;
+using MapsApiStandardLibrary.Api.Parameters.Directions;
+using MapsApiStandardLibrary.Api.Parameters.Directions.Enums;
+using MapsApiStandardLibrary.Models.Directions;
 using Xamarin.Forms;
 
 namespace Maps.ViewModels
@@ -69,7 +69,7 @@ namespace Maps.ViewModels
         }
         public static TrafficModels ConvertStringToEnum(string value)
         {
-            return Enum.Parse<TrafficModels>(value);
+            return (TrafficModels)Enum.Parse(typeof(TrafficModels), value);
         }
 
         private bool IsButtonEnabled(object arg)

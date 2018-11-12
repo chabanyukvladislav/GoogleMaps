@@ -4,7 +4,7 @@ using Windows.Devices.Geolocation;
 using Maps.Content;
 using Maps.Controls;
 using Maps.Controls.Models;
-using MapsApiLibrary.Models.Directions;
+using MapsApiStandardLibrary.Models.Directions;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 

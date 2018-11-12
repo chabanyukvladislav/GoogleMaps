@@ -4,7 +4,7 @@ using System.Linq;
 using Maps.Content;
 using Maps.Controls;
 using Maps.Controls.Models;
-using MapsApiLibrary.Models.Directions;
+using MapsApiStandardLibrary.Models.Directions;
 
 namespace Maps.Collections
 {

@@ -1,9 +1,9 @@
 ﻿using System;
 using Maps.Controls;
-using MapsApiLibrary;
-using MapsApiLibrary.Api.Parameters.Directions;
-using MapsApiLibrary.Api.Parameters.Directions.Enums;
-using MapsApiLibrary.Models.Directions;
+using MapsApiStandardLibrary;
+using MapsApiStandardLibrary.Api.Parameters.Directions;
+using MapsApiStandardLibrary.Api.Parameters.Directions.Enums;
+using MapsApiStandardLibrary.Models.Directions;
 
 namespace Maps.Helpers
 {

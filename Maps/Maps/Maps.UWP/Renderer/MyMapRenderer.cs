@@ -11,7 +11,7 @@ using Maps.Controls.Models;
 using Maps.UWP.Renderer;
 using Maps.UWP.Renderer.Controls;
 using Maps.UWP.Renderer.Helpers;
-using MapsApiLibrary.Models.Directions;
+using MapsApiStandardLibrary.Models.Directions;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Maps.UWP;
 using Xamarin.Forms.Platform.UWP;

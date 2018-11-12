@@ -1,5 +1,5 @@
 ﻿using System;
-using MapsApiLibrary.Models.Directions;
+using MapsApiStandardLibrary.Models.Directions;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;

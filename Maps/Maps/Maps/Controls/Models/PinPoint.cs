@@ -1,4 +1,4 @@
-﻿using MapsApiLibrary.Models.Directions;
+﻿using MapsApiStandardLibrary.Models.Directions;
 
 namespace Maps.Controls.Models
 {

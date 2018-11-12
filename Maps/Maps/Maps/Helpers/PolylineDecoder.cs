@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using MapsApiLibrary.Models.Directions;
+using MapsApiStandardLibrary.Models.Directions;
 
 namespace Maps.Helpers
 {

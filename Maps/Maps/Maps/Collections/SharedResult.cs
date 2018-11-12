@@ -1,5 +1,5 @@
 ﻿using System;
-using MapsApiLibrary.Models.Directions;
+using MapsApiStandardLibrary.Models.Directions;
 
 namespace Maps.Collections
 {

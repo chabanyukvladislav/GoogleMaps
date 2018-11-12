@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Maps.Helpers;
-using MapsApiLibrary.Models.Directions;
+using MapsApiStandardLibrary.Models.Directions;
 
 namespace Maps.Collections
 {

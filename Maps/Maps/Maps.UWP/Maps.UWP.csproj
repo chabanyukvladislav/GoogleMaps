@@ -169,7 +169,7 @@
       <Version>11.0.2</Version>
     </PackageReference>
     <PackageReference Include="Telerik.UI.for.Xamarin.DataControls.Trial">
-      <Version>2018.3.1018.1</Version>
+      <Version>2018.3.1109.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>0.11.0-preview</Version>
@@ -181,9 +181,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="MapsApiLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\MapsApiLibrary\MapsApiLibrary\bin\Debug\netcoreapp2.0\MapsApiLibrary.dll</HintPath>
+    <Reference Include="MapsApiStandardLibrary">
+      <HintPath>..\..\..\MapsApiStandardLibrary\MapsApiStandardLibrary\bin\Debug\netstandard2.0\MapsApiStandardLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="..\Maps\Maps.projitems" Label="Shared" />
