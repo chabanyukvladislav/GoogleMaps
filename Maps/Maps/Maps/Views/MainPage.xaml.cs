@@ -1,6 +1,9 @@
-﻿using Maps.Collections;
+﻿using System.Collections.ObjectModel;
+using Maps.Collections;
+using Maps.Controls;
 using Maps.Controls.Models;
 using Maps.ViewModels;
+using Telerik.XamarinForms.DataControls;
 using Telerik.XamarinForms.DataControls.ListView;
 using Xamarin.Forms;
 
@@ -84,6 +87,35 @@ namespace Maps.Views
                 start.Toggled += Switch_OnToggled;
                 ExecuteTypeSelected("End");
             }
+        }
+
+        private void OnItemSwipeCompleted(object sender, ItemSwipeCompletedEventArgs e)
+        {
+            var item = e.Item as PinPoint;
+
+            if (!(sender is RadListView listView))
+            {
+                return;
+            }
+
+            listView.EndItemSwipe();
+
+            if (!(e.Offset <= -70) && !(e.Offset >= 70))
+            {
+                return;
+            }
+            (listView.ItemsSource as ObservableCollection<PinPoint>)?.Remove(item);
+            var pins = SharedMyPins.Get;
+            if (item == null)
+            {
+                return;
+            }
+            var pin = new MyPin
+            {
+                MyType = MyPinType.Undefined,
+                Coordinate = item.Coordinate
+            };
+            pins.RemovePin(pin);
         }
     }
 }

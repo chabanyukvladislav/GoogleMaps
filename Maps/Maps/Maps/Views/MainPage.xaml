@@ -39,10 +39,37 @@
                 <Button Grid.Column="2" Text="Calculate optimize" FontSize="Micro" HorizontalOptions="Center" Margin="5" Command="{Binding Calculate}" CommandParameter="true"/>
             </Grid>
 
-            <telerikDataControl:RadListView Grid.Row="1" IsItemsReorderEnabled="True" ReorderEnded="RadListView_OnReorderEnded" BindingContext="{Binding PinsViewModel}" ItemsSource="{Binding PinPoints}" SelectedItem="{Binding SelectedPinPoint, Mode=TwoWay}">
+            <telerikDataControl:RadListView Grid.Row="1" IsItemsReorderEnabled="True" IsItemSwipeEnabled="True" ItemSwipeCompleted="OnItemSwipeCompleted" ReorderEnded="RadListView_OnReorderEnded" BindingContext="{Binding PinsViewModel}" ItemsSource="{Binding PinPoints}" SelectedItem="{Binding SelectedPinPoint, Mode=TwoWay}">
                 <telerikDataControl:RadListView.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding ListViewTapped}"/>
                 </telerikDataControl:RadListView.GestureRecognizers>
+                <telerikDataControl:RadListView.ItemSwipeContentTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0"
+                              Padding="0"
+                              ColumnSpacing="0"
+                              RowSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="70" />
+                            </Grid.ColumnDefinitions>
+                            <Label BackgroundColor="Red"
+                                   HorizontalTextAlignment="Center"
+                                   Text="Delete"
+                                   TextColor="White"
+                                   VerticalTextAlignment="Center"
+                                   WidthRequest="70" />
+                            <Label Grid.Column="2"
+                                   BackgroundColor="Red"
+                                   HorizontalTextAlignment="Center"
+                                   Text="Delete"
+                                   TextColor="White"
+                                   VerticalTextAlignment="Center"
+                                   WidthRequest="70" />
+                        </Grid>
+                    </DataTemplate>
+                </telerikDataControl:RadListView.ItemSwipeContentTemplate>
                 <telerikDataControl:RadListView.ItemTemplate>
                     <DataTemplate>
                         <telerikListView:ListViewTemplateCell>
