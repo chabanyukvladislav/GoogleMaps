@@ -31,6 +31,7 @@ namespace Maps.ViewModels
             set
             {
                 _selectedPinPoint = value;
+                ListViewTapped.Execute(null);
                 OnPropertyChanged(nameof(SelectedPinPoint));
             }
         }
@@ -75,7 +76,7 @@ namespace Maps.ViewModels
 
             var startPinPoint = new PinPoint
             {
-                Number = 0,
+                Number = 1,
                 Address = legs[0].StartAddress,
                 Coordinate = _pins.Pins.StartPin.Coordinate,
                 Distance = 0,
@@ -90,7 +91,7 @@ namespace Maps.ViewModels
             {
                 var pinPoint = new PinPoint
                 {
-                    Number = i,
+                    Number = i + 1,
                     Address = legs[i].StartAddress,
                     Coordinate = _pins.Pins.WaypointsPin[SharedResult.Result.Routes[0].WaypointOrder[i - 1]].Coordinate,
                     Distance = distance,
@@ -104,7 +105,7 @@ namespace Maps.ViewModels
 
             var endPinPoint = new PinPoint
             {
-                Number = legs.Count,
+                Number = legs.Count + 1,
                 Address = legs[legs.Count - 1].EndAddress,
                 Coordinate = _pins.Pins.EndPin.Coordinate,
                 Distance = distance,
@@ -117,7 +118,7 @@ namespace Maps.ViewModels
             var pinPoint = new PinPoint
             {
                 Coordinate = value.Coordinate,
-                Number = PinPoints.Count
+                Number = PinPoints.Count + 1
             };
             PinPoints.Add(pinPoint);
         }

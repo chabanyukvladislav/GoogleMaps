@@ -21,15 +21,25 @@ namespace Maps.Droid.Renderer
     {
         private readonly SharedMyPins _pins;
         private readonly SharedRoutePath _routePath;
+        private PolylineOptions _polyline; 
 
         public MyMapRenderer(Context context) : base(context)
         {
             _pins = SharedMyPins.Get;
             _routePath = SharedRoutePath.Get;
+            _polyline = null;
 
             _pins.PinAdded += OnAddPin;
             _pins.PinRemoved += x => OnPinsUpdated();
-            _pins.PinSelected += (x, y) => OnPinsUpdated();
+            _pins.PinSelected += (x, y) =>
+            {
+                NativeMap.Clear();
+                LoadMyPins();
+                if (_polyline != null)
+                {
+                    NativeMap.AddPolyline(_polyline);
+                }
+            };
             _pins.PinsUpdated += OnPinsUpdated;
             _routePath.CoordinatesChanged += OnRenderPath;
         }
@@ -143,6 +153,7 @@ namespace Maps.Droid.Renderer
             var polyline = new PolylineOptions().Add(LocationsToPoints.Convert(_routePath.Coordinates).ToArray())
                 .InvokeColor(Android.Graphics.Color.DarkRed);
             NativeMap.AddPolyline(polyline);
+            _polyline = polyline;
         }
 
         private void OnAddPin(MyPin pin)
@@ -154,6 +165,7 @@ namespace Maps.Droid.Renderer
         {
             NativeMap.Clear();
             LoadMyPins();
+            _polyline = null;
         }
     }
 }

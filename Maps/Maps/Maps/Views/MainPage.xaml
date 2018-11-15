@@ -19,27 +19,27 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <Grid>
+        <Grid Margin="0" Padding="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="4*" />
+                <RowDefinition Height="3*" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0">
+            <Grid Grid.Row="0" Margin="0" Padding="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Picker Grid.Column="0" HorizontalOptions="Center" FontSize="Micro" Margin="5, 5, 25, 5" ItemsSource="{Binding TrafficModels}" SelectedItem="{Binding SelectedTrafficModel}"/>
-                <Button Grid.Column="1" Text="Calculate" FontSize="Micro" HorizontalOptions="Center" Margin="5" Command="{Binding Calculate}" CommandParameter="false"/>
-                <Button Grid.Column="2" Text="Calculate optimize" FontSize="Micro" HorizontalOptions="Center" Margin="5" Command="{Binding Calculate}" CommandParameter="true"/>
+                <Picker Grid.Column="0" HorizontalOptions="Center" FontSize="Micro" Margin="5, 0, 25, 0" ItemsSource="{Binding TrafficModels}" SelectedItem="{Binding SelectedTrafficModel}"/>
+                <Button Grid.Column="1" Text="Calculate" FontSize="Micro" HorizontalOptions="Center" Margin="5, 0, 5, 0" Command="{Binding Calculate}" CommandParameter="false"/>
+                <Button Grid.Column="2" Text="Calculate optimize" FontSize="Micro" HorizontalOptions="Center" Margin="5, 0, 5, 0" Command="{Binding Calculate}" CommandParameter="true"/>
             </Grid>
 
-            <telerikDataControl:RadListView Grid.Row="1" IsItemsReorderEnabled="True" IsItemSwipeEnabled="True" ItemSwipeCompleted="OnItemSwipeCompleted" ReorderEnded="RadListView_OnReorderEnded" BindingContext="{Binding PinsViewModel}" ItemsSource="{Binding PinPoints}" SelectedItem="{Binding SelectedPinPoint, Mode=TwoWay}">
+            <telerikDataControl:RadListView Margin="0" Grid.Row="1" IsItemsReorderEnabled="True" IsItemSwipeEnabled="True" ItemSwipeCompleted="OnItemSwipeCompleted" ReorderEnded="RadListView_OnReorderEnded" BindingContext="{Binding PinsViewModel}" ItemsSource="{Binding PinPoints}" SelectedItem="{Binding SelectedPinPoint, Mode=TwoWay}">
                 <telerikDataControl:RadListView.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding ListViewTapped}"/>
                 </telerikDataControl:RadListView.GestureRecognizers>
@@ -74,7 +74,7 @@
                     <DataTemplate>
                         <telerikListView:ListViewTemplateCell>
                             <telerikListView:ListViewTemplateCell.View>
-                                <Grid>
+                                <Grid Margin="0" Padding="0">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
@@ -104,27 +104,27 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <StackLayout Orientation="Horizontal" Grid.Column="0" HorizontalOptions="Center">
-                    <Label Text="Start" HorizontalOptions="Start" VerticalOptions="Center"/>
-                    <Switch HorizontalOptions="End" Toggled="Switch_OnToggled" x:Name="Start">
+                <StackLayout Orientation="Horizontal" Grid.Column="0" HorizontalOptions="Center" Margin="0">
+                    <Label Text="Start" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Micro" Margin="0"/>
+                    <Switch HorizontalOptions="End" Toggled="Switch_OnToggled" x:Name="Start" Margin="0">
                         <Switch.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding TypeSelected}" CommandParameter="Start"/>
                         </Switch.GestureRecognizers>
                     </Switch>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="Center">
-                    <Label Text="Waypoint" HorizontalOptions="Start" VerticalOptions="Center"/>
-                    <Switch HorizontalOptions="End" Toggled="Switch_OnToggled" x:Name="Waypoint">
+                <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="Center" Margin="0">
+                    <Label Text="Waypoint" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Micro" Margin="0"/>
+                    <Switch HorizontalOptions="End" Toggled="Switch_OnToggled" x:Name="Waypoint" Margin="0">
                         <Switch.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding TypeSelected}" CommandParameter="Waypoint"/>
                         </Switch.GestureRecognizers>
                     </Switch>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Grid.Column="2" HorizontalOptions="Center">
-                    <Label Text="End" HorizontalOptions="Start" VerticalOptions="Center"/>
-                    <Switch HorizontalOptions="End" Toggled="Switch_OnToggled" x:Name="End">
+                <StackLayout Orientation="Horizontal" Grid.Column="2" HorizontalOptions="Center" Margin="0">
+                    <Label Text="End" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Micro" Margin="0"/>
+                    <Switch HorizontalOptions="End" Toggled="Switch_OnToggled" x:Name="End" Margin="0">
                         <Switch.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding TypeSelected}" CommandParameter="End"/>
                         </Switch.GestureRecognizers>
