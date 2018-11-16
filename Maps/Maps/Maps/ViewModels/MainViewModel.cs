@@ -22,6 +22,7 @@ namespace Maps.ViewModels
 
         private ObservableCollection<string> _trafficModels;
         private TrafficModels _selectedTrafficModel;
+        private string _icon;
 
         public IPinsViewModel PinsViewModel { get; set; }
         public IMapViewModel MapViewModel { get; set; }
@@ -44,6 +45,15 @@ namespace Maps.ViewModels
                 OnPropertyChanged(nameof(SelectedTrafficModel));
             }
         }
+        public string Icon
+        {
+            get => _icon;
+            set
+            {
+                _icon = value;
+                OnPropertyChanged(nameof(Icon));
+            }
+        }
 
         public Command Calculate { get; }
         public ICommand TypeSelected { get; }
@@ -52,6 +62,7 @@ namespace Maps.ViewModels
         {
             _trafficModels = new ObservableCollection<string>(Enum.GetNames(typeof(TrafficModels)));
             _lastCalculateOptimize = true;
+            _icon = "down.png";
 
             _service = new DirectionsService();
             _myPins = SharedMyPins.Get;

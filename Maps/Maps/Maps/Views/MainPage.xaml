@@ -5,8 +5,10 @@
             xmlns:myControls="clr-namespace:Maps.Controls"
             xmlns:converters="clr-namespace:Maps.Converters"
             xmlns:telerikDataControl="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
-             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
-            x:Class="Maps.Views.MainPage">
+            xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+            xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+            x:Class="Maps.Views.MainPage"
+            x:Name="Page">
     <ContentPage.BindingContext>
         <vm:MainViewModel />
     </ContentPage.BindingContext>
@@ -18,121 +20,161 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="{Binding Icon}" Clicked="Button_OnClicked" x:Name="icon"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
-        <Grid Margin="0" Padding="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="3*" />
-            </Grid.RowDefinitions>
+        <!--<telerikPrimitives:RadSideDrawer DrawerLength="{Binding Height, Source={x:Reference Name=Page}}" DrawerLocation="Top" AreGesturesEnabled="False">-->
+        <telerikPrimitives:RadSideDrawer DrawerLocation="Top" AreGesturesEnabled="False">
 
-            <Grid Grid.Row="0" Margin="0" Padding="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+            <telerikPrimitives:RadSideDrawer.DrawerLength>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="Android" Value="{Binding Height, Source={x:Reference Name=Page}}"/>
+                    <On Platform="UWP" Value="300"/>
+                </OnPlatform>
+            </telerikPrimitives:RadSideDrawer.DrawerLength>
+            <telerikPrimitives:RadSideDrawer.DrawerContent>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
 
-                <Picker Grid.Column="0" HorizontalOptions="Center" FontSize="Micro" Margin="5, 0, 25, 0" ItemsSource="{Binding TrafficModels}" SelectedItem="{Binding SelectedTrafficModel}"/>
-                <Button Grid.Column="1" Text="Calculate" FontSize="Micro" HorizontalOptions="Center" Margin="5, 0, 5, 0" Command="{Binding Calculate}" CommandParameter="false"/>
-                <Button Grid.Column="2" Text="Calculate optimize" FontSize="Micro" HorizontalOptions="Center" Margin="5, 0, 5, 0" Command="{Binding Calculate}" CommandParameter="true"/>
-            </Grid>
+                    <Grid Grid.Row="0" Margin="0" Padding="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-            <telerikDataControl:RadListView Margin="0" Grid.Row="1" IsItemsReorderEnabled="True" IsItemSwipeEnabled="True" ItemSwipeCompleted="OnItemSwipeCompleted" ReorderEnded="RadListView_OnReorderEnded" BindingContext="{Binding PinsViewModel}" ItemsSource="{Binding PinPoints}" SelectedItem="{Binding SelectedPinPoint, Mode=TwoWay}">
-                <telerikDataControl:RadListView.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ListViewTapped}"/>
-                </telerikDataControl:RadListView.GestureRecognizers>
-                <telerikDataControl:RadListView.ItemSwipeContentTemplate>
-                    <DataTemplate>
-                        <Grid Margin="0"
+                        <Picker Grid.Column="0" HorizontalOptions="Center" FontSize="Micro" Margin="5, 0, 25, 0" ItemsSource="{Binding TrafficModels}" SelectedItem="{Binding SelectedTrafficModel}"/>
+                        <Button Grid.Column="1" Text="Calculate" FontSize="Micro" HorizontalOptions="Center" Margin="5, 0, 5, 0" Command="{Binding Calculate}" CommandParameter="false"/>
+                        <Button Grid.Column="2" Text="Calculate optimize" FontSize="Micro" HorizontalOptions="Center" Margin="5, 0, 5, 0" Command="{Binding Calculate}" CommandParameter="true"/>
+                    </Grid>
+
+                    <Frame Grid.Row="1" BorderColor="Yellow" Padding="0">
+                        <Grid Margin="0" Padding="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0" Margin="0" Padding="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="Number" FontAttributes="Bold"/>
+                                <Label Grid.Column="1" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="Latitude" FontAttributes="Bold"/>
+                                <Label Grid.Column="2" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="Longitude" FontAttributes="Bold"/>
+                                <Label Grid.Column="3" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="Address" FontAttributes="Bold"/>
+                                <Label Grid.Column="4" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="Duration" FontAttributes="Bold"/>
+                                <Label Grid.Column="5" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="Distance" FontAttributes="Bold"/>
+                            </Grid>
+
+                            <telerikDataControl:RadListView Grid.Row="1" x:Name="List" Margin="0" IsItemsReorderEnabled="True" IsItemSwipeEnabled="True" ItemSwipeCompleted="OnItemSwipeCompleted" ReorderEnded="RadListView_OnReorderEnded" BindingContext="{Binding PinsViewModel}" ItemsSource="{Binding PinPoints}" SelectedItem="{Binding SelectedPinPoint, Mode=TwoWay}">
+                                <telerikDataControl:RadListView.ItemSwipeContentTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="0"
                               Padding="0"
                               ColumnSpacing="0"
                               RowSpacing="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="70" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="70" />
-                            </Grid.ColumnDefinitions>
-                            <Label BackgroundColor="Red"
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="70" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="70" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label BackgroundColor="Red"
                                    HorizontalTextAlignment="Center"
                                    Text="Delete"
                                    TextColor="White"
                                    VerticalTextAlignment="Center"
                                    WidthRequest="70" />
-                            <Label Grid.Column="2"
+                                            <Label Grid.Column="2"
                                    BackgroundColor="Red"
                                    HorizontalTextAlignment="Center"
                                    Text="Delete"
                                    TextColor="White"
                                    VerticalTextAlignment="Center"
                                    WidthRequest="70" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </telerikDataControl:RadListView.ItemSwipeContentTemplate>
+                                <telerikDataControl:RadListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <telerikListView:ListViewTemplateCell>
+                                            <telerikListView:ListViewTemplateCell.View>
+                                                <Grid Margin="0" Padding="0">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Column="0" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Number}"/>
+                                                    <Label Grid.Column="1" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Coordinate.Latitude}"/>
+                                                    <Label Grid.Column="2" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Coordinate.Longitude}"/>
+                                                    <Label Grid.Column="3" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Address}"/>
+                                                    <Label Grid.Column="4" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Duration, Converter={StaticResource ToNormalDuration}}"/>
+                                                    <Label Grid.Column="5" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Distance, Converter={StaticResource ToNormalDistance}}"/>
+                                                </Grid>
+                                            </telerikListView:ListViewTemplateCell.View>
+                                        </telerikListView:ListViewTemplateCell>
+                                    </DataTemplate>
+                                </telerikDataControl:RadListView.ItemTemplate>
+                            </telerikDataControl:RadListView>
                         </Grid>
-                    </DataTemplate>
-                </telerikDataControl:RadListView.ItemSwipeContentTemplate>
-                <telerikDataControl:RadListView.ItemTemplate>
-                    <DataTemplate>
-                        <telerikListView:ListViewTemplateCell>
-                            <telerikListView:ListViewTemplateCell.View>
-                                <Grid Margin="0" Padding="0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                    </Frame>
 
-                                    <Label Grid.Column="0" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Number}"/>
-                                    <Label Grid.Column="1" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Coordinate.Latitude}"/>
-                                    <Label Grid.Column="2" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Coordinate.Longitude}"/>
-                                    <Label Grid.Column="3" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Address}"/>
-                                    <Label Grid.Column="4" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Duration, Converter={StaticResource ToNormalDuration}}"/>
-                                    <Label Grid.Column="5" Margin="10" HorizontalTextAlignment="Center" FontSize="Micro" Text="{Binding Distance, Converter={StaticResource ToNormalDistance}}"/>
-                                </Grid>
-                            </telerikListView:ListViewTemplateCell.View>
-                        </telerikListView:ListViewTemplateCell>
-                    </DataTemplate>
-                </telerikDataControl:RadListView.ItemTemplate>
-            </telerikDataControl:RadListView>
+                    <Grid Grid.Row="2" Padding="0" Margin="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+                        <StackLayout Orientation="Horizontal" Grid.Column="0" HorizontalOptions="Center" Margin="0" Padding="0">
+                            <Label Text="Start" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Micro" Margin="0"/>
+                            <Switch HorizontalOptions="End" VerticalOptions="Center" Toggled="Switch_OnToggled" x:Name="Start" Margin="0">
+                                <Switch.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TypeSelected}" CommandParameter="Start"/>
+                                </Switch.GestureRecognizers>
+                            </Switch>
+                        </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Grid.Column="0" HorizontalOptions="Center" Margin="0">
-                    <Label Text="Start" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Micro" Margin="0"/>
-                    <Switch HorizontalOptions="End" Toggled="Switch_OnToggled" x:Name="Start" Margin="0">
-                        <Switch.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding TypeSelected}" CommandParameter="Start"/>
-                        </Switch.GestureRecognizers>
-                    </Switch>
-                </StackLayout>
+                        <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="Center" Margin="0" Padding="0">
+                            <Label Text="Waypoint" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Micro" Margin="0"/>
+                            <Switch HorizontalOptions="End" VerticalOptions="Center" Toggled="Switch_OnToggled" x:Name="Waypoint" Margin="0">
+                                <Switch.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TypeSelected}" CommandParameter="Waypoint"/>
+                                </Switch.GestureRecognizers>
+                            </Switch>
+                        </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="Center" Margin="0">
-                    <Label Text="Waypoint" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Micro" Margin="0"/>
-                    <Switch HorizontalOptions="End" Toggled="Switch_OnToggled" x:Name="Waypoint" Margin="0">
-                        <Switch.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding TypeSelected}" CommandParameter="Waypoint"/>
-                        </Switch.GestureRecognizers>
-                    </Switch>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal" Grid.Column="2" HorizontalOptions="Center" Margin="0">
-                    <Label Text="End" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Micro" Margin="0"/>
-                    <Switch HorizontalOptions="End" Toggled="Switch_OnToggled" x:Name="End" Margin="0">
-                        <Switch.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding TypeSelected}" CommandParameter="End"/>
-                        </Switch.GestureRecognizers>
-                    </Switch>
-                </StackLayout>
-            </Grid>
-
-            <myControls:MyMap Grid.Row="3" BindingContext="{Binding MapViewModel}" PinsSource="{Binding Pins}"/>
-        </Grid>
+                        <StackLayout Orientation="Horizontal" Grid.Column="2" HorizontalOptions="Center" Margin="0" Padding="0">
+                            <Label Text="End" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Micro" Margin="0"/>
+                            <Switch HorizontalOptions="End" VerticalOptions="Center" Toggled="Switch_OnToggled" x:Name="End" Margin="0">
+                                <Switch.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TypeSelected}" CommandParameter="End"/>
+                                </Switch.GestureRecognizers>
+                            </Switch>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+            </telerikPrimitives:RadSideDrawer.DrawerContent>
+            <telerikPrimitives:RadSideDrawer.MainContent>
+                <myControls:MyMap Margin="0" BindingContext="{Binding MapViewModel}" PinsSource="{Binding Pins}"/>
+            </telerikPrimitives:RadSideDrawer.MainContent>
+        </telerikPrimitives:RadSideDrawer>
     </ContentPage.Content>
 </ContentPage>

@@ -1,11 +1,12 @@
-﻿using System.Collections.ObjectModel;
-using System.Collections.Specialized;
+﻿using System;
+using System.Collections.ObjectModel;
 using Maps.Collections;
 using Maps.Controls;
 using Maps.Controls.Models;
 using Maps.ViewModels;
 using Telerik.XamarinForms.DataControls;
 using Telerik.XamarinForms.DataControls.ListView;
+using Telerik.XamarinForms.Primitives;
 using Xamarin.Forms;
 
 namespace Maps.Views
@@ -15,6 +16,9 @@ namespace Maps.Views
         public MainPage()
         {
             InitializeComponent();
+
+            SharedRoutePath.Get.CoordinatesChanged += icon.Activate;
+            SharedMyPins.Get.PinSelected += (x, y) => icon.Activate();
         }
 
         private void RadListView_OnReorderEnded(object sender, ReorderEndedEventArgs e)
@@ -25,7 +29,7 @@ namespace Maps.Views
             pins.UpdatePinsFromPinPoints(viewModel.PinsViewModel.PinPoints);
         }
 
-        private static void ExecuteTypeSelected(object type)
+        private void ExecuteTypeSelected(object type)
         {
             var myPins = SharedMyPins.Get;
             var pinType = type.ToString();
@@ -88,6 +92,7 @@ namespace Maps.Views
                 start.Toggled += Switch_OnToggled;
                 ExecuteTypeSelected("End");
             }
+            icon.Activate();
         }
 
         private void OnItemSwipeCompleted(object sender, ItemSwipeCompletedEventArgs e)
@@ -117,6 +122,21 @@ namespace Maps.Views
                 Coordinate = item.Coordinate
             };
             pins.RemovePin(pin);
+        }
+
+        private void Button_OnClicked(object sender, EventArgs e)
+        {
+            var menu = (RadSideDrawer)Content;
+            if (menu.IsOpen)
+            {
+                menu.IsOpen = false;
+                ((MainViewModel)BindingContext).Icon = "down.png";
+            }
+            else
+            {
+                menu.IsOpen = true;
+                ((MainViewModel)BindingContext).Icon = "up.png";
+            }
         }
     }
 }
